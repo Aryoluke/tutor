@@ -26,7 +26,7 @@
     /* grid 3 */
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .card{background:#1e1e1e;border:1px solid #2a2a2a;border-radius:12px;padding:28px 24px;transition:border-color .3s,transform .3s}
-    .card:hover{border-color:#e65100;transform:translateY(-3px)}
+    .card:hover{border-color:#e65100;transform:translateY(-3px);box-shadow:0 8px 25px rgba(255,255,255,.05)}
     .card .icon{font-size:1.8rem;margin-bottom:12px}
     .card h3{font-size:1.1rem;font-weight:700;margin-bottom:6px}
     .card .price{color:#e65100;font-weight:600;font-size:.9rem;margin-bottom:8px}
@@ -34,7 +34,7 @@
     /* grid 4 */
     .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
     .workout-card{background:#1e1e1e;border:1px solid #2a2a2a;border-radius:12px;padding:28px 24px;transition:border-color .3s,transform .3s}
-    .workout-card:hover{border-color:#e65100;transform:translateY(-3px)}
+    .workout-card:hover{border-color:#e65100;transform:translateY(-3px);box-shadow:0 8px 25px rgba(255,255,255,.05)}
     .workout-card .badge{display:inline-block;padding:4px 12px;border-radius:12px;font-size:.75rem;font-weight:600;margin-bottom:12px;letter-spacing:.5px}
     .badge-beginner{background:#1b3a1b;color:#4caf50}
     .badge-intermediate{background:#3a2e1b;color:#ff9800}
@@ -46,7 +46,7 @@
     .workout-card .rounds{color:#ff8f00;font-size:.82rem;font-weight:600;margin-top:12px}
     /* programme cards */
     .programme-card{background:#1e1e1e;border:1px solid #2a2a2a;border-radius:12px;padding:28px 24px;text-align:center;transition:border-color .3s,transform .3s}
-    .programme-card:hover{border-color:#e65100;transform:translateY(-3px)}
+    .programme-card:hover{border-color:#e65100;transform:translateY(-3px);box-shadow:0 8px 25px rgba(255,255,255,.05)}
     .programme-card .icon{font-size:2.2rem;margin-bottom:12px}
     .programme-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
     .programme-card p{color:#999;font-size:.9rem}
@@ -62,6 +62,8 @@
     /* reveal animations */
     .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
     .reveal.visible{opacity:1;transform:translateY(0)}
+    /* back to top */
+    .back-to-top{position:fixed;bottom:30px;right:30px;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#e65100,#ff8f00);color:#fff;border:none;font-size:1.3rem;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .3s;z-index:999;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,.3)}.back-to-top.show{opacity:1;visibility:visible}.back-to-top:hover{transform:translateY(-3px)}
     /* responsive */
     @media(max-width:900px){.grid-4{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:700px){.grid-3{grid-template-columns:1fr;gap:16px}.grid-4{grid-template-columns:1fr;gap:16px}section{padding:56px 0}.cta-banner{padding:40px 24px}}
@@ -85,12 +87,12 @@
       <p>Six essentials. Most of them cost next to nothing × or nothing at all.</p>
     </div>
     <div class="grid-3">
-      <div class="card reveal"><div class="icon">×çü¿í¸¿</div><h3>Pull-up bar</h3><div class="price">~$20</div><p>Doorframe or wall-mounted. The single best piece of home gym kit you can own.</p></div>
-      <div class="card reveal"><div class="icon">×çü©ª</div><h3>Paralettes</h3><div class="price">~$25</div><p>Low push-up bars that save your wrists and unlock full ROM pressing.</p></div>
-      <div class="card reveal"><div class="icon">×çü½×</div><h3>Backpack + books</h3><div class="price">Free</div><p>Fill a rucksack with textbooks for instant, adjustable weight × squats, carries, rows.</p></div>
-      <div class="card reveal"><div class="icon">×çü</div><h3>Resistance bands</h3><div class="price">£$10</div><p>Loop bands for pull-up assistance, glute work, and banded push-ups. Compact and versatile.</p></div>
-      <div class="card reveal"><div class="icon">×çü§Ü</div><h3>Floor space</h3><div class="price">Free</div><p>2m — 2m of clear floor is all you need for lunges, planks, bridges and mobility work.</p></div>
-      <div class="card reveal"><div class="icon">×çüª×</div><h3>Chair or table</h3><div class="price">Free</div><p>For Bulgarian split squats, incline push-ups, and box step-ups. Your furniture is gym equipment.</p></div>
+      <div class="card reveal"><div class="icon">×ç÷¯´¸¿</div><h3>Pull-up bar</h3><div class="price">~$20</div><p>Doorframe or wall-mounted. The single best piece of home gym kit you can own.</p></div>
+      <div class="card reveal"><div class="icon">×ç÷ªª</div><h3>Paralettes</h3><div class="price">~$25</div><p>Low push-up bars that save your wrists and unlock full ROM pressing.</p></div>
+      <div class="card reveal"><div class="icon">×ç÷¯×</div><h3>Backpack + books</h3><div class="price">Free</div><p>Fill a rucksack with textbooks for instant, adjustable weight × squats, carries, rows.</p></div>
+      <div class="card reveal"><div class="icon">×ç÷</div><h3>Resistance bands</h3><div class="price">£$10</div><p>Loop bands for pull-up assistance, glute work, and banded push-ups. Compact and versatile.</p></div>
+      <div class="card reveal"><div class="icon">×ç÷§×</div><h3>Floor space</h3><div class="price">Free</div><p>2m × 2m of clear floor is all you need for lunges, planks, bridges and mobility work.</p></div>
+      <div class="card reveal"><div class="icon">×ç÷ª×</div><h3>Chair or table</h3><div class="price">Free</div><p>For Bulgarian split squats, incline push-ups, and box step-ups. Your furniture is gym equipment.</p></div>
     </div>
   </div>
 </section>
@@ -162,22 +164,22 @@
     </div>
     <div class="grid-4">
       <div class="programme-card reveal">
-        <div class="icon">×çüÍÇ</div>
+        <div class="icon">×ç÷ÍÇ</div>
         <h3>Progressive overload at home</h3>
         <p>Add reps, reduce rest, increase time under tension, or switch to harder variations. The bar still moves up × even without a barbell.</p>
       </div>
       <div class="programme-card reveal">
-        <div class="icon">×çü½×</div>
+        <div class="icon">×ç÷¯×</div>
         <h3>Rucking & weighted carries</h3>
         <p>Load a backpack and walk. Then add lunges, step-ups, and carries. It's boring. It works. Cardio that doesn't kill gains.</p>
       </div>
       <div class="programme-card reveal">
-        <div class="icon">ÃÑ×¿ï¸Í</div>
+        <div class="icon">ÃÑ×¿¯Í</div>
         <h3>Minimalist splits</h3>
         <p>Push / Pull / Legs fits home training perfectly. Two compound lifts plus accessories. 45 minutes, door to door, done.</p>
       </div>
       <div class="programme-card reveal">
-        <div class="icon">×çü°±</div>
+        <div class="icon">×ç÷°±</div>
         <h3>Form checks via video</h3>
         <p>Film a set, watch it back, fix one thing. No coach needed × just honest eyes and a phone tripod. Progress compounds fast.</p>
       </div>
@@ -190,7 +192,7 @@
     <div class="cta-banner">
       <h2>Ready to&nbsp;train at&nbsp;home?</h2>
       <p>Pick a workout, find your floor space, and start today. No commute, no queue, no excuses.</p>
-      <a href="#workouts" class="btn-outline">Start now £×</a>
+      <a href="#workouts" class="btn-outline">Start now »×</a>
     </div>
   </div>
 </section>
@@ -201,6 +203,8 @@
   </div>
 </footer>
 
-<script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));</script>
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));const backToTop=document.querySelector('.back-to-top');window.addEventListener('scroll',()=>{if(window.scrollY>400){backToTop.classList.add('show')}else{backToTop.classList.remove('show')}});</script>
 </body>
 </html>
