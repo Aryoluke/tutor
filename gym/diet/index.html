@@ -14,7 +14,7 @@
         .hero h1 { font-size: 3rem; font-weight: 800; color: #fff; max-width: 700px; margin: 0 auto 20px; line-height: 1.2; }
         .hero p { font-size: 1.15rem; color: #999; max-width: 600px; margin: 0 auto; }
         .hero p strong { color: #ff6b00; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         @media (max-width: 768px) { .hero { padding: 80px 0 60px; } .hero h1 { font-size: 2.2rem; } .hero p { font-size: 1rem; } }
         .section { padding: 80px 0; }
@@ -63,7 +63,7 @@
 
 <section class="hero reveal"><div class="container"><span class="hero-label">Diet &amp; Nutrition</span><h1>Fuel your training. Build muscle. Feel better.</h1><p>You can't <strong>out-train</strong> a bad diet. What you put on your plate matters as much as what you do in the gym - maybe more. Let's fix it.</p></div></section>
 
-<section class="section"><div class="container"><h2 class="section-title">What <span>I cover</span></h2><div class="cards-grid"><div class="card"><div class="card-icon">🥩</div><h3>Protein &amp; Macros</h3><ul><li>Daily protein targets that actually work</li><li>Vegetarian &amp; vegan options</li><li>Simple meals you'll actually cook</li><li>Budget-friendly protein sources</li></ul></div><div class="card"><div class="card-icon">🍋</div><h3>Meal Planning</h3><ul><li>Templates that make grocery shopping easy</li><li>Snacks that fit your macros</li><li>Eating around school &amp; family meals</li><li>Batch cooking for the week ahead</li></ul></div><div class="card"><div class="card-icon">⚖️</div><h3>Cutting &amp; Bulking</h3><ul><li>Find your maintenance calories</li><li>Safe deficits that preserve muscle</li><li>Lean bulking without excess fat</li><li>When to switch between phases</li></ul></div><div class="card"><div class="card-icon">🛒</div><h3>Hydration &amp; Supplements</h3><ul><li>How much water you actually need</li><li>Protein powder - worth it or not</li><li>Creatine: dosage, timing, myths</li><li>Supplements to avoid wasting money on</li></ul></div></div></div></section>
+<section class="section"><div class="container"><h2 class="section-title">What <span>I cover</span></h2><div class="cards-grid"><div class="card"><div class="card-icon">🥩</div><h3>Protein &amp; Macros</h3><ul><li>Daily protein targets that actually work</li><li>Vegetarian &amp; vegan options</li><li>Simple meals you'll actually cook</li><li>Budget-friendly protein sources</li></ul></div><div class="card"><div class="card-icon">🍋</div><h3>Meal Planning</h3><ul><li>Templates that make grocery shopping easy</li><li>Snacks that fit your macros</li><li>Eating around school &amp; family meals</li><li>Batch cooking for the week ahead</li></ul></div><div class="card"><div class="card-icon">⚖️</div><h3>Cutting &amp; Bulking</h3><ul><li>Find your maintenance calories</li><li>Safe deficits that preserve muscle</li><li>Lean bulking without excess fat</li><li>When to switch between phases</li></ul></div><div class="card"><div class="card-icon">🔧</div><h3>Hydration &amp; Supplements</h3><ul><li>How much water you actually need</li><li>Protein powder - worth it or not?</li><li>Creatine: dosage, timing, myths</li><li>Supplements to avoid wasting money on</li></ul></div></div></div></section>
 
 <div class="section"><div class="container"><div class="section-inner"><div class="section-label">How I help</div><div class="section-heading">Personalised nutrition coaching</div><div class="section-sub">Everyone's body, goals, and lifestyle are different. I don't do cookie-cutter plans. We'll figure out what works for YOU — your schedule, your food preferences, your goals. No generic formulas.</div><div class="service-grid"><div class="service-card reveal"><h3>Find your baseline</h3><p>We figure out where you're at with your current eating habits and what needs to change. No drastic overhauls — just small, sustainable tweaks.</p></div><div class="service-card reveal"><h3>Build your plan</h3><p>A meal structure that fits around your life. School, family meals, training sessions — we work with what you've got, not against it.</p></div><div class="service-card reveal"><h3>Adjust as you go</h3><p>What works in month one might not work in month three. We check in, track progress, and adapt. This isn't a one-and-done thing.</p></div><div class="service-card reveal"><h3>No obsession required</h3><p>You don't need to weigh every gram of food forever. I'll teach you the intuition so you can manage your own nutrition long-term.</p></div></div></div></div></div>
 
@@ -76,17 +76,14 @@
 <footer><div class="container"><p>© 2026 <a href="#">Tutor</a>. Built for people who want to get stronger.</p></div></footer>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const reveals = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 }
             });
-        }, { threshold: 0.15 });
-        reveals.forEach(el => observer.observe(el));
-    });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
 </body>
