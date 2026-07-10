@@ -72,6 +72,9 @@
   footer p{color:var(--muted);font-size:.85rem}
   footer a{color:inherit}
 
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
   @media(max-width:768px){
     .nav-links{display:none}
     .hero h1{font-size:2.2rem}
@@ -102,19 +105,19 @@
   </div>
 </nav>
 
-<section class="hero">
+<section class="hero reveal">
   <div class="hero-label">A-LEVEL MATHS</div>
   <h1>Pure &middot; Mechanics &middot; Statistics</h1>
-  <p>The jump from GCSE to A-Level is real — and it's completely different. The questions are harder, the algebra is heavier, and you're expected to think, not just follow steps. I'll help you bridge that gap and build the confidence to tackle any problem.</p>
+  <p>The jump from GCSE to A-Level is real &mdash; and it's completely different. The questions are harder, the algebra is heavier, and you're expected to think, not just follow steps. I'll help you bridge that gap and build the confidence to tackle any problem.</p>
 </section>
 
 <section class="alt">
   <div class="section-inner">
     <div class="section-label">Three Modules</div>
     <h2 class="section-heading">Everything you'll cover</h2>
-    <p class="section-sub">A-Level maths splits into three core areas. Each demands a different style of thinking — and I teach all of them.</p>
+    <p class="section-sub">A-Level maths splits into three core areas. Each demands a different style of thinking &mdash; and I teach all of them.</p>
     <div class="module-grid">
-      <div class="module-card">
+      <div class="module-card reveal">
         <div class="icon">&#120514;</div>
         <h3>Pure Mathematics</h3>
         <ul>
@@ -129,7 +132,7 @@
           <li>Numerical methods</li>
         </ul>
       </div>
-      <div class="module-card">
+      <div class="module-card reveal">
         <div class="icon">&#9881;</div>
         <h3>Mechanics</h3>
         <ul>
@@ -143,7 +146,7 @@
           <li>Impulse &amp; momentum</li>
         </ul>
       </div>
-      <div class="module-card">
+      <div class="module-card reveal">
         <div class="icon">&#8800;</div>
         <h3>Statistics</h3>
         <ul>
@@ -161,12 +164,32 @@
   </div>
 </section>
 
+<section class="alt">
+  <div class="section-inner">
+    <div class="section-label">The A-Level Challenge</div>
+    <h2 class="section-heading">Why it's different from GCSE</h2>
+    <p class="section-sub">Two things that catch most students off guard — and how we tackle them head-on.</p>
+    <div class="teach-grid">
+      <div class="teach-card reveal">
+        <div class="num">1</div>
+        <h3>Not your GCSE</h3>
+        <p>A-Level maths demands conceptual understanding, not just rote procedures. Problems combine multiple topics, method marks dominate, and the algebra is far heavier. It's a different subject disguised under the same name.</p>
+      </div>
+      <div class="teach-card reveal">
+        <div class="num">2</div>
+        <h3>Fast pace, no waiting</h3>
+        <p>You cover more content in the first term of Year 12 than in two years of GCSE. There's no time to coast — lessons move quickly, and topics build on each other every single week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="section-inner">
     <div class="section-label">GCSE vs A-Level</div>
     <h2 class="section-heading">It's a different ball game</h2>
     <p class="section-sub">Most students underestimate the jump. Here's what actually changes.</p>
-    <table class="compare-table">
+    <table class="compare-table reveal">
       <thead>
         <tr>
           <th>Area</th>
@@ -211,25 +234,25 @@
     <h2 class="section-heading">Built for A-Level success</h2>
     <p class="section-sub">My approach is structured around what actually works at this level.</p>
     <div class="teach-grid">
-      <div class="teach-card">
+      <div class="teach-card reveal">
         <div class="num">1</div>
         <h3>Deep understanding first</h3>
         <p>No shortcuts. I make sure you know the <em>why</em> behind every method so you can adapt when a question throws a curveball.</p>
       </div>
-      <div class="teach-card">
+      <div class="teach-card reveal">
         <div class="num">2</div>
         <h3>Problem-solving skills</h3>
-        <p>We work on layered and unfamiliar problems — the kind that combine multiple topics — so you're ready for real exam questions.</p>
+        <p>We work on layered and unfamiliar problems &mdash; the kind that combine multiple topics &mdash; so you're ready for real exam questions.</p>
       </div>
-      <div class="teach-card">
+      <div class="teach-card reveal">
         <div class="num">3</div>
         <h3>Regular assessment</h3>
         <p>Short check-ins, timed past-paper practice, and honest feedback. Progress is tracked, not guessed.</p>
       </div>
-      <div class="teach-card">
+      <div class="teach-card reveal">
         <div class="num">4</div>
         <h3>Bridging from GCSE</h3>
-        <p>We start from where you are. I identify any GCSE gaps and fix them first — because A-Level won't wait for shaky foundations.</p>
+        <p>We start from where you are. I identify any GCSE gaps and fix them first &mdash; because A-Level won't wait for shaky foundations.</p>
       </div>
     </div>
   </div>
@@ -253,6 +276,10 @@
   </div>
   <p>&copy; 2026 Aryan Mehta &middot; <a href="mailto:aryoluke29@gmail.com">aryoluke29@gmail.com</a> &middot; Based in Stanmore, UK</p>
 </footer>
+
+<script>
+const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));
+</script>
 
 </body>
 </html>
