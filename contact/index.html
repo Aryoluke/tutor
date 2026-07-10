@@ -67,10 +67,10 @@ section{padding:70px 32px}
         <h3>WhatsApp</h3>
         <p>Fastest response. Send a message any time — I'll get back to you within a few hours.</p>
       </a>
-      <a href="mailto:aryoluke29@gmail.com" class="contact-card">
+      <a href="mailto:aryanjigar.jmehta@gmail.com" class="contact-card">
         <div class="icon">📧</div>
         <h3>Email</h3>
-        <p>aryoluke29@gmail.com — prefer email? That works too. I'll reply within 24 hours.</p>
+        <p>aryanjigar.jmehta@gmail.com — prefer email? That works too. I'll reply within 24 hours.</p>
       </a>
     </div>
 
@@ -104,7 +104,11 @@ section{padding:70px 32px}
   </div>
 </section>
 
-<footer><p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
-<script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));</script>
+<footer><p>© 2026 Aryan Mehta · <a href="mailto:aryanjigar.jmehta@gmail.com" style="color:inherit">aryanjigar.jmehta@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
+<script>
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+revealElements.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
