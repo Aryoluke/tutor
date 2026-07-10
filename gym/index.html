@@ -46,13 +46,15 @@ section.alt{background:var(--light)}
 .btn-outline:hover{background:var(--accent2);color:#fff}
 footer{padding:40px 32px;border-top:1px solid var(--border);text-align:center}
 footer p{color:var(--muted);font-size:.85rem}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2rem}.service-grid{grid-template-columns:1fr}.section-heading{font-size:1.6rem}section{padding:50px 20px}}
 </style>
 </head>
 <body>
 <nav class="nav-bar"><div class="nav-inner"><a href="../" class="logo"><div class="logo-icon">AT</div>Aryan Tutors</a><div class="nav-links"><a href="../maths/">Maths</a><a href="../gym/" class="active">Gym</a><a href="../pricing/">Pricing</a><a href="../about/">About</a><a href="../reviews/">Reviews</a><a href="../contact/" class="nav-cta">Get in touch</a></div></div></nav>
 
-<div class="hero">
+<div class="hero reveal">
   <div class="section-label">Gym Coaching</div>
   <h1>Calisthenics . Form . Programming . Diet</h1>
   <p>I've spent years figuring out calisthenics — the trial and error, the injuries, the plateaus, and the breakthroughs. Now I help others do the same, safely and efficiently.</p>
@@ -64,10 +66,24 @@ footer p{color:var(--muted);font-size:.85rem}
     <div class="section-heading">Everything you need to get stronger</div>
     <div class="section-sub">Whether you're a complete beginner or chasing advanced skills, there's a path for you.</div>
     <div class="service-grid">
-      <a href="beginners/" class="service-card"><div class="icon">🌑</div><h3>Beginner Calisthenics</h3><p>Start from zero. Build your first pull-up, master push-ups, and develop a solid foundation with proper form from day one.</p></a>
-      <a href="skills/" class="service-card"><div class="icon">⚕</div><h3>Skills Training</h3><p>Muscle-up, front lever, planche, handstand. Clear progression paths, technique breakdowns, and the accessory work that unlocks them.</p></a>
-      <a href="home/" class="service-card"><div class="icon">🏠</div><h3>Home Workouts</h3><p>No gym? No problem. Minimal equipment programmes using a pull-up bar, floor space, and whatever you've got available.</p></a>
-      <a href="diet/" class="service-card"><div class="icon">🍽</div><h3>Diet &amp; Nutrition</h3><p>Macro guidance, meal planning, cutting and bulking strategies, and sustainable habits — built around your lifestyle and goals.</p></a>
+      <a href="beginners/" class="service-card reveal"><div class="icon">🌑</div><h3>Beginner Calisthenics</h3><p>Start from zero. Build your first pull-up, master push-ups, and develop a solid foundation with proper form from day one.</p></a>
+      <a href="skills/" class="service-card reveal"><div class="icon">⚕</div><h3>Skills Training</h3><p>Muscle-up, front lever, planche, handstand. Clear progression paths, technique breakdowns, and the accessory work that unlocks them.</p></a>
+      <a href="home/" class="service-card reveal"><div class="icon">🏠</div><h3>Home Workouts</h3><p>No gym? No problem. Minimal equipment programmes using a pull-up bar, floor space, and whatever you've got available.</p></a>
+      <a href="diet/" class="service-card reveal"><div class="icon">🍽</div><h3>Diet &amp; Nutrition</h3><p>Macro guidance, meal planning, cutting and bulking strategies, and sustainable habits — built around your lifestyle and goals.</p></a>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--light)">
+  <div class="section-inner reveal">
+    <div class="section-label">Training philosophy</div>
+    <div class="section-heading">How I think about fitness</div>
+    <div class="section-sub">No shortcuts. No gimmicks. Just smart, consistent work that builds real results.</div>
+    <div class="service-grid">
+      <div class="service-card reveal"><h3>Form before weight</h3><p>Adding weight to bad form multiplies injury risk. We lock in technique first — the strength follows naturally.</p></div>
+      <div class="service-card reveal"><h3>Progressive overload</h3><p>Getting stronger week by week. Not by maxing out every session, but by small, sustainable increases in volume or intensity.</p></div>
+      <div class="service-card reveal"><h3>Recovery is training</h3><p>You don't build muscle during the workout — you build it during recovery. Sleep, nutrition, and rest days are non-negotiable.</p></div>
+      <div class="service-card reveal"><h3>Consistency beats everything</h3><p>A mediocre programme done consistently beats a perfect programme done occasionally. Show up, do the work, trust the process.</p></div>
     </div>
   </div>
 </section>
@@ -78,10 +94,24 @@ footer p{color:var(--muted);font-size:.85rem}
     <div class="section-heading">No ego. No rushing. Just progress.</div>
     <div class="section-sub">Every session starts with a form assessment. We figure out where you're at, identify weak points, and build a programme around your specific goals.</div>
     <div class="service-grid">
-      <div class="service-card"><h3>Form assessment</h3><p>I watch how you move, spot what needs fixing, and correct it before it becomes a problem. Good form now prevents injury later.</p></div>
-      <div class="service-card"><h3>Custom programming</h3><p>No cookie-cutter plans. Your programme is built around your goals, equipment, schedule, and current level. It evolves as you get stronger.</p></div>
-      <div class="service-card"><h3>Posture &amp; mobility</h3><p>Rounded shoulders, anterior pelvic tilt, tight hibs — common issues we can fix with targeted exercises alongside your main training.</p></div>
-      <div class="service-card"><h3>Progressive overload</h3><p>Getting stronger week by week through volume, tempo, leverage, and resistance — without needing a full gym setup.</p></div>
+      <div class="service-card reveal"><h3>Form assessment</h3><p>I watch how you move, spot what needs fixing, and correct it before it becomes a problem. Good form now prevents injury later.</p></div>
+      <div class="service-card reveal"><h3>Custom programming</h3><p>No cookie-cutter plans. Your programme is built around your goals, equipment, schedule, and current level. It evolves as you get stronger.</p></div>
+      <div class="service-card reveal"><h3>Posture &amp; mobility</h3><p>Rounded shoulders, anterior pelvic tilt, tight hips — common issues we can fix with targeted exercises alongside your main training.</p></div>
+      <div class="service-card reveal"><h3>Progressive overload</h3><p>Getting stronger week by week through volume, tempo, leverage, and resistance — without needing a full gym setup.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-inner reveal">
+    <div class="section-label">Who I work with</div>
+    <div class="section-heading">No experience requirements</div>
+    <div class="section-sub">I've coached all kinds of people. Here's who tends to get the most out of working with me.</div>
+    <div class="service-grid">
+      <div class="service-card reveal"><h3>Complete beginners</h3><p>Never touched a pull-up bar? Perfect. We'll start from the very beginning and build good habits from day one.</p></div>
+      <div class="service-card reveal"><h3>Gamers with bad posture</h3><p>Rounded shoulders, forward head, back pain from sitting all day. We'll fix the damage and get you moving well.</p></div>
+      <div class="service-card reveal"><h3>Students wanting to get in shape</h3><p>School is stressful. Exercise helps with everything — focus, sleep, confidence. We'll fit training around your schedule.</p></div>
+      <div class="service-card reveal"><h3>Intermediate plateaus</h3><p>Stuck at 8 pull-ups? Can't get the muscle-up transition? I'll spot what's holding you back and get you unstuck.</p></div>
     </div>
   </div>
 </section>
@@ -89,5 +119,6 @@ footer p{color:var(--muted);font-size:.85rem}
 <div class="cta-section"><h2>Ready to start?</h2><p>Send me a message. Tell me what you're working towards and we'll figure out a plan.</p><a href="../contact/" class="btn btn-primary">Get in touch →</a></div>
 
 <footer><p>© 2026 Aryan Mehta &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
+<script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));</script>
 </body>
 </html>
