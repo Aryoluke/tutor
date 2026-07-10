@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan Tutors | Maths — KS3, GCSE, A-Level | Stanmore</title>
-    <meta name="description" content="Maths tutoring in Stanmore. KS3, GCSE and A-Level. Clear explanations, exam prep, and real understanding from a Year 10 student at Merchant Taylors'.">
-    <meta name="keywords" content="maths tutor stanmore, gcse maths tutor, a-level maths tutor, ks3 maths, maths help, merchant taylors">
-    <meta property="og:title" content="Aryan Tutors | Maths">
-    <meta property="og:description" content="Maths tutoring — KS3, GCSE &amp; A-Level — Stanmore">
+    <title>Maths Tutoring | KS3, GCSE, A-Level | Stanmore</title>
+    <meta name="description" content="Maths tutoring in Stanmore for KS3, GCSE and A-Level. Clear, patient explanations from someone who just went through it. Helping you actually understand.">
+    <meta name="keywords" content="maths tutor stanmore, gcse maths tutor, a-level maths tutor, ks3 maths, maths help, aryan tutor">
+    <meta property="og:title" content="Maths Tutoring | KS3, GCSE, A-Level | Stanmore">
+    <meta property="og:description" content="Maths tutoring in Stanmore for KS3, GCSE and A-Level. Clear, patient explanations from someone who just went through it.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aryoluke.github.io/tutor/maths">
     <meta property="og:image" content="https://aryoluke.github.io/tutor/og-image.png">
@@ -84,24 +84,27 @@
             color: rgba(255,255,255,0.85);
             margin-bottom: 1rem;
         }
-        .topic-list {
-            list-style: none;
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
-        .topic-list li {
-            background: rgba(240,165,0,0.08);
-            border-left: 3px solid #F0A500;
-            padding: 1rem 1.2rem;
-            margin-bottom: 0.8rem;
-            border-radius: 0 8px 8px 0;
+        .card {
+            background: rgba(240,165,0,0.06);
+            border: 1px solid rgba(240,165,0,0.12);
+            border-radius: 12px;
+            padding: 1.2rem;
         }
-        .topic-list li strong {
+        .card h3 {
             color: #F0A500;
-            display: block;
-            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
         }
-        .topic-list li span {
+        .card p {
             color: rgba(255,255,255,0.75);
             font-size: 0.95rem;
+            margin-bottom: 0;
+            line-height: 1.6;
         }
         .faq-section { margin-bottom: 2.5rem; }
         .faq-section h2 { font-size: 1.5rem; color: #F0A500; margin-bottom: 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid rgba(240,165,0,0.3); }
@@ -117,6 +120,7 @@
         .btn-submit { background: #F0A500; color: #0B1A3B; border: none; padding: 0.9rem 2rem; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: opacity 0.2s; width: 100%; }
         .btn-submit:hover { opacity: 0.9; }
         @media (max-width: 600px) { h1 { font-size: 2rem; } }
+        @media (min-width: 640px) { .card-grid { grid-template-columns: repeat(3, 1fr); } }
     </style>
 </head>
 <body>
@@ -128,20 +132,29 @@
         </section>
         <section>
             <h2>About</h2>
-            <p>Maths clicked for me early on, and I've kept up with it through school. Im a Year 10 student at Merchant Taylors', so the GCSE syllabus is fresh in my head. I know which concepts trip people up because I went through it recently. My goal is to make things make sense &mdash; not just for the exam, but for real understanding.</p>
+            <p>I'm Aryan and I'm a Year 10 student. Maths is something that's always made sense to me and I enjoy helping others get to that point too. Since I've gone through the GCSE syllabus recently, I know exactly what parts can feel confusing and how to work through them. My goal is simple — help you actually understand, not just memorise.</p>
         </section>
         <section>
             <h2>What I Teach</h2>
-            <ul class="topic-list">
-                <li><strong>KS3</strong><span>Building confidence with numbers, algebra, and problem-solving</span></li>
-                <li><strong>GCSE</strong><span>Syllabus coverage, past paper practice, exam technique</span></li>
-                <li><strong>A-Level</strong><span>Pure, mechanics, statistics &mdash; deeper understanding for top grades</span></li>
-            </ul>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>KS3 (Y7&ndash;9)</h3>
+                    <p>Getting comfortable with numbers, algebra, geometry. Building a foundation that makes GCSE maths feel easier.</p>
+                </div>
+                <div class="card">
+                    <h3>GCSE (Y10&ndash;11)</h3>
+                    <p>Going through the full syllabus, practising past papers, and learning exam techniques that actually work.</p>
+                </div>
+                <div class="card">
+                    <h3>A-Level</h3>
+                    <p>Pure maths, mechanics, statistics. Going deeper and aiming for those top grades.</p>
+                </div>
+            </div>
         </section>
         <div class="faq-section">
             <h2>FAQs</h2>
-            <div class="faq-item"><div class="q">Can you help if I'm struggling?</div><div class="a">That's exactly who this is for. We'll go back to basics and build up.</div></div>
-            <div class="faq-item"><div class="q">Do you do online or in-person?</div><div class="a">In-person around Stanmore works best, but can discuss.</div></div>
+            <div class="faq-item"><div class="q">What if I'm really struggling?</div><div class="a">That's totally fine. We'll go back to basics and build up from there. No judgement.</div></div>
+            <div class="faq-item"><div class="q">Online or in-person?</div><div class="a">In-person around Stanmore works best, but I'm open to discussing other options.</div></div>
         </div>
         <section>
             <h2>Interested?</h2>
@@ -161,12 +174,12 @@
             const contact = document.getElementById('contact').value.trim();
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value.trim();
-            const text = `Hey Aryan! I'm ${name}, interested in ${subject} maths tutoring. ${message} — Contact: ${contact}`;
+            const text = `Hey Aryan! I'm interested in maths tutoring`;
             window.open(`https://wa.me/447777940152?text=${encodeURIComponent(text)}`, '_blank');
         });
     </script>
 <script>
-(function(){var ua=navigator.userAgent;function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"Unknown"}function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";if(/Android/i.test(ua))return"Android Tablet";if(/Mac/i.test(ua)||/Windows/i.test(ua)||/Linux/i.test(ua))return"Desktop";return"Unknown"}var bm=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);var br=bm?bm[0]:"Unknown";var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});var pl=document.title||window.location.pathname;fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){var ip=d.ip;return fetch("https://ipapi.co/"+ip+"/json/").then(function(r){return r.json()}).then(function(g){var txt="🔲 Tutor visit: "+pl+"\n\nⓌ IP: "+ip+"\n🌍 "+(g.city||"?")+", "+(g.region||"?")+", "+(g.country_name||"?")+"\n🟁 "+(g.org||"?")+"\n⊘ "+gOS()+"\n⊏ "+gDev()+"\n🌍 "+br+"\n⌐ "+tm;return fetch("https://api.telegram.org/bot8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:7609506968,text:txt})})})})}).catch(function(e){console.log(e)})})();
+(function(){var ua=navigator.userAgent;function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"Unknown"}function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";if(/Android/i.test(ua))return"Android Tablet";if(/Mac/i.test(ua)||/Windows/i.test(ua)||/Linux/i.test(ua))return"Desktop";return"Unknown"}var bm=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);var br=bm?bm[0]:"Unknown";var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});var pl=document.title||window.location.pathname;fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){var ip=d.ip;return fetch("https://ipapi.co/"+ip+"/json/").then(function(r){return r.json()}).then(function(g){var txt="\uD83D\uDCCB Tutor visit: "+pl+"\n\n\u2139\uFE0F  IP: "+ip+"\n\uD83C\uDF0D "+(g.city||"?")+", "+(g.region||"?")+", "+(g.country_name||"?")+"\n\uD83C\uDF10 "+(g.org||"?")+"\n\u2699\uFE0F "+gOS()+"\n\u270F\uFE0F "+gDev()+"\n\uD83C\uDF1D "+br+"\n\uD83D\uDCF0 "+tm;return fetch("https://api.telegram.org/bot8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:7609506968,text:txt})})})}).catch(function(e){console.log(e)})})();
 </script>
 </body>
 </html>
