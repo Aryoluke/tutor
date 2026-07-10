@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Coaching | Calisthenics, Form &amp; Strength | Stanmore</title>
-    <meta name="description" content="Gym coaching and calisthenics training in Stanmore. Bodyweight basics, form correction, programme design, and skills progressions.">
-    <meta name="keywords" content="gym coach, calisthenics coach, strength training, pull-ups, form coaching, programme design, stanmore">
-    <meta property="og:title" content="Gym Coaching | Calisthenics, Form &amp; Strength">
-    <meta property="og:description" content="Gym coaching and calisthenics training. Bodyweight basics, form correction, programme design, and skills progressions.">
+    <title>Aryan Tutors | Gym Coaching — Calisthenics &amp; Strength | Stanmore</title>
+    <meta name="description" content="Gym coaching in Stanmore. Calisthenics basics, form coaching, programme design and skills progression. No experience needed.">
+    <meta name="keywords" content="gym coach stanmore, calisthenics coach, personal trainer, form coaching, strength training, calisthenics for beginners">
+    <meta property="og:title" content="Aryan Tutors | Gym Coaching">
+    <meta property="og:description" content="Gym coaching — calisthenics, form &amp; strength — Stanmore">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aryoluke.github.io/tutor/gym">
-    <meta property="og:image" content="https://aryoluke.github.io/tutor/og-image.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -83,43 +82,87 @@
             color: rgba(255,255,255,0.85);
             margin-bottom: 1rem;
         }
-        .card-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
+        .offer-list {
+            list-style: none;
         }
-        .card {
+        .offer-list li {
             background: rgba(255,107,53,0.06);
-            border: 1px solid rgba(255,107,53,0.12);
-            border-radius: 12px;
-            padding: 1.2rem;
+            border-left: 3px solid #FF6B35;
+            padding: 1rem 1.2rem;
+            margin-bottom: 0.8rem;
+            border-radius: 0 8px 8px 0;
         }
-        .card h3 {
+        .offer-list li strong {
             color: #FF6B35;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            display: block;
+            margin-bottom: 0.3rem;
         }
-        .card p {
+        .offer-list li span {
             color: rgba(255,255,255,0.75);
             font-size: 0.95rem;
-            margin-bottom: 0;
-            line-height: 1.6;
         }
-        .faq-section { margin-bottom: 2.5rem; }
-        .faq-section h2 { font-size: 1.5rem; color: #FF6B35; margin-bottom: 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid rgba(255,107,53,0.3); }
-        .faq-item { background: rgba(255,107,53,0.06); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.7rem; border: 1px solid rgba(255,107,53,0.1); }
-        .faq-item .q { font-weight: 600; color: #FF6B35; margin-bottom: 0.2rem; }
-        .faq-item .a { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.5; }
-        .form-group { margin-bottom: 1.2rem; }
-        .form-group label { display: block; font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0.4rem; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: #fff; font-size: 1rem; font-family: inherit; outline: none; transition: border 0.2s; }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #FF6B35; }
-        .form-group select option { background: #121212; color: #fff; }
-        .form-group textarea { min-height: 80px; resize: vertical; }
-        .btn-submit { background: #FF6B35; color: #121212; border: none; padding: 0.9rem 2rem; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: opacity 0.2s; width: 100%; }
+        .badge {
+            display: inline-block;
+            background: rgba(255,107,53,0.15);
+            color: #FF6B35;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255,107,53,0.3);
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.4rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.06);
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #FF6B35;
+        }
+        .form-group select option {
+            background: #121212;
+            color: #fff;
+        }
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .btn-submit {
+            background: #FF6B35;
+            color: #121212;
+            border: none;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            width: 100%;
+        }
         .btn-submit:hover { opacity: 0.9; }
-        @media (max-width: 600px) { h1 { font-size: 2rem; } }
-        @media (min-width: 640px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
@@ -128,41 +171,40 @@
         
         <section>
             <h1>Gym Coaching</h1>
-            <p class="hero-sub">Calisthenics &middot; Form &middot; Strength</p>
+            <p class="hero-sub">Calisthenics &middot; Strength &middot; Form</p>
         </section>
 
         <section>
             <h2>About</h2>
-            <p>I got into calisthenics a while back and I've been training consistently ever since. I've made plenty of mistakes along the way with form and programming — and I can help you avoid those same mistakes. Whether you're completely new or looking to level up, I'll help you train smarter.</p>
+            <p>I'm Aryan &mdash; 14, calisthenics athlete in training. I can do 17 pull-ups and 7 weighted with 15kg. I'm working towards my first muscle up. I know what works and I can teach u proper form, progressive overload, and how to build a physique that performs.</p>
         </section>
 
         <section>
             <h2>What I Offer</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Bodyweight Basics</h3>
-                    <p>Pull-ups, dips, push-ups, core work. Master the fundamentals before adding weight.</p>
-                </div>
-                <div class="card">
-                    <h3>Form + Posture</h3>
-                    <p>Fix common issues like rounded shoulders and improper technique. Train safely.</p>
-                </div>
-                <div class="card">
-                    <h3>Programme Design</h3>
-                    <p>A split that fits your schedule and goals. No cookie-cutter plans.</p>
-                </div>
-                <div class="card">
-                    <h3>Skills Progressions</h3>
-                    <p>Working towards muscle ups, front levers, planches — step by step.</p>
-                </div>
-            </div>
+            <ul class="offer-list">
+                <li>
+                    <strong>Calisthenics Basics</strong>
+                    <span>Pull-ups, dips, push-ups, core work. Master bodyweight first.</span>
+                </li>
+                <li>
+                    <strong>Form Coaching</strong>
+                    <span>Fix rounded shoulders, anterior pelvic tilt, improper technique</span>
+                </li>
+                <li>
+                    <strong>Programme Design</strong>
+                    <span>Custom PPL splits, skill progressions, running + strength balance</span>
+                </li>
+                <li>
+                    <strong>Skills Training</strong>
+                    <span>Muscle up progressions, front lever, planche foundations</span>
+                </li>
+            </ul>
         </section>
 
-        <div class="faq-section">
-            <h2>FAQs</h2>
-            <div class="faq-item"><div class="q">I've never trained before.</div><div class="a">Perfect. Starting from scratch means no bad habits to fix. We'll go at your pace.</div></div>
-            <div class="faq-item"><div class="q">Is this just for guys?</div><div class="a">Not at all. Calisthenics is for everyone.</div></div>
-        </div>
+        <section>
+            <h2>Pricing</h2>
+            <span class="badge">DM for rates</span>
+        </section>
 
         <section>
             <h2>Interested?</h2>
@@ -179,10 +221,10 @@
                     <label for="subject">Subject</label>
                     <select id="subject" required>
                         <option value="">Select...</option>
-                        <option value="Calisthenics Basics">Bodyweight Basics</option>
-                        <option value="Form Coaching">Form + Posture</option>
+                        <option value="Calisthenics">Calisthenics Basics</option>
+                        <option value="Form Coaching">Form Coaching</option>
                         <option value="Programme Design">Programme Design</option>
-                        <option value="Skills Training">Skills Progressions</option>
+                        <option value="Skills Training">Skills Training</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -197,12 +239,16 @@
     <script>
         document.getElementById('interestForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const text = `Hey Aryan! I'm interested in gym coaching`;
+            const name = document.getElementById('name').value.trim();
+            const contact = document.getElementById('contact').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+            const text = `Hey Aryan! I'm ${name}, interested in ${subject} gym coaching. ${message} — Contact: ${contact}`;
             window.open(`https://wa.me/447777940152?text=${encodeURIComponent(text)}`, '_blank');
         });
     </script>
 <script>
-(function(){var ua=navigator.userAgent;function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"Unknown"}function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";if(/Android/i.test(ua))return"Android Tablet";if(/Mac/i.test(ua)||/Windows/i.test(ua)||/Linux/i.test(ua))return"Desktop";return"Unknown"}var bm=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);var br=bm?bm[0]:"Unknown";var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});var pl=document.title||window.location.pathname;fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){var ip=d.ip;return fetch("https://ipapi.co/"+ip+"/json/").then(function(r){return r.json()}).then(function(g){var txt="\uD83D\uDCCB Tutor visit: "+pl+"\n\n\u2139\uFE0F  IP: "+ip+"\n\uD83C\uDF0D "+(g.city||"?")+", "+(g.region||"?")+", "+(g.country_name||"?")+"\n\uD83C\uDF10 "+(g.org||"?")+"\n\u2699\uFE0F "+gOS()+"\n\u270F\uFE0F "+gDev()+"\n\uD83C\uDF1D "+br+"\n\uD83D\uDCF0 "+tm;return fetch("https://api.telegram.org/bot8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:7609506968,text:txt})})})}).catch(function(e){console.log(e)})})();
+(function(){var ua=navigator.userAgent;function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"Unknown"}function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";if(/Android/i.test(ua))return"Android Tablet";if(/Mac/i.test(ua)||/Windows/i.test(ua)||/Linux/i.test(ua))return"Desktop";return"Unknown"}var bm=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);var br=bm?bm[0]:"Unknown";var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});var pl=document.title||window.location.pathname;fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){var ip=d.ip;return fetch("https://ipapi.co/"+ip+"/json/").then(function(r){return r.json()}).then(function(g){var txt="\ud83d\udcf2 Tutor visit: "+pl+"\n\n\ud83d\udcf0 IP: "+ip+"\n\ud83d\udccd "+(g.city||"?")+", "+(g.region||"?")+", "+(g.country_name||"?")+"\n\ud83d\udde1 "+(g.org||"?")+"\n\ud83d\udcf1 "+gOS()+"\n\ud83d\udcfb "+gDev()+"\n\ud83c\udf09 "+br+"\n\u23f0 "+tm;return fetch("https://api.telegram.org/bot8687058866:AAG2GvVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:7609506968,text:txt})})})}).catch(function(e){console.log(e)})})();
 </script>
 </body>
 </html>
