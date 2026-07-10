@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Tutoring | Aryoluke Tutor</title>
+    <style>
+        /* === CREAM THEME === */
+        :root {
+            --cream: #FFF8F0;
+            --cream-dark: #F5E6D0;
+            --cream-border: #E8D5B5;
+            --text: #3D2C1E;
+            --text-light: #6B5340;
+            --accent: #C4956A;
+            --accent-hover: #B07D52;
+            --white: #FFFFFF;
+            --shadow: rgba(61, 44, 30, 0.1);
+            --radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        a { color: var(--accent); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--accent-hover); }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        /* === NAV === */
+        nav {
+            background: var(--white);
+            border-bottom: 2px solid var(--cream-border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); letter-spacing: -0.5px; }
+        nav ul { list-style: none; display: flex; gap: 28px; }
+        nav ul li a { font-weight: 500; font-size: 0.95rem; color: var(--text-light); transition: color 0.3s; }
+        nav ul li a:hover { color: var(--accent); }
+        .nav-cta {
+            background: var(--accent);
+            color: var(--white) !important;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        .nav-cta:hover { background: var(--accent-hover); color: var(--white) !important; }
+
+        @media (max-width: 600px) {
+            nav ul { gap: 16px; }
+            nav ul li a { font-size: 0.85rem; }
+        }
+
+        /* === HERO === */
+        .hero {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            text-align: center;
+            padding: 100px 24px 80px;
+            border-bottom: 2px solid var(--cream-border);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 650px;
+            margin: 0 auto 32px;
+        }
+        .hero-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .hero-btn:hover { background: var(--accent-hover); color: var(--white); transform: translateY(-2px); }
+
+        /* === SECTIONS === */
+        section { padding: 80px 0; }
+        section:nth-child(even) { background: var(--white); }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+            color: var(--text);
+            letter-spacing: -0.5px;
+        }
+
+        /* === HOW IT WORKS === */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .step {
+            background: var(--cream);
+            border: 2px solid var(--cream-border);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .step:hover { transform: translateY(-6px); box-shadow: 0 12px 30px var(--shadow); }
+        .step .icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        .step h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+        .step p { font-size: 0.95rem; color: var(--text-light); }
+
+        /* === BENEFITS === */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .benefit-card {
+            background: var(--cream);
+            border: 2px solid var(--cream-border);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px var(--shadow); }
+        .benefit-card .icon { font-size: 2rem; margin-bottom: 12px; }
+        .benefit-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+        .benefit-card p { font-size: 0.93rem; color: var(--text-light); }
+
+        /* === COMPARISON TABLE === */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--cream);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 4px 16px var(--shadow);
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 18px 24px;
+            text-align: left;
+            border-bottom: 2px solid var(--cream-border);
+        }
+        .comparison-table th {
+            background: var(--accent);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+        .comparison-table td:first-child {
+            font-weight: 600;
+            color: var(--text);
+        }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table .check { color: #4CAF50; font-weight: bold; }
+        .comparison-table .cross { color: #D32F2F; font-weight: bold; }
+        .comparison-table .partial { color: var(--accent); font-weight: bold; }
+
+        .table-wrapper { overflow-x: auto; }
+
+        @media (max-width: 600px) {
+            .comparison-table th,
+            .comparison-table td { padding: 12px 14px; font-size: 0.85rem; }
+        }
+
+        /* === CTA === */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, var(--cream-dark) 0%, var(--cream) 100%);
+            border-top: 2px solid var(--cream-border);
+            border-bottom: 2px solid var(--cream-border);
+        }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 16px; }
+        .cta-section p { font-size: 1.1rem; color: var(--text-light); margin-bottom: 32px; max-width: 550px; margin-left: auto; margin-right: auto; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 16px 44px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .cta-btn:hover { background: var(--accent-hover); color: var(--white); transform: translateY(-2px); }
+
+        /* === FOOTER === */
+        footer {
+            background: var(--text);
+            color: var(--cream);
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        footer a:hover { color: var(--cream-dark); }
+
+        /* === SCROLL REVEAL === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === BACK TO TOP === */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s, visibility 0.4s, background 0.3s;
+            box-shadow: 0 4px 16px var(--shadow);
+            z-index: 99;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        #back-to-top:hover {
+            background: var(--accent-hover);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            section { padding: 60px 0; }
+            .section-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="container">
+        <span class="logo">Aryoluke Tutor</span>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/subjects/">Subjects</a></li>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/online/" class="nav-cta">Online</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero reveal">
+    <div class="container">
+        <h1>Online Tutoring</h1>
+        <p>Learn from anywhere. WhatsApp video or your preferred platform — same quality coaching, no travel needed.</p>
+        <a href="/contact/" class="hero-btn">Book Your Free Consultation</a>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+    <div class="container">
+        <h2 class="section-title reveal">How Online Sessions Work</h2>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="icon">📱</div>
+                <h3>Choose Your Platform</h3>
+                <p>WhatsApp video, Zoom, Google Meet, or Microsoft Teams — use whatever you're comfortable with. I'll send you a link.</p>
+            </div>
+            <div class="step reveal">
+                <div class="icon">💻</div>
+                <h3>What You Need</h3>
+                <p>A stable internet connection, a device with a camera & microphone, and a quiet space. That's it — no special software required.</p>
+            </div>
+            <div class="step reveal">
+                <div class="icon">📄</div>
+                <h3>Materials Shared Instantly</h3>
+                <p>I share screens, PDF worksheets, notes, and recordings after each session — everything you need is delivered digitally.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section>
+    <div class="container">
+        <h2 class="section-title reveal">Why Choose Online Tutoring?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card reveal">
+                <div class="icon">📅</div>
+                <h3>Flexible Scheduling</h3>
+                <p>Easier to find time slots that work for both of us. No commute means more time for learning.</p>
+            </div>
+            <div class="benefit-card reveal">
+                <div class="icon">🏠</div>
+                <h3>Learn From Home</h3>
+                <p>No travel stress. Log in from your bedroom, living room, or wherever you focus best.</p>
+            </div>
+            <div class="benefit-card reveal">
+                <div class="icon">🎥</div>
+                <h3>Record Sessions</h3>
+                <p>Every session can be recorded — rewatch explanations anytime, perfect for revision.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+    <div class="container">
+        <h2 class="section-title reveal">Online vs In-Person Tutoring</h2>
+        <div class="table-wrapper reveal">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Online</th>
+                        <th>In-Person</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Flexible scheduling</td>
+                        <td><span class="check">✓</span> Easy</td>
+                        <td><span class="partial">~</span> Limited</td>
+                    </tr>
+                    <tr>
+                        <td>Travel time</td>
+                        <td><span class="check">✓</span> None</td>
+                        <td><span class="cross">✗</span> Required</td>
+                    </tr>
+                    <tr>
+                        <td>Quality of teaching</td>
+                        <td><span class="check">✓</span> Same high quality</td>
+                        <td><span class="check">✓</span> Same high quality</td>
+                    </tr>
+                    <tr>
+                        <td>Screen sharing &amp; digital materials</td>
+                        <td><span class="check">✓</span> Built-in</td>
+                        <td><span class="partial">~</span> Printouts only</td>
+                    </tr>
+                    <tr>
+                        <td>Session recordings</td>
+                        <td><span class="check">✓</span> Available</td>
+                        <td><span class="cross">✗</span> Not available</td>
+                    </tr>
+                    <tr>
+                        <td>Personal interaction</td>
+                        <td><span class="partial">~</span> Virtual</td>
+                        <td><span class="check">✓</span> Face-to-face</td>
+                    </tr>
+                    <tr>
+                        <td>Cost (no travel)</td>
+                        <td><span class="check">✓</span> Lower</td>
+                        <td><span class="partial">~</span> May include travel fee</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2 class="reveal">Ready to Get Started?</h2>
+        <p class="reveal">Book your first online session today and experience the flexibility of learning from anywhere.</p>
+        <a href="/contact/" class="cta-btn reveal">Book an Online Session</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Aryoluke Tutor. All rights reserved. | <a href="/contact/">Contact</a></p>
+    </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="back-to-top" aria-label="Back to top">↑</button>
+
+<script>
+    // === SCROLL REVEAL ===
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+
+    // === BACK TO TOP ===
+    const btn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        btn.classList.toggle('show', window.scrollY > 400);
+    });
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
