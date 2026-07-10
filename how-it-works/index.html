@@ -43,12 +43,15 @@ section.alt{background:var(--light)}
 footer{padding:40px 32px;border-top:1px solid var(--border);text-align:center}
 footer p{color:var(--muted);font-size:.85rem}
 @media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2rem}.section-heading{font-size:1.6rem}.step{gap:16px}section{padding:50px 20px}}
+/* scroll animations */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 <nav class="nav-bar"><div class="nav-inner"><a href="../" class="logo"><div class="logo-icon">AT</div>Aryan Tutors</a><div class="nav-links"><a href="../maths/">Maths</a><a href="../gym/">Gym</a><a href="../pricing/">Pricing</a><a href="../about/">About</a><a href="../reviews/">Reviews</a><a href="../how-it-works/" class="active">How It Works</a><a href="../contact/" class="nav-cta">Get in touch</a></div></div></nav>
 
-<div class="hero">
+<div class="hero reveal">
   <div class="section-label">How It Works</div>
   <h1>From first message to first session</h1>
   <p>Simple and no pressure. Here's exactly what happens when you reach out.</p>
@@ -56,10 +59,10 @@ footer p{color:var(--muted);font-size:.85rem}
 
 <section>
   <div class="section-inner">
-    <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Reach out</h3><p>Send me a message on WhatsApp or email. Tell me what you're looking for — maths, gym, or both — and roughly where you're at. No long forms. No commitment. Just a conversation starter.</p></div></div>
-    <div class="step"><div class="step-num">2</div><div class="step-content"><h3>Quick chat</h3><p>We'll have a relaxed conversation about your goals, current level, and what kind of help would make the biggest difference. I'll ask a few questions to understand where you're at. This chat is free and obligation-free — it's just to make sure we're a good fit.</p></div></div>
-    <div class="step"><div class="step-num">3</div><div class="step-content"><h3>First session</h3><p>We'll meet — in person or online — and start working on your goals. I'll assess where you're at, figure out a plan tailored to you, and we'll get straight into it. For maths, this might mean tackling a topic you're stuck on. For gym, it starts with a form and movement assessment. No judgement, just progress.</p></div></div>
-    <div class="step"><div class="step-num">4</div><div class="step-content"><h3>Keep going (or don't)</h3><p>After the first session, you decide if you want to continue. No contracts, no pressure. If it's working for you, we'll set up regular sessions — weekly, fortnightly, whatever fits. If it's not what you expected, no hard feelings at all. You pay for what you use.</p></div></div>
+    <div class="step reveal"><div class="step-num">1</div><div class="step-content"><h3>Reach out</h3><p>Send me a message on WhatsApp or email. Tell me what you're looking for — maths, gym, or both — and roughly where you're at. No long forms. No commitment. Just a conversation starter.</p></div></div>
+    <div class="step reveal"><div class="step-num">2</div><div class="step-content"><h3>Quick chat</h3><p>We'll have a relaxed conversation about your goals, current level, and what kind of help would make the biggest difference. I'll ask a few questions to understand where you're at. This chat is free and obligation-free — it's just to make sure we're a good fit.</p></div></div>
+    <div class="step reveal"><div class="step-num">3</div><div class="step-content"><h3>First session</h3><p>We'll meet — in person or online — and start working on your goals. I'll assess where you're at, figure out a plan tailored to you, and we'll get straight into it. For maths, this might mean tackling a topic you're stuck on. For gym, it starts with a form and movement assessment. No judgement, just progress.</p></div></div>
+    <div class="step reveal"><div class="step-num">4</div><div class="step-content"><h3>Keep going (or don't)</h3><p>After the first session, you decide if you want to continue. No contracts, no pressure. If it's working for you, we'll set up regular sessions — weekly, fortnightly, whatever fits. If it's not what you expected, no hard feelings at all. You pay for what you use.</p></div></div>
   </div>
 </section>
 
@@ -78,5 +81,9 @@ footer p{color:var(--muted);font-size:.85rem}
 <div class="cta-section"><h2>Ready for step 1?</h2><p>It takes 30 seconds to send a message. Zero pressure, no commitment.</p><a href="../contact/" class="btn btn-primary">Get in touch →</a></div>
 
 <footer><p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
+<script>
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>
