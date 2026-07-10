@@ -46,6 +46,7 @@ footer{background:#0a0a0a;color:#666;text-align:center;padding:2rem;font-size:0.
 .hero h1{font-size:2rem;}
 .nav-links{display:none;}
 }
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
 </style>
 </head>
 <body>
@@ -62,7 +63,7 @@ footer{background:#0a0a0a;color:#666;text-align:center;padding:2rem;font-size:0.
 </div>
 </nav>
 
-<section class="hero">
+<section class="hero reveal">
 <div class="label">POSTURE CORRECTION</div>
 <h1>Fix rounded shoulders &amp; APT</h1>
 <p>Years of sitting, gaming, and studying take a toll on your posture. I'll show you how to fix it with simple, targeted exercises.</p>
@@ -71,15 +72,15 @@ footer{background:#0a0a0a;color:#666;text-align:center;padding:2rem;font-size:0.
 <section class="section">
 <h2>Common issues I see</h2>
 <div class="cards">
-<div class="card">
+<div class="card reveal">
 <h3>Rounded Shoulders</h3>
 <p>Forward shoulder position from hunching over desks and screens. Causes tight chest muscles and weak upper back. Makes you look slouched and can lead to shoulder pain.</p>
 </div>
-<div class="card">
+<div class="card reveal">
 <h3>Anterior Pelvic Tilt (APT)</h3>
 <p>Excessive forward tilt of the pelvis caused by prolonged sitting and weak glutes/core. Creates a "duck-like" posture and can cause lower back pain.</p>
 </div>
-<div class="card">
+<div class="card reveal">
 <h3>Forward Head Posture</h3>
 <p>Head jutting forward from looking at screens. Puts immense stress on the neck and upper spine. Can cause headaches, neck pain, and reduced mobility.</p>
 </div>
@@ -89,22 +90,22 @@ footer{background:#0a0a0a;color:#666;text-align:center;padding:2rem;font-size:0.
 <section class="section">
 <h2>The fix</h2>
 <div class="step-cards">
-<div class="step-card">
+<div class="step-card reveal">
 <div class="num">1</div>
 <h3>Assessment</h3>
 <p>Identify your specific imbalances through simple posture checks and mobility tests. Know what you're working on.</p>
 </div>
-<div class="step-card">
+<div class="step-card reveal">
 <div class="num">2</div>
 <h3>Daily exercises (10-15 mins)</h3>
 <p>A short daily routine targeting your specific issues. Consistency beats intensity for posture correction.</p>
 </div>
-<div class="step-card">
+<div class="step-card reveal">
 <div class="num">3</div>
 <h3>Strengthening weak muscles</h3>
 <p>Strengthen the muscles that pull you into good posture: upper back, glutes, core, and deep neck flexors.</p>
 </div>
-<div class="step-card">
+<div class="step-card reveal">
 <div class="num">4</div>
 <h3>Stretching tight ones</h3>
 <p>Stretch the muscles pulling you out of alignment: chest, hip flexors, hamstrings, and upper traps.</p>
@@ -112,7 +113,7 @@ footer{background:#0a0a0a;color:#666;text-align:center;padding:2rem;font-size:0.
 </div>
 </section>
 
-<section class="section">
+<section class="section reveal">
 <h2>Sample routine</h2>
 <p style="text-align:center;color:#aaa;margin-bottom:2rem;">Do this daily — takes about 12 minutes:</p>
 <ul class="routine-list">
@@ -124,7 +125,7 @@ footer{background:#0a0a0a;color:#666;text-align:center;padding:2rem;font-size:0.
 </ul>
 </section>
 
-<section class="section">
+<section class="section reveal">
 <h2>How long it takes</h2>
 <div class="timeline">
 <div class="phase">
@@ -138,7 +139,7 @@ footer{background:#0a0a0a;color:#666;text-align:center;padding:2rem;font-size:0.
 </div>
 </section>
 
-<section class="section">
+<section class="section reveal">
 <blockquote>"I'd had rounded shoulders for years from gaming. After 6 weeks of daily exercises with Alex, my posture was completely different — my parents even noticed. No more back pain either."<cite>— Liam, Year 11</cite></blockquote>
 </section>
 
@@ -151,5 +152,6 @@ footer{background:#0a0a0a;color:#666;text-align:center;padding:2rem;font-size:0.
 <footer>
 <p>&copy; 2026 AT Tutoring. All rights reserved.</p>
 </footer>
+<script>document.addEventListener('DOMContentLoaded',function(){const r=document.querySelectorAll('.reveal');const o=new IntersectionObserver((e)=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target)}})},{threshold:0.15});r.forEach(e=>o.observe(e))});</script>
 </body>
 </html>
