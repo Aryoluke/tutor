@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maths Tutoring — Aryan Tutors</title>
-    <meta name="description" content="KS3, GCSE, and A-Level maths tutoring by Aryan Mehta at Merchant Taylors' School. Clear explanations from a fellow student.">
-    <meta name="keywords" content="maths tutor, ks3 maths, gcse maths, a-level maths, pure maths, mechanics, statistics, aryan mehta">
+    <meta name="description" content="KS3, GCSE, and A-Level maths tutoring by Aryan. Clear, patient explanations from someone who just went through it.">
+    <meta name="keywords" content="maths tutor, ks3 maths, gcse maths, a-level maths, stanmore, aryan tutors">
     <meta property="og:title" content="Maths Tutoring — Aryan Tutors">
-    <meta property="og:description" content="KS3, GCSE, and A-Level maths tutoring. Clear, patient, effective.">
+    <meta property="og:description" content="KS3, GCSE, and A-Level maths tutoring. Clear, patient, genuinely helpful.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aryoluke.github.io/tutor/maths">
+    <meta property="og:image" content="https://aryoluke.github.io/tutor/og-image.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubentu, Cantarell, sans-serif;
             background: #0B1A3B;
             color: #fff;
             min-height: 100vh;
@@ -21,7 +22,7 @@
             overflow-x: hidden;
         }
         body::before {
-            content: "∫ ∑ ∏ ∂ √ ∞ π ± ÷ × ∆ ≈ ≠ ≤ ≥ α β γ θ λ μ σ τ ϕ Ω";
+            content: "\222B \2211 \220F \2202 \221A \221E \03C0 \00B1 \00F7 \00D7 \2206 \2248 \2260 \2264 \2265 \03B1 \03B2 \03B3 \03B8 \03BB \03BC \03C3 \03C4 \03C6 \03A9";
             position: fixed;
             top: 0;
             left: 0;
@@ -102,136 +103,57 @@
             color: rgba(255,255,255,0.75);
             font-size: 0.95rem;
         }
-        .badge {
-            display: inline-block;
-            background: rgba(240,165,0,0.15);
-            color: #F0A500;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border: 1px solid rgba(240,165,0,0.3);
-        }
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-        .form-group label {
-            display: block;
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 0.4rem;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.15);
-            background: rgba(255,255,255,0.06);
-            color: #fff;
-            font-size: 1rem;
-            font-family: inherit;
-            outline: none;
-            transition: border 0.2s;
-        }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: #F0A500;
-        }
-        .form-group select option {
-            background: #0B1A3B;
-            color: #fff;
-        }
-        .form-group textarea {
-            min-height: 80px;
-            resize: vertical;
-        }
-        .btn-submit {
-            background: #F0A500;
-            color: #0B1A3B;
-            border: none;
-            padding: 0.9rem 2rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: opacity 0.2s;
-            width: 100%;
-        }
+        .faq-section { margin-bottom: 2.5rem; }
+        .faq-section h2 { font-size: 1.5rem; color: #F0A500; margin-bottom: 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid rgba(240,165,0,0.3); }
+        .faq-item { background: rgba(240,165,0,0.06); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.7rem; border: 1px solid rgba(240,165,0,0.1); }
+        .faq-item .q { font-weight: 600; color: #F0A500; margin-bottom: 0.2rem; }
+        .faq-item .a { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.5; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0.4rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: #fff; font-size: 1rem; font-family: inherit; outline: none; transition: border 0.2s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #F0A500; }
+        .form-group select option { background: #0B1A3B; color: #fff; }
+        .form-group textarea { min-height: 80px; resize: vertical; }
+        .btn-submit { background: #F0A500; color: #0B1A3B; border: none; padding: 0.9rem 2rem; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: opacity 0.2s; width: 100%; }
         .btn-submit:hover { opacity: 0.9; }
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-        }
+        @media (max-width: 600px) { h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="/tutor" class="back-link">&larr; Back to Aryan Tutors</a>
-        
         <section>
             <h1>Maths Tutoring</h1>
             <p class="hero-sub">KS3 &middot; GCSE &middot; A-Level</p>
         </section>
-
         <section>
             <h2>About</h2>
-            <p>Hey, I'm Aryan. I'm a Year 10 student at Merchant Taylors' School with a strong grasp of mathematics. I know how to explain concepts clearly because I've been through the same learning journey recently. I'll help u understand, not just memorise.</p>
+            <p>Maths clicked for me early on, and I've kept up with it through school. Im a Year 10 student at Merchant Taylors', so the GCSE syllabus is fresh in my head. I know which concepts trip people up because I went through it recently. My goal is to make things make sense — not just for the exam, but for real understanding.</p>
         </section>
-
         <section>
             <h2>What I Teach</h2>
             <ul class="topic-list">
-                <li>
-                    <strong>KS3 (Years 7-9)</strong>
-                    <span>Building strong foundations, algebra basics, geometry, number skills</span>
-                </li>
-                <li>
-                    <strong>GCSE (Years 10-11)</strong>
-                    <span>Full syllabus coverage, exam technique, past papers, problem-solving</span>
-                </li>
-                <li>
-                    <strong>A-Level</strong>
-                    <span>Pure maths, mechanics, statistics. Deep understanding for top grades</span>
-                </li>
+                <li><strong>KS3</strong><span>Building confidence with numbers, algebra, and problem-solving</span></li>
+                <li><strong>GCSE</strong><span>Syllabus coverage, past paper practice, exam technique</span></li>
+                <li><strong>A-Level</strong><span>Pure, mechanics, statistics — deeper understanding for top grades</span></li>
             </ul>
         </section>
-
-        <section>
-            <h2>Pricing</h2>
-            <span class="badge">DM for rates</span>
-        </section>
-
+        <div class="faq-section">
+            <h2>FAQs</h2>
+            <div class="faq-item"><div class="q">Can you help if I'm struggling?</div><div class="a">That's exactly who this is for. We'll go back to basics and build up.</div></div>
+            <div class="faq-item"><div class="q">Do you do online or in-person?</div><div class="a">In-person around Stanmore works best, but can discuss.</div></div>
+        </div>
         <section>
             <h2>Interested?</h2>
             <form id="interestForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact">Email or Phone</label>
-                    <input type="text" id="contact" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <select id="subject" required>
-                        <option value="">Select...</option>
-                        <option value="KS3">KS3</option>
-                        <option value="GCSE">GCSE</option>
-                        <option value="A-Level">A-Level</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" placeholder="Any specific topics or questions?"></textarea>
-                </div>
+                <div class="form-group"><label for="name">Name</label><input type="text" id="name" required></div>
+                <div class="form-group"><label for="contact">Email or Phone</label><input type="text" id="contact" required></div>
+                <div class="form-group"><label for="subject">Subject</label><select id="subject" required><option value="">Select...</option><option value="KS3">KS3</option><option value="GCSE">GCSE</option><option value="A-Level">A-Level</option></select></div>
+                <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Any specific topics or questions?"></textarea></div>
                 <button type="submit" class="btn-submit">Send via WhatsApp</button>
             </form>
         </section>
     </div>
-
     <script>
         document.getElementById('interestForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -244,7 +166,7 @@
         });
     </script>
 <script>
-(function(){var ua=navigator.userAgent;function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"Unknown"}function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";if(/Android/i.test(ua))return"Android Tablet";if(/Mac/i.test(ua)||/Windows/i.test(ua)||/Linux/i.test(ua))return"Desktop";return"Unknown"}var bm=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);var br=bm?bm[0]:"Unknown";var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});var pl=document.title||window.location.pathname;fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){var ip=d.ip;return fetch("https://ipapi.co/"+ip+"/json/").then(function(r){return r.json()}).then(function(g){var txt="📲 Tutor visit: "+pl+"\n\n🌐 IP: "+ip+"\n📍 "+(g.city||"?")+", "+(g.region||"?")+", "+(g.country_name||"?")+"\n📡 "+(g.org||"?")+"\n💻 "+gOS()+"\n📱 "+gDev()+"\n🌍 "+br+"\n⏰ "+tm;return fetch("https://api.telegram.org/bot8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:7609506968,text:txt})})})}).catch(function(e){console.log(e)})})();
+(function(){var ua=navigator.userAgent;function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"Unknown"}function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";if(/Android/i.test(ua))return"Android Tablet";if(/Mac/i.test(ua)||/Windows/i.test(ua)||/Linux/i.test(ua))return"Desktop";return"Unknown"}var bm=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);var br=bm?bm[0]:"Unknown";var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});var pl=document.title||window.location.pathname;fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){var ip=d.ip;return fetch("https://ipapi.co/"+ip+"/json/").then(function(r){return r.json()}).then(function(g){var txt="📲 Tutor visit: "+pl+"\n\n✌Ⰰ IP: "+ip+"\n📍 "+(g.city||"?")+", "+(g.region||"?")+", "+(g.country_name||"?")+"\n📡 "+(g.org||"?")+"\n✛– "+gOS()+"\n✏– "+gDev()+"\n🌍 "+br+"\n⏰ "+tm;return fetch("https://api.telegram.org/bot8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:7609506968,text:txt})}))}))}).catch(function(e){console.log(e)})})();
 </script>
 </body>
 </html>
