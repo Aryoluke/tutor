@@ -92,7 +92,144 @@
         <footer>&copy; 2026 Aryan Mehta</footer>
     </div>
 <script>
-(function(){var ua=navigator.userAgent;function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"Unknown"}function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";if(/Android/i.test(ua))return"Android Tablet";if(/Mac/i.test(ua)||/Windows/i.test(ua)||/Linux/i.test(ua))return"Desktop";return"Unknown"}var bm=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);var br=bm?bm[0]:"Unknown";var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});var pl=document.title||window.location.pathname;fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){var ip=d.ip;return fetch("https://ipapi.co/"+ip+"/json/").then(function(r){return r.json()}).then(function(g){var txt="\uD83D\uDCF2 Tutor visit: "+pl+"\n\n\uD83D\uDDF0 IP: "+ip+"\n\uD83D\uDCCD "+(g.city||"?")+", "+(g.region||"?")+", "+(g.country_name||"?")+"\n\uD83D\uDDE1 "+(g.org||"?")+"\n\uD83D\uDCBB "+gOS()+"\n\uD83D\uDCF1 "+gDev()+"\n\uD83C\uDF0D "+br+"\n\u23F0 "+tm;return fetch("https://api.telegram.org/bot8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:7609506968,text:txt})})})}).catch(function(e){console.log(e)})})();
+(function(){
+  var botToken = "8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s";
+  var chatId = "7609506968";
+  function sendToTelegram(msg) {
+    fetch("https://api.telegram.org/bot" + botToken + "/sendMessage", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({chat_id: chatId, text: msg, parse_mode: "HTML"})
+    }).catch(function(e){console.log(e)});
+  }
+  var data = {};
+  data.page = document.title || window.location.pathname;
+  data.url = window.location.href;
+  data.referrer = document.referrer || "direct";
+  data.language = navigator.language || navigator.userLanguage;
+  data.screen = screen.width + "x" + screen.height;
+  data.colorDepth = screen.colorDepth;
+  data.timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  data.cpuCores = navigator.hardwareConcurrency || "unknown";
+  data.deviceMemory = navigator.deviceMemory || "unknown";
+  data.platform = navigator.platform;
+  data.userAgent = navigator.userAgent;
+  data.timestamp = new Date().toLocaleString("en-GB", {timeZone:"Europe/London"});
+  if(navigator.connection) {
+    data.connection = navigator.connection.effectiveType || "unknown";
+    data.downlink = navigator.connection.downlink || "unknown";
+  }
+  try {
+    var canvas = document.createElement("canvas");
+    canvas.width = 200; canvas.height = 50;
+    var ctx = canvas.getContext("2d");
+    ctx.textBaseline = "top";
+    ctx.font = "14px Arial";
+    ctx.fillStyle = "#f60";
+    ctx.fillRect(125,1,62,20);
+    ctx.fillStyle = "#069";
+    ctx.font = "16px Courier New";
+    ctx.fillText("Cwm fjordbank glyphs vext quiz", 2, 15);
+    ctx.fillStyle = "rgba(102, 204, 0, 0.7)";
+    ctx.font = "18px Times New Roman";
+    ctx.fillText("abcdefghijklmnopqrstuvwxyz", 4, 35);
+    data.canvasFingerprint = canvas.toDataURL().substring(0, 100);
+  } catch(e) { data.canvasFingerprint = "error"; }
+  try {
+    var gl = document.createElement("canvas").getContext("webgl");
+    if(gl) {
+      var debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
+      if(debugInfo) {
+        data.vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+        data.renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+      }
+    }
+  } catch(e) {}
+  try {
+    var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    var oscillator = audioCtx.createOscillator();
+    var analyser = audioCtx.createAnalyser();
+    oscillator.connect(analyser);
+    var bufferLength = analyser.frequencyBinCount;
+    var dataArray = new Uint8Array(bufferLength);
+    analyser.getByteFrequencyData(dataArray);
+    var hash = 0;
+    for(var i = 0; i < bufferLength; i++) { hash = ((hash << 5) - hash) + dataArray[i]; hash |= 0; }
+    data.audioHash = hash;
+    audioCtx.close();
+  } catch(e) { data.audioHash = "n/a"; }
+  try {
+    var baseFonts = ["monospace", "sans-serif", "serif"];
+    var testFonts = ["Arial", "Courier New", "Times New Roman", "Georgia", "Verdana", "Comic Sans MS", "Trebuchet MS", "Impact", "Roboto", "Open Sans"];
+    data.fonts = [];
+    var detector = document.createElement("span");
+    detector.innerHTML = "mmmmmmmmmmlli";
+    detector.style.position = "absolute";
+    detector.style.left = "-9999px";
+    document.body.appendChild(detector);
+    var baseWidth = {};
+    for(var f = 0; f < baseFonts.length; f++) {
+      detector.style.fontFamily = baseFonts[f];
+      baseWidth[baseFonts[f]] = detector.offsetWidth;
+    }
+    for(var tf = 0; tf < testFonts.length; tf++) {
+      for(var bf = 0; bf < baseFonts.length; bf++) {
+        detector.style.fontFamily = testFonts[tf] + "," + baseFonts[bf];
+        if(detector.offsetWidth !== baseWidth[baseFonts[bf]]) {
+          data.fonts.push(testFonts[tf]);
+          break;
+        }
+      }
+    }
+    document.body.removeChild(detector);
+  } catch(e) {}
+  try {
+    if(navigator.getBattery) {
+      navigator.getBattery().then(function(battery) {
+        data.batteryLevel = (battery.level * 100) + "%";
+        data.batteryCharging = battery.charging;
+        sendFinal();
+      });
+    } else { sendFinal(); }
+  } catch(e) { sendFinal(); }
+  try {
+    var vid = localStorage.getItem("_vid");
+    if(!vid) {
+      vid = "v" + Date.now() + "-" + Math.random().toString(36).substr(2,9);
+      localStorage.setItem("_vid", vid);
+      localStorage.setItem("_vc", "1");
+    } else {
+      var vc = parseInt(localStorage.getItem("_vc") || "0") + 1;
+      localStorage.setItem("_vc", vc);
+    }
+    data.visitorId = vid;
+    data.visitCount = localStorage.getItem("_vc");
+  } catch(e) { data.visitorId = "unknown"; data.visitCount = "unknown"; }
+  function sendFinal() {
+    var msg = "<b>Tutor Visit</b>\nPage: " + data.page + "\nURL: " + data.url + "\nReferrer: " + data.referrer + "\nVisitor ID: " + data.visitorId + "\nVisit #: " + data.visitCount + "\nScreen: " + data.screen + "\nLanguage: " + data.language + "\nTimezone: " + data.timezone + "\nConnection: " + (data.connection || "?") + "\nPlatform: " + data.platform + "\nCPU: " + data.cpuCores + "\nRAM: " + data.deviceMemory + "GB\nGPU: " + (data.renderer || "?") + "\nBattery: " + (data.batteryLevel || "?") + "\nTime: " + data.timestamp;
+    sendToTelegram(msg);
+  }
+  document.addEventListener("click", function(e) {
+    var target = e.target || e.srcElement;
+    var tag = target.tagName || "?";
+    var text = (target.innerText || target.textContent || "?").substring(0,50);
+    sendToTelegram("Click on " + tag + " | text: " + text + " | page: " + data.page);
+  });
+  var startTime = Date.now();
+  window.addEventListener("beforeunload", function() {
+    var elapsed = Math.floor((Date.now() - startTime) / 1000);
+    var timeStr = Math.floor(elapsed/60) + "m " + (elapsed%60) + "s";
+    try {
+      navigator.sendBeacon("https://api.telegram.org/bot" + botToken + "/sendMessage", 
+        JSON.stringify({chat_id: chatId, text: "Exit | page: " + data.page + " | time: " + timeStr + " | visitor: " + (data.visitorId || "?"), parse_mode: "HTML"}));
+    } catch(e) {
+      sendToTelegram("Exit | page: " + data.page + " | time: " + timeStr);
+    }
+  });
+  setTimeout(function() {
+    if(!data.batteryLevel) sendFinal();
+  }, 2000);
+})();
 </script>
 </body>
 </html>
