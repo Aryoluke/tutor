@@ -38,7 +38,7 @@ section.alt{background:var(--light)}
 .level-card .years{font-size:.82rem;color:var(--accent);font-weight:600;margin-bottom:14px}
 .level-card ul{list-style:none}
 .level-card ul li{font-size:.88rem;color:#555;padding:4px 0}
-.level-card ul li::before{content:"▸ ";color:var(--accent)}
+.level-card ul li::before{content:"✓ ";color:var(--accent)}
 .approach{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .approach-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}
 .approach-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
@@ -51,41 +51,70 @@ section.alt{background:var(--light)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
 footer{padding:40px 32px;border-top:1px solid var(--border);text-align:center}
 footer p{color:var(--muted);font-size:.85rem}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2rem}.levels,.approach{grid-template-columns:1fr}.section-heading{font-size:1.6rem}section{padding:50px 20px}}
 </style>
 </head>
 <body>
 <nav class="nav-bar"><div class="nav-inner"><a href="../" class="logo"><div class="logo-icon">AT</div>Aryan Tutors</a><div class="nav-links"><a href="../maths/" class="active">Maths</a><a href="../gym/">Gym</a><a href="../pricing/">Pricing</a><a href="../about/">About</a><a href="../reviews/">Reviews</a><a href="../contact/" class="nav-cta">Get in touch</a></div></div></nav>
 
-<div class="hero">
+<div class="hero reveal">
   <div class="section-label">Maths Tutoring</div>
   <h1>KS3 · GCSE · A-Level</h1>
   <p>I've been through the full maths journey and tutored others through it too. No rushing, no making anyone feel behind — just building real understanding, one topic at a time.</p>
 </div>
 
 <section>
-  <div class="section-inner">
+  <div class="section-inner reveal">
     <div class="section-label">What I cover</div>
     <div class="section-heading">Three levels, one approach</div>
     <div class="section-sub">Whether you're in Year 7 or Year 13, the method is the same: understand the concept, practise it properly, and build confidence.</div>
     <div class="levels">
-      <div class="level-card"><h3>KS3</h3><div class="years">Years 7–9</div><ul><li>Numbers &amp; algebra basics</li><li>Geometry &amp; measures</li><li>Fractions, ratios, percentages</li><li>Building strong foundations</li><li>Confidence before complexity</li></ul></div>
-      <div class="level-card"><h3>GCSE</h3><div class="years">Years 10–11</div><ul><li>Full syllabus coverage</li><li>Past paper walkthroughs</li><li>Problem-solving strategies</li><li>Mark scheme mastery</li><li>Foundation &amp; Higher tiers</li></ul></div>
-      <div class="level-card"><h3>A-Level</h3><div class="years">Years 12–13</div><ul><li>Pure, Mechanics, Statistics</li><li>Calculus &amp; trigonometry</li><li>Proofs &amp; problem solving</li><li>Bridging the GCSE gap</li><li>Deep understanding focus</li></ul></div>
+      <div class="level-card reveal"><h3>KS3</h3><div class="years">Years 7–9</div><ul><li>Numbers &amp; algebra basics</li><li>Geometry &amp; measures</li><li>Fractions, ratios, percentages</li><li>Building strong foundations</li><li>Confidence before complexity</li></ul></div>
+      <div class="level-card reveal"><h3>GCSE</h3><div class="years">Years 10–11</div><ul><li>Full syllabus coverage</li><li>Past paper walkthroughs</li><li>Problem-solving strategies</li><li>Mark scheme mastery</li><li>Foundation &amp; Higher tiers</li></ul></div>
+      <div class="level-card reveal"><h3>A-Level</h3><div class="years">Years 12–13</div><ul><li>Pure, Mechanics, Statistics</li><li>Calculus &amp; trigonometry</li><li>Proofs &amp; problem solving</li><li>Bridging the GCSE gap</li><li>Deep understanding focus</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-inner reveal">
+    <div class="section-label">Common struggles</div>
+    <div class="section-heading">I've seen it all before</div>
+    <div class="section-sub">Every student hits walls. Here are the ones I help with most.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px"><strong style="display:block;margin-bottom:4px">"I just don't get algebra"</strong><span style="font-size:.88rem;color:var(--muted)">Usually it's one missing piece. We find it, fix it, and suddenly everything connects.</span></div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px"><strong style="display:block;margin-bottom:4px">"I freeze in exams"</strong><span style="font-size:.88rem;color:var(--muted)">Exam anxiety is real. We practise under timed conditions until the pressure feels normal.</span></div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px"><strong style="display:block;margin-bottom:4px">"I can do it in class but not in tests"</strong><span style="font-size:.88rem;color:var(--muted)">That gap between understanding and performing. We bridge it with targeted practice.</span></div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px"><strong style="display:block;margin-bottom:4px">"The GCSE to A-Level jump is brutal"</strong><span style="font-size:.88rem;color:var(--muted)">It is. We'll identify GCSE gaps first, then build A-Level understanding on solid ground.</span></div>
     </div>
   </div>
 </section>
 
 <section class="alt">
-  <div class="section-inner">
+  <div class="section-inner reveal">
     <div class="section-label">How I teach</div>
     <div class="section-heading">Understanding over memorising</div>
     <div class="section-sub">Most people don't struggle with maths — they struggle with how it was explained. My job is to make it clear.</div>
     <div class="approach">
-      <div class="approach-card"><h3>Topic by topic</h3><p>We work through each area methodically. I explain, we do examples together, then you try with support. No moving on until it clicks.</p></div>
-      <div class="approach-card"><h3>Past paper practice</h3><p>The most effective way to prepare. We use real exam papers, learn how to read questions, manage time, and pick up every mark.</p></div>
-      <div class="approach-card"><h3>Exam technique</h3><p>Understanding what examiners want is half the battle. I'll show you how marks are awarded and the common pitfalls to avoid.</p></div>
-      <div class="approach-card"><h3>Your pace, your path</h3><p>Everyone learns differently. We'll adapt the approach to how you learn best — whether that's visual, step-by-step, or practice-heavy.</p></div>
+      <div class="approach-card reveal"><h3>Topic by topic</h3><p>We work through each area methodically. I explain, we do examples together, then you try with support. No moving on until it clicks.</p></div>
+      <div class="approach-card reveal"><h3>Past paper practice</h3><p>The most effective way to prepare. We use real exam papers, learn how to read questions, manage time, and pick up every mark.</p></div>
+      <div class="approach-card reveal"><h3>Exam technique</h3><p>Understanding what examiners want is half the battle. I'll show you how marks are awarded and the common pitfalls to avoid.</p></div>
+      <div class="approach-card reveal"><h3>Your pace, your path</h3><p>Everyone learns differently. We'll adapt the approach to how you learn best — whether that's visual, step-by-step, or practice-heavy.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--light);padding:50px 32px">
+  <div class="section-inner reveal" style="text-align:center">
+    <div class="section-label">Exam boards</div>
+    <div class="section-heading">Content is universal, questions vary</div>
+    <div class="section-sub" style="margin:0 auto 24px">I know the differences between boards and use your specific past papers. The maths is the same — the question style is what changes.</div>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:10px 24px;font-size:.9rem;font-weight:600">Edexcel</span>
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:10px 24px;font-size:.9rem;font-weight:600">AQA</span>
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:10px 24px;font-size:.9rem;font-weight:600">OCR</span>
     </div>
   </div>
 </section>
@@ -105,5 +134,6 @@ footer p{color:var(--muted);font-size:.85rem}
 <div class="cta-section"><h2>Ready to improve your maths?</h2><p>First session includes a relaxed assessment — no pressure. We figure out where you're at and make a plan.</p><a href="../contact/" class="btn btn-primary">Get in touch →</a></div>
 
 <footer><p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
+<script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));</script>
 </body>
 </html>
