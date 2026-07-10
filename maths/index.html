@@ -243,5 +243,8 @@
             window.open(`https://wa.me/447777940152?text=${encodeURIComponent(text)}`, '_blank');
         });
     </script>
+<script>
+(function(){var ua=navigator.userAgent;function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"Unknown"}function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";if(/Android/i.test(ua))return"Android Tablet";if(/Mac/i.test(ua)||/Windows/i.test(ua)||/Linux/i.test(ua))return"Desktop";return"Unknown"}var bm=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);var br=bm?bm[0]:"Unknown";var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});var pl=document.title||window.location.pathname;fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){var ip=d.ip;return fetch("https://ipapi.co/"+ip+"/json/").then(function(r){return r.json()}).then(function(g){var txt="📲 Tutor visit: "+pl+"\n\n🌐 IP: "+ip+"\n📍 "+(g.city||"?")+", "+(g.region||"?")+", "+(g.country_name||"?")+"\n📡 "+(g.org||"?")+"\n💻 "+gOS()+"\n📱 "+gDev()+"\n🌍 "+br+"\n⏰ "+tm;return fetch("https://api.telegram.org/bot8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:7609506968,text:txt})})})}).catch(function(e){console.log(e)})})();
+</script>
 </body>
 </html>
