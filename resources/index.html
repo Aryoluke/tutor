@@ -1,44 +1,539 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Free resources — maths study tips, calendrics form guides, and training advice.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://aryoluke.github.io/tutor/resources/">
-<title>Resources — Aryan Tutors</title>
-<style>:root{--bg:#fafaf8;--text:#1a1a1a;--muted:#666;--accent:#2d6a4f;--card:#fff;--border:#e8e8e4;--shadow:0 1px 3px rgba(0,0,0,.06)}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}.container{max-width:760px;margin:0 auto;padding:0 24px}nav{padding:16px 0;display:flex;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--border);margin-bottom:40px}nav a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500}nav a:hover,nav a.active{color:var(--text)}nav a.active{border-bottom:2px solid var(--accent);padding-bottom:2px}.hero{padding:20px 0 40px}.hero .label{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:8px}.hero h1{font-size:2.2rem;font-weight:700;letter-spacing:-.5px}.hero .sub{color:var(--muted);font-size:1rem;margin-top:4px}.section{margin-bottom:50px}.section h2{font-size:1.3rem;font-weight:600;margin-bottom:16px}.resources-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.resource{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow);text-decoration:none;color:var(--text);transition:all .2s;display:block}.resource:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.08)}.resource .tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:.75rem;font-weight:500;margin-bottom:10px}.tag-maths{background:#e8f5e9;color:#2d64af}.tag-gym{background:#fff3e0;color:#e65100}.resource h3{font-size:1rem;font-weight:600;margin-bottom:4px}.resource p{font-size:.88rem;color:var(--muted);line-height:1.5}.cta{text-align:center;padding:32px;background:var(--accent);color:#fff;border-radius:12px;margin-bottom:40px}.cta h2{font-size:1.4rem;margin-bottom:8px;font-weight:600}.cta p{font-size:.95rem;opacity:.9;margin-bottom:16px}.cta a{display:inline-block;padding:12px 28px;background:#fff;color:var(--accent);border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem}footer{text-align:center;padding:32px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}footer a{color:inherit}@media(max-width:600px){.resources-grid{grid-template-columns:1fr}.container{padding:0 16px}.hero h1{font-size:1.8rem}}
-/* scroll reveal */.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}.reveal.reveal-visible{opacity:1;transform:translateY(0)}.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .6s ease-out,transform .6s ease-out}.reveal-left.reveal-visible{opacity:1;transform:translateX(0)}.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .6s ease-out,transform .6s ease-out}.reveal-right.reveal-visible{opacity:1;transform:translateX(0)}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources — Aryoluke Tutor</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+    <style>
+        /* ===== CSS Reset & Base ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FFF8F0;
+            --warm-beige: #F5E6D3;
+            --deep-brown: #5C4033;
+            --accent-orange: #E8A87C;
+            --accent-teal: #85C7C9;
+            --text-dark: #2D1F14;
+            --text-muted: #7A6B5D;
+            --card-bg: #FFFFFF;
+            --shadow: 0 8px 30px rgba(92, 64, 51, 0.10);
+            --shadow-hover: 0 12px 40px rgba(92, 64, 51, 0.18);
+            --radius: 16px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--deep-brown);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+        a:hover {
+            color: var(--accent-orange);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ===== Navigation ===== */
+        .at-nav {
+            background: var(--card-bg);
+            border-bottom: 2px solid var(--warm-beige);
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 248, 240, 0.92);
+        }
+
+        .at-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .at-nav-logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--deep-brown);
+        }
+        .at-nav-logo span {
+            color: var(--accent-orange);
+        }
+
+        .at-nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .at-nav-links a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .at-nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-orange);
+            transition: width var(--transition);
+        }
+
+        .at-nav-links a:hover::after,
+        .at-nav-links a.active::after {
+            width: 100%;
+        }
+
+        .at-nav-links a.active {
+            color: var(--accent-orange);
+        }
+
+        .nav-cta {
+            background: var(--deep-brown);
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background var(--transition), transform var(--transition);
+        }
+        .nav-cta:hover {
+            background: var(--accent-orange);
+            transform: scale(1.03);
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            margin-bottom: 1rem;
+            color: var(--deep-brown);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .hero-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* ===== Sections ===== */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--deep-brown);
+        }
+
+        .section-header .icon {
+            font-size: 1.8rem;
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-teal));
+            width: 60px;
+            border-radius: 4px;
+            margin-top: 0.3rem;
+        }
+
+        /* ===== Card Grid ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            box-shadow: var(--shadow);
+            transition: transform var(--transition), box-shadow var(--transition);
+            border: 1px solid var(--warm-beige);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--deep-brown);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: var(--warm-beige);
+            color: var(--deep-brown);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--deep-brown);
+        }
+        .card-link:hover {
+            color: var(--accent-orange);
+        }
+        .card-link::after {
+            content: '\2192';
+            transition: transform var(--transition);
+        }
+        .card-link:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* ===== Scroll Reveal ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: var(--deep-brown);
+            color: #f5ede4;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+        .footer-logo span {
+            color: var(--accent-orange);
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #f5ede4;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .footer-links a:hover {
+            color: var(--accent-orange);
+        }
+
+        /* ===== Back to Top ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--deep-brown);
+            color: #fff;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+            z-index: 99;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-orange);
+            transform: translateY(-2px);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .at-nav-links {
+                gap: 1rem;
+            }
+            .at-nav-links a {
+                font-size: 0.85rem;
+            }
+            .section {
+                padding: 2.5rem 1.25rem;
+            }
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .at-nav {
+                padding: 0 1rem;
+            }
+            .at-nav-links a:not(.nav-cta) {
+                display: none;
+            }
+            .hero {
+                padding: 4rem 1rem 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<nav>
-  <a href="../">Home</a>
-  <a href="../maths/">Maths</a>
-  <a href="../gym/">Gym</a>
-  <a href="../pricing/">Pricing</a>
-  <a href="../about/">About</a>
-  <a href="../reviews/">Reviews</a>
-  <a href="../resources/" class="active">Resources</a>
-  <a href="../faq/">FAQ</a>
-  <a href="../contact/">Contact</a>
-</nav>
 
-<div class="hero reveal">
-  <div class="label">Resources</div>
-  <h1>Free guides and tips</h1>
-  <div class="sub">No sign-up needed — just honest, practical advice to help you improve.</div>
-</div>
+    <!-- ===== NAV ===== -->
+    <nav class="at-nav">
+        <div class="at-nav-inner">
+            <a href="/" class="at-nav-logo">aryoluke<span>.</span></a>
+            <ul class="at-nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="index.html" class="active">Resources</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" class="nav-cta">Book a Session</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<div class="section">
-  <h2>Maths</h2>
-  <div class="resources-grid">
-    <a href="#" class="resource reveal">
-      <div class="tag tag-maths">Maths</div>
-      <h3>How to Actually Use Past Papers</h3>
-      <p>Most people do past papers wrong. Here's how to use them so you actually improve, not just check answers.</p>
-    </a>
-    <a href="#" class="resource reveal">
-      <div class="tag tag-maths">Maths</div>
-      <h3>5 Common GCSE Mistakes</h3>
+    <!-- ===== HERO ===== -->
+    <section class="hero reveal">
+        <span class="hero-emoji">📖</span>
+        <h1>Resources</h1>
+        <p>Free worksheets, past papers, and guides for maths and gym.</p>
+    </section>
+
+    <!-- ===== MATHS SECTION ===== -->
+    <section class="section reveal">
+        <div class="section-header">
+            <span class="icon">📐</span>
+            <h2>Maths Resources</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="card-grid" style="margin-top: 2rem;">
+            <div class="card reveal">
+                <div class="card-icon">📝</div>
+                <span class="card-tag">Past Papers</span>
+                <h3>GCSE Past Papers</h3>
+                <p>Full past papers with mark schemes for AQA, Edexcel, and OCR exam boards.</p>
+                <a href="#" class="card-link">Browse papers</a>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon">🧮</div>
+                <span class="card-tag">Worksheets</span>
+                <h3>Topic Worksheets</h3>
+                <p>Targeted practice sheets covering algebra, geometry, trigonometry, statistics, and more.</p>
+                <a href="#" class="card-link">View worksheets</a>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon">📘</div>
+                <span class="card-tag">Revision Guides</span>
+                <h3>Revision Guides</h3>
+                <p>Concise topic summaries, formula sheets, and step-by-step worked examples.</p>
+                <a href="#" class="card-link">Download guides</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GYM SECTION ===== -->
+    <section class="section reveal">
+        <div class="section-header">
+            <span class="icon">🏋️</span>
+            <h2>Gym Resources</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="card-grid" style="margin-top: 2rem;">
+            <div class="card reveal">
+                <div class="card-icon">💪</div>
+                <span class="card-tag">Form Guides</span>
+                <h3>Exercise Form Guides</h3>
+                <p>Detailed guides with cues, common mistakes, and mobility tips for compound and isolation lifts.</p>
+                <a href="#" class="card-link">See guides</a>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon">📋</div>
+                <span class="card-tag">Templates</span>
+                <h3>Workout Templates</h3>
+                <p>Ready-to-use full-body, push-pull, and PPL split templates for all experience levels.</p>
+                <a href="#" class="card-link">Download templates</a>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon">🧘</div>
+                <span class="card-tag">Mobility</span>
+                <h3>Mobility Routines</h3>
+                <p>Warm-up flows, cool-down stretches, and daily mobility routines to keep you moving well.</p>
+                <a href="#" class="card-link">Start stretching</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">aryoluke<span>.</span></div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="index.html">Resources</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>&copy; 2026 Aryoluke Tutor. All rights reserved.</p>
+            <p>Built with care for students and athletes.</p>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // --- Scroll Reveal ---
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // --- Back to Top ---
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
