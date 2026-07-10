@@ -1,97 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Beginner calisthenics coaching in Stanmore — start from zero. Pull-ups, push-ups, form coaching, and confidence building.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://aryoluke.github.io/tutor/gym/beginners/">
-<title>Beginner Calisthenics — Aryan Tutors</title>
-<style>:root{--bg:#121212;--surface:#1e1e1e;--text:#e8e8e8;--muted:#999;--accent:#e65100;--accent2:#ff8f00;--border:#2a2a2a;--shadow:0 2px 8px rgba(0,0,0,.3)}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}.container{max-width:760px;margin:0 auto;padding:0 24px}nav{padding:16px 0;display:flex;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--border);margin-bottom:40px}nav a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500}nav a:hover,nav a.active{color:var(--text)}nav a.active{border-bottom:2px solid var(--accent);padding-bottom:2px}.back{display:inline-block;padding:10px 0;color:var(--muted);text-decoration:none;font-size:.9rem;margin-bottom:8px}.back:hover{color:var(--text)}header{padding:20px 0 32px}header h1{font-size:2.2rem;font-weight:700;letter-spacing:-0.5px}header .sub{color:var(--accent2);font-size:1rem;margin-top:4px;font-weight:500}.hero{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:36px;box-shadow:var(--shadow);border-left:4px solid var(--accent);text-align:center}.hero h2{font-size:1.3rem;font-weight:600;margin-bottom:8px;color:#fff}.hero p{color:#ccc;font-size:.95rem;line-height:1.7;max-width:560px;margin:0 auto}.path{display:flex;flex-direction:column;gap:14px;margin-bottom:40px}.step-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start}.step-num{flex-shrink:0;width:40px;height:40px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem}.step-card h3{font-size:1rem;font-weight:600;margin-bottom:4px;color:#fff}.step-card p{font-size:.9rem;color:var(--muted);line-height:1.5}.section{margin-bottom:44px}.section h2{font-size:1.3rem;font-weight:600;margin-bottom:16px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow)}.card h3{font-size:1rem;font-weight:600;margin-bottom:6px;color:#fff}.card p{font-size:.9rem;color:var(--muted);line-height:1.5}.quote{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin:20px 0;text-align:center;box-shadow:var(--shadow)}.quote p{font-size:.95rem;color:#ccc;font-style:italic;line-height:1.7}.quote .name{font-size:.82rem;color:var(--muted);margin-top:8px;font-weight:500}.cta{text-align:center;padding:32px;background:linear-gradient(135deg,var(--accent),#bf360c);color:#fff;border-radius:12px;margin-bottom:40px}.cta h2{font-size:1.4rem;margin-bottom:8px;font-weight:600}.cta p{font-size:.95rem;opacity:.9;margin-bottom:16px}.cta a{display:inline-block;padding:12px 28px;background:#fff;color:var(--accent);border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem}footer{text-align:center;padding:32px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}@media(max-width:600px){.cards{grid-template-columns:1fr}.container{padding:0 16px}header h1{font-size:1.8rem}}</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beginner Calisthenics | AT Tutor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #121212;
+      color: #e8e8e8;
+      line-height: 1.6;
+    }
+    a { color: #ff8f00; text-decoration: none; }
+    a:hover { color: #e65100; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1100px; margin:0 auto; padding:0 24px; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #1a1a1a;
+      border-bottom: 1px solid #2a2a2a;
+      padding: 14px 0;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #e8e8e8;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #e65100, #ff8f00);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1rem;
+      color: #fff;
+    }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: #999; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #e8e8e8; }
+    .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; }
+    .hamburger span { width: 26px; height: 2px; background: #e8e8e8; border-radius: 2px; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #1a1a1a; flex-direction: column; padding: 20px 24px; border-bottom: 1px solid #2a2a2a; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+    }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(230,81,0,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-label {
+      display: inline-block;
+      padding: 6px 18px;
+      border: 1px solid #e65100;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e65100;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: #999;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .hero { padding: 60px 0 50px; }
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      color: #999;
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    /* STEPS */
+    .steps-section { padding: 70px 0; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+    }
+    .step-card {
+      background: #1e1e1e;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .step-card:hover { border-color: #e65100; transform: translateY(-4px); }
+    .step-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e65100, #ff8f00);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .step-card p { font-size: 0.85rem; color: #999; line-height: 1.5; }
+
+    /* CONCERNS */
+    .concerns-section { padding: 70px 0; }
+    .concerns-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .concern-card {
+      background: #1e1e1e;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      padding: 24px;
+      transition: border-color 0.25s;
+    }
+    .concern-card:hover { border-color: #ff8f00; }
+    .concern-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: #ff8f00; }
+    .concern-card p { font-size: 0.85rem; color: #999; line-height: 1.6; }
+    @media (max-width: 640px) {
+      .concerns-grid { grid-template-columns: 1fr; }
+    }
+
+    /* LEARN */
+    .learn-section { padding: 70px 0; }
+    .learn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .learn-card {
+      background: #1e1e1e;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      padding: 28px 22px;
+      text-align: center;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .learn-card:hover { border-color: #e65100; transform: translateY(-4px); }
+    .learn-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .learn-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+    .learn-card p { font-size: 0.85rem; color: #999; }
+
+    /* TESTIMONIAL */
+    .testimonial-section { padding: 70px 0; }
+    .testimonial-box {
+      background: #1e1e1e;
+      border: 1px solid #2a2a2a;
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .testimonial-box::before {
+      content: '"';
+      font-size: 5rem;
+      position: absolute;
+      top: 10px;
+      left: 24px;
+      color: #e65100;
+      opacity: 0.25;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .testimonial-box blockquote {
+      font-size: 1.25rem;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .testimonial-box cite { font-style: normal; color: #999; font-size: 0.9rem; }
+    @media (max-width: 600px) {
+      .testimonial-box { padding: 32px 20px; }
+      .testimonial-box blockquote { font-size: 1.05rem; }
+    }
+
+    /* CTA */
+    .cta-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .cta-box {
+      background: linear-gradient(135deg, #e65100, #ff8f00);
+      border-radius: 24px;
+      padding: 60px 40px;
+    }
+    .cta-box h2 {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .cta-box p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 40px;
+      background: #fff;
+      color: #121212;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 100px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      color: #121212;
+    }
+    @media (max-width: 600px) {
+      .cta-box { padding: 40px 24px; }
+      .cta-box h2 { font-size: 1.7rem; }
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #2a2a2a;
+      padding: 32px 0;
+      text-align: center;
+    }
+    footer p { color: #666; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
-<div class="container">
-<nav>
-  <a href="../../">Home</a>
-  <a href="../../maths/">Maths</a>
-  <a href="../../gym/">Gym</a>
-  <a href="../../gym/beginners/" class="active">Beginners</a>
-  <a href="../../pricing/">Pricing</a>
-  <a href="../../contact/">Contact</a>
-</nav>
-<a href="../" class="back">← Back to Gym</a>
-<header>
-  <h1>Beginner Calisthenics</h1>
-  <div class="sub">Start from zero. Build real strength.</div>
-</header>
 
-<div class="hero">
-  <h2>Everyone starts somewhere</h2>
-  <p>Can't do a pull-up? Never touched a pull-up bar? That's completely normal. Most people I coach started exactly there. I'll show you the path from zero to your first rep — safely and with proper form.</p>
-</div>
-
-<div class="section">
-  <h2>The beginner path</h2>
-  <div class="path">
-    <div class="step-card">
-      <div class="step-num">1</div>
-      <div><h3>Assessment &amp; baseline</h3><p>We figure out where you're at right now — how you move, what feels weak, what feels tight. No judgement. This is your starting point and that's completely fine.</p></div>
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <div class="logo-icon">AT</div>
+        <span>AT Tutor</span>
+      </div>
+      <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Programs</a></li>
+        <li><a href="#">Exercises</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
-    <div class="step-card">
-      <div class="step-num">2</div>
-      <div><h3>Foundation exercises</h3><p>We start with the regressions that match your level: dead hangs, scapular pulls, negative pull-ups, knee push-ups, and core holds. Building the base before adding difficulty.</p></div>
+  </nav>
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-label">Beginner Calisthenics</span>
+      <h1>Start from zero. Build real strength.</h1>
+      <p>No experience needed. No gym membership required. Just your body, a pull-up bar, and a proven system that has helped hundreds of beginners find their strength.</p>
     </div>
-    <div class="step-card">
-      <div class="step-num">3</div>
-      <div><h3>Form mastery</h3><p>Before increasing reps or weight, we lock in proper form. I'll watch every movement and correct anything that could lead to injury. Good form now means faster progress later.</p></div>
+  </section>
+
+  <!-- 2. THE BEGINNER PATH -->
+  <section class="steps-section">
+    <div class="container">
+      <h2 class="section-title">The beginner path</h2>
+      <p class="section-sub">Five steps to go from absolute beginner to consistent, capable calisthenics athlete.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Assessment &amp; baseline</h3>
+          <p>Test your current strength levels and identify your starting point with simple benchmarks.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Foundation exercises</h3>
+          <p>Dead hangs, scap pulls, negatives, and knee push-ups — the building blocks of every movement.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Form mastery</h3>
+          <p>Learn proper technique before adding volume. Quality over quantity, every single session.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h3>First milestones</h3>
+          <p>Celebrate your first full push-up and your first pull-up — they will come sooner than you think.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">5</div>
+          <h3>Building consistency</h3>
+          <p>Turn workouts into a habit with a simple, repeatable routine that fits your lifestyle.</p>
+        </div>
+      </div>
     </div>
-    <div class="step-card">
-      <div class="step-num">4</div>
-      <div><h3>First milestones</h3><p>Your first full push-up. Your first band-assisted pull-up. Your first unassisted pull-up. We celebrate every win — because they're genuinely earned.</p></div>
+  </section>
+
+  <!-- 3. COMMON CONCERNS -->
+  <section class="concerns-section">
+    <div class="container">
+      <h2 class="section-title">Common concerns</h2>
+      <p class="section-sub">We've heard it all. Here's why none of it should stop you.</p>
+      <div class="concerns-grid">
+        <div class="concern-card">
+          <h3>"I'm too weak"</h3>
+          <p>Everyone starts somewhere. The program is designed for people who can't do a single push-up. That's the whole point — you'll build strength from exactly where you are.</p>
+        </div>
+        <div class="concern-card">
+          <h3>"I don't have equipment"</h3>
+          <p>All you need is a pull-up bar and some floor space. Most exercises use just your bodyweight. No dumbbells, no machines, no expensive gear.</p>
+        </div>
+        <div class="concern-card">
+          <h3>"I'm not fit enough"</h3>
+          <p>Calisthenics is about getting fit, not being fit already. The progressions start at a level anyone can handle and ramp up gradually.</p>
+        </div>
+        <div class="concern-card">
+          <h3>"I'll look stupid"</h3>
+          <p>Every single advanced athlete was once a beginner. Nobody is watching — they're all focused on their own workout. Your effort is what counts.</p>
+        </div>
+        <div class="concern-card">
+          <h3>"I have bad posture"</h3>
+          <p>Calisthenics is one of the best ways to fix posture. Dead hangs decompress the spine, rows strengthen the back, and core work builds stability.</p>
+        </div>
+        <div class="concern-card">
+          <h3>"I don't know where to start"</h3>
+          <p>That's exactly what this program is for. Follow the steps in order, and you'll never have to wonder what to do next.</p>
+        </div>
+      </div>
     </div>
-    <div class="step-card">
-      <div class="step-num">5</div>
-      <div><h3>Building consistency</h3><p>Once the basics are solid, we build a sustainable routine. A simple programme you can follow on your own, with check-ins to track progress and adjust as you get stronger.</p></div>
+  </section>
+
+  <!-- 4. FIRST MONTH -->
+  <section class="learn-section">
+    <div class="container">
+      <h2 class="section-title">What you'll learn in the first month</h2>
+      <p class="section-sub">Four foundational pillars that set you up for long-term progress.</p>
+      <div class="learn-grid">
+        <div class="learn-card">
+          <div class="learn-icon">&#9650;</div>
+          <h3>Push movements</h3>
+          <p>Push-ups from your knees, incline push-ups, and the pathway to full push-ups and dips.</p>
+        </div>
+        <div class="learn-card">
+          <div class="learn-icon">&#9660;</div>
+          <h3>Pull movements</h3>
+          <p>Dead hangs, scapular pulls, Australian rows, and the early steps toward your first pull-up.</p>
+        </div>
+        <div class="learn-card">
+          <div class="learn-icon">&#9632;</div>
+          <h3>Core strength</h3>
+          <p>Planks, hollow body holds, leg raises, and the anti-extension stability that protects your lower back.</p>
+        </div>
+        <div class="learn-card">
+          <div class="learn-icon">&#8635;</div>
+          <h3>Movement patterns</h3>
+          <p>How to brace, breathe, and move efficiently. The foundational motor patterns every exercise builds on.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="quote">
-  <p>"Started with zero pull-ups and honestly didn't think I'd ever get there. The progression plan was simple and the form coaching actually fixed my shoulder issues. Two months later I'm at 5 clean pull-ups. Never thought I'd say that."</p>
-  <div class="name">— Sixth form student, North London</div>
-</div>
+  <!-- 5. TESTIMONIAL -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-box">
+        <blockquote>
+          "Started with zero pull-ups and couldn't hold a dead hang for 10 seconds. Three months later I did my first pull-up. This program works if you trust the process."
+        </blockquote>
+        <cite>&mdash; Alex R., beginner program graduate</cite>
+      </div>
+    </div>
+  </section>
 
-<div class="section">
-  <h2>Common beginner concerns</h2>
-  <div class="cards">
-    <div class="card"><h3>"I'm too weak"</h3><p>That's why you're here. We'll start with exercises you CAN do and build from there. Everyone was a beginner once.</p></div>
-    <div class="card"><h3>"I don't have equipment"</h3><p>Floor space and a doorway pull-up bar is plenty to start. I can recommend affordable options if you want to set up at home.</p></div>
-    <div class="card"><h3>"I'm not fit enough"</h3><p>No minimum fitness required. The whole point is to help you get there. Sessions are paced around what you can handle.</p></div>
-    <div class="card"><h3>"I'll look stupid"</h3><p>You won't. Sessions are one-to-one, private, and judgement-free. No mirrors, no audience, no ego.</p></div>
-    <div class="card"><h3>"I have bad posture"</h3><p>That's actually one of the most common reasons people come to me. We'll work on it as part of your programme — it's not a barrier to starting.</p></div>
-    <div class="card"><h3>"I don't know where to start"</h3><p>That's exactly what I'm here for. You don't need to figure it out alone. That's literally my job.</p></div>
-  </div>
-</div>
+  <!-- 6. CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to start?</h2>
+        <p>Your first session is free. No commitment, no pressure.</p>
+        <a href="#" class="cta-btn">Contact us</a>
+      </div>
+    </div>
+  </section>
 
-<div class="section">
-  <h2>What you'll learn in the first month</h2>
-  <div class="cards">
-    <div class="card"><h3>Push movements</h3><p>Push-up progressions matched to your level. From wall push-ups to knee push-ups to full push-ups. Proper hand placement, elbow angle, and core engagement.</p></div>
-    <div class="card"><h3>Pull movements</h3><p>Dead hangs → scapular pulls → negative pull-ups → band-assisted pull-ups. The progression that actually works for getting your first pull-up.</p></div>
-    <div class="card"><h3>Core strength</h3><p>Planks, hollow body holds, leg raises, dead bugs. Building the foundation that supports everything else you do.</p></div>
-    <div class="card"><h3>Movement patterns</h3><p>Squats, lunges, hinge movements. Learning to move well so you can build strength without building bad habits.</p></div>
-  </div>
-</div>
+  <!-- 7. FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 AT Tutor. All rights reserved.</p>
+    </div>
+  </footer>
 
-<div class="cta">
-  <h2>Ready to start?</h2>
-  <p>No experience required. Just bring yourself and a willingness to learn.</p>
-  <a href="../../contact/">Get in touch</a>
-</div>
-
-<footer>
-  <p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · <a href="../../" style="color:inherit">Aryan Tutors</a></p>
-</footer>
-</div>
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.hamburger')?.addEventListener('click', function() {
+      this.nextElementSibling.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
