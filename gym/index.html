@@ -3,147 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Gym coaching in Stanmore — calisthenics, form coaching, and custom training programmes. From first pull-up to advanced skills.">
+<meta name="description" content="Gym coaching in Stanmore — calisthenics, form coaching, custom programmes, diet advice, and skills training. From first pull-up to muscle-up.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://aryoluke.github.io/tutor/gym/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232d6a4f'/><text x='50' y='68' text-anchor='middle' font-size='50' font-weight='700' font-family='system-ui' fill='%23fff'>AT</text></svg>">
 <title>Gym Coaching — Aryan Tutors</title>
-<style>
-  :root{--bg:#121212;--surface:#1e1e1e;--text:#e8e8e8;--muted:#999;--accent:#e65100;--accent2:#ff8f00;--border:#2a2a2a;--shadow:0 2px 8px rgba(0,0,0,.3)}
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .container{max-width:720px;margin:0 auto;padding:0 24px}
-  .back{display:inline-block;padding:10px 0;color:var(--muted);text-decoration:none;font-size:.9rem;margin-top:20px}
-  .back:hover{color:var(--text)}
-  header{padding:40px 0 32px}
-  header h1{font-size:2.2rem;font-weight:700;letter-spacing:-0.5px}
-  header .sub{color:var(--accent2);font-size:1rem;margin-top:4px;font-weight:500}
-  .intro{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:40px;box-shadow:var(--shadow);border-left:4px solid var(--accent)}
-  .intro p{color:#ccc;font-size:.95rem;line-height:1.7}
-  .services{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
-  .service{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
-  .service h3{font-size:1rem;font-weight:600;margin-bottom:6px;color:#fff}
-  .service p{font-size:.88rem;color:var(--muted);line-height:1.5}
-  .service ul{list-style:none;margin-top:10px}
-  .service ul li{font-size:.84rem;color:#aaa;padding:3px 0}
-  .service ul li::before{content:"▸ ";color:var(--accent2)}
-  .reviews{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
-  .review{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
-  .review .stars{color:#f4b400;font-size:.9rem;margin-bottom:6px}
-  .review p{font-size:.9rem;color:#ccc;line-height:1.6;font-style:italic}
-  .review .name{font-size:.82rem;color:var(--muted);margin-top:8px;font-style:normal;font-weight:500}
-  .faq{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:40px;box-shadow:var(--shadow)}
-  .faq h2{font-size:1.3rem;font-weight:600;margin-bottom:16px}
-  .faq-item{margin-bottom:16px}
-  .faq-item:last-child{margin-bottom:0}
-  .faq-item q{font-weight:600;font-size:.95rem;display:block;margin-bottom:4px;color:#fff}
-  .faq-item p{font-size:.9rem;color:var(--muted);line-height:1.5}
-  .cta{text-align:center;padding:32px;background:linear-gradient(135deg,var(--accent),#bf360c);color:#fff;border-radius:12px;margin-bottom:40px}
-  .cta h2{font-size:1.4rem;margin-bottom:8px;font-weight:600}
-  .cta p{font-size:.95rem;opacity:.9;margin-bottom:16px}
-  .cta a{display:inline-block;padding:12px 28px;background:#fff;color:var(--accent);border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;transition:all .2s}
-  .cta a:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.4)}
-  footer{text-align:center;padding:32px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
-  @media(max-width:600px){
-    .services,.reviews{grid-template-columns:1fr}
-    header h1{font-size:1.8rem}
-    .container{padding:0 16px}
-  }
+<style>:root{--bg:#121212;--surface:#1e1e1e;--text:#e8e8e8;--muted:#999;--accent:#e65100;--accent2:#ff8f00;--border:#2a2a2a;--light:#1a1a1a}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.nav-bar{position:sticky;top:0;z-index:100;background:rgba(18,18,18,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:1.2rem;color:var(--text);letter-spacing:-0.3px}
+.logo-icon{width:36px;height:36px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;font-weight:800}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-links a.active{border-bottom:2px solid var(--accent);padding-bottom:2px}
+.nav-cta{background:var(--accent);color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600!important}
+.hero{padding:80px 32px 60px;max-width:900px;margin:0 auto;text-align:center}
+.hero .section-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent2);margin-bottom:12px}
+.hero h1{font-size:3rem;font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:620px;margin:0 auto;line-height:1.7}
+section{padding:70px 32px}
+section.alt{background:var(--light)}
+.section-inner{max-width:900px;margin:0 auto}
+.section-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent2);margin-bottom:12px}
+.section-heading{font-size:2rem;font-weight:700;letter-spacing:-0.6px;line-height:1.2;margin-bottom:12px}
+.section-sub{font-size:1.05rem;color:var(--muted);line-height:1.7;margin-bottom:36px;max-width:620px}
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px 24px;transition:all .2s;text-decoration:none;color:var(--text);display:block}
+.service-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.4);border-color:#444}
+.service-card .icon{font-size:2rem;margin-bottom:12px}
+.service-card h3{font-size:1.15rem;font-weight:700;margin-bottom:6px}
+.service-card p{font-size:.9rem;color:var(--muted);line-height:1.5}
+.cta-section{background:linear-gradient(135deg,var(--accent),#bf360c);color:#fff;text-align:center;padding:70px 32px}
+.cta-section h2{font-size:2rem;font-weight:700;letter-spacing:-0.6px;margin-bottom:12px}
+.cta-section p{font-size:1.05rem;opacity:.9;margin-bottom:28px}
+.btn{display:inline-block;padding:14px 30px;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .2s}
+.btn-primary{background:#fff;color:var(--accent)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.btn-outline{border:2px solid var(--accent2);color:var(--accent2)}
+.btn-outline:hover{background:var(--accent2);color:#fff}
+footer{padding:40px 32px;border-top:1px solid var(--border);text-align:center}
+footer p{color:var(--muted);font-size:.85rem}
+@media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2rem}.service-grid{grid-template-columns:1fr}.section-heading{font-size:1.6rem}section{padding:50px 20px}}
 </style>
 </head>
 <body>
-<div class="container">
-<a href="../" class="back">← Back to Aryan Tutors</a>
-<header>
-  <h1>Gym Coaching</h1>
-  <div class="sub">Calisthenics · Form · Programming</div>
-</header>
+<nav class="nav-bar"><div class="nav-inner"><a href="../" class="logo"><div class="logo-icon">AT</div>Aryan Tutors</a><div class="nav-links"><a href="../maths/">Maths</a><a href="../gym/" class="active">Gym</a><a href="../pricing/">Pricing</a><a href="../about/">About</a><a href="../reviews/">Reviews</a><a href="../contact/" class="nav-cta">Get in touch</a></div></div></nav>
 
-<div class="intro">
-  <p>I've spent years figuring out calisthenics — the trial and error, the injuries, the plateaus, and the breakthroughs. Along the way I've helped friends and other students build real strength with proper form. Whether you're working towards your first pull-up or chasing advanced skills, I can help you get there safely and efficiently.</p>
+<div class="hero">
+  <div class="section-label">Gym Coaching</div>
+  <h1>Calisthenics . Form . Programming . Diet</h1>
+  <p>I've spent years figuring out calisthenics — the trial and error, the injuries, the plateaus, and the breakthroughs. Now I help others do the same, safely and efficiently.</p>
 </div>
 
-<div class="services">
-  <div class="service">
-    <h3>Calisthenics Foundations</h3>
-    <p>From zero to confident.</p>
-    <ul>
-      <li>Pull-ups &amp; chin-ups</li>
-      <li>Dips &amp; push-up progressions</li>
-      <li>Core strength &amp; stability</li>
-      <li>Building a solid base</li>
-    </ul>
+<section>
+  <div class="section-inner">
+    <div class="section-label">What I offer</div>
+    <div class="section-heading">Everything you need to get stronger</div>
+    <div class="section-sub">Whether you're a complete beginner or chasing advanced skills, there's a path for you.</div>
+    <div class="service-grid">
+      <a href="beginners/" class="service-card"><div class="icon">🌑</div><h3>Beginner Calisthenics</h3><p>Start from zero. Build your first pull-up, master push-ups, and develop a solid foundation with proper form from day one.</p></a>
+      <a href="skills/" class="service-card"><div class="icon">⚕</div><h3>Skills Training</h3><p>Muscle-up, front lever, planche, handstand. Clear progression paths, technique breakdowns, and the accessory work that unlocks them.</p></a>
+      <a href="home/" class="service-card"><div class="icon">🏠</div><h3>Home Workouts</h3><p>No gym? No problem. Minimal equipment programmes using a pull-up bar, floor space, and whatever you've got available.</p></a>
+      <a href="diet/" class="service-card"><div class="icon">🍽</div><h3>Diet &amp; Nutrition</h3><p>Macro guidance, meal planning, cutting and bulking strategies, and sustainable habits — built around your lifestyle and goals.</p></a>
+    </div>
   </div>
-  <div class="service">
-    <h3>Form Coaching</h3>
-    <p>Fix technique, prevent injury.</p>
-    <ul>
-      <li>Posture assessment</li>
-      <li>Rounded shoulders / APT fixes</li>
-      <li>Exercise form breakdown</li>
-      <li>Injury-safe movement patterns</li>
-    </ul>
-  </div>
-  <div class="service">
-    <h3>Custom Programmes</h3>
-    <p>Built around your goals.</p>
-    <ul>
-      <li>PPL &amp; upper/lower splits</li>
-      <li>Skill progression plans</li>
-      <li>Progressive overload tracking</li>
-      <li>Home &amp; gym options</li>
-    </ul>
-  </div>
-  <div class="service">
-    <h3>Skills Training</h3>
-    <p>Muscle-up, front lever &amp; more.</p>
-    <ul>
-      <li>Muscle-up progressions</li>
-      <li>Front lever foundations</li>
-      <li>Planche groundwork</li>
-      <li>Structured skill drills</li>
-    </ul>
-  </div>
-</div>
+</section>
 
-<h2 style="font-size:1.4rem;font-weight:600;margin-bottom:20px">What people say</h2>
-<div class="reviews">
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <p>"Started with zero pull-ups and honestly didn't think I'd ever get there. The programming was simple, the form coaching actually fixed my shoulder issues. Now I'm at 8 strict pull-ups and counting."</p>
-    <div class="name">— Sixth form student, North London</div>
+<section class="alt">
+  <div class="section-inner">
+    <div class="section-label">How I coach</div>
+    <div class="section-heading">No ego. No rushing. Just progress.</div>
+    <div class="section-sub">Every session starts with a form assessment. We figure out where you're at, identify weak points, and build a programme around your specific goals.</div>
+    <div class="service-grid">
+      <div class="service-card"><h3>Form assessment</h3><p>I watch how you move, spot what needs fixing, and correct it before it becomes a problem. Good form now prevents injury later.</p></div>
+      <div class="service-card"><h3>Custom programming</h3><p>No cookie-cutter plans. Your programme is built around your goals, equipment, schedule, and current level. It evolves as you get stronger.</p></div>
+      <div class="service-card"><h3>Posture &amp; mobility</h3><p>Rounded shoulders, anterior pelvic tilt, tight hibs — common issues we can fix with targeted exercises alongside your main training.</p></div>
+      <div class="service-card"><h3>Progressive overload</h3><p>Getting stronger week by week through volume, tempo, leverage, and resistance — without needing a full gym setup.</p></div>
+    </div>
   </div>
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <p>"I had terrible rounded shoulders from gaming all day. He showed me exactly what was wrong and gave me a few simple exercises. Two months later my posture is noticeably better and I actually feel stronger."</p>
-    <div class="name">— Year 10 student, Stanmore</div>
-  </div>
-</div>
+</section>
 
-<div class="faq">
-  <h2>Common questions</h2>
-  <div class="faq-item">
-    <q>I've never been to a gym. Is that fine?</q>
-    <p>Absolutely. Lots of people I work with are complete beginners. We'll start wherever you're at — no expectations, no showing off.</p>
-  </div>
-  <div class="faq-item">
-    <q>Do I need equipment?</q>
-    <p>A pull-up bar helps, but we can work with what you have. I can also recommend affordable options if you want to set up at home.</p>
-  </div>
-  <div class="faq-item">
-    <q>How much is it?</q>
-    <p>Message me and we'll sort out something that fits. Not trying to make this expensive.</p>
-  </div>
-</div>
+<div class="cta-section"><h2>Ready to start?</h2><p>Send me a message. Tell me what you're working towards and we'll figure out a plan.</p><a href="../contact/" class="btn btn-primary">Get in touch →</a></div>
 
-<div class="cta">
-  <h2>Ready to start?</h2>
-  <p>DM me and let's figure out a plan that works for you.</p>
-  <a href="https://wa.me/447777940152">Message on WhatsApp</a>
-</div>
-
-<footer>
-  <p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p>
-</footer>
-</div>
+<footer><p>© 2026 Aryan Mehta &nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
 </body>
 </html>
