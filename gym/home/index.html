@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Workouts · tutor</title>
+  <title>Home Workouts × tutor</title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
     body{background:#121212;color:#fff;line-height:1.6}
@@ -11,7 +11,7 @@
     /* hero */
     .hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden}
     .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(230,81,0,.12),transparent 70%)}
-    .hero-labgl{display:inline-block;border:1px solid #e65100;color:#e65100;padding:6px 18px;border-radius:20px;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;z-index:1}
+    .hero-label{display:inline-block;border:1px solid #e65100;color:#e65100;padding:6px 18px;border-radius:20px;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;z-index:1}
     .hero h1{font-size:clamp(2.5rem,7vw,4.5rem);font-weight:800;line-height:1.1;z-index:1}
     .hero h1 span{background:linear-gradient(135deg,#e65100,#ff8f00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .hero p{max-width:580px;color:#aaa;font-size:1.2rem;margin-top:20px;z-index:1}
@@ -42,7 +42,7 @@
     .workout-card h3{font-size:1.05rem;font-weight:700;margin-bottom:12px}
     .workout-card ul{list-style:none;color:#999;font-size:.88rem}
     .workout-card ul li{padding:4px 0;position:relative;padding-left:16px}
-    .workout-card ul li::before{content:'›';position:absolute;left:0;color:#e65100;font-weight:700}
+    .workout-card ul li::before{content:'→';position:absolute;left:0;color:#e65100;font-weight:700}
     .workout-card .rounds{color:#ff8f00;font-size:.82rem;font-weight:600;margin-top:12px}
     /* programme cards */
     .programme-card{background:#1e1e1e;border:1px solid #2a2a2a;border-radius:12px;padding:28px 24px;text-align:center;transition:border-color .3s,transform .3s}
@@ -59,6 +59,9 @@
     /* footer */
     footer{text-align:center;padding:32px 0;border-top:1px solid #2a2a2a;color:#666;font-size:.85rem}
     footer a{color:#e65100;text-decoration:none}
+    /* reveal animations */
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
+    .reveal.visible{opacity:1;transform:translateY(0)}
     /* responsive */
     @media(max-width:900px){.grid-4{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:700px){.grid-3{grid-template-columns:1fr;gap:16px}.grid-4{grid-template-columns:1fr;gap:16px}section{padding:56px 0}.cta-banner{padding:40px 24px}}
@@ -66,12 +69,12 @@
 </head>
 <body>
 
-<section class="hero">
+<section class="hero reveal">
   <div class="container">
     <span class="hero-label">Home Workouts</span>
     <h1>No&nbsp;gym? <span>No&nbsp;problem.</span></h1>
-    <p>Zero equipment? No excuses. Every workout here is designed to build muscle, strength, and conditioning �%t with minimal gear and maximum intensity.</p>
-    <a href="#equipment" class="cta-btn">See what you'll need �&�</a>
+    <p>Zero equipment? No excuses. Every workout here is designed to build muscle, strength, and conditioning × with minimal gear and maximum intensity.</p>
+    <a href="#equipment" class="cta-btn">See what you'll need ×</a>
   </div>
 </section>
 
@@ -79,15 +82,15 @@
   <div class="container">
     <div class="section-header">
       <h2><span>Equipment</span> guide</h2>
-      <p>Six essentials. Most of them cost next to nothing — or nothing at all.</p>
+      <p>Six essentials. Most of them cost next to nothing × or nothing at all.</p>
     </div>
     <div class="grid-3">
-      <div class="card"><div class="icon">🏋️</div><h3>Pull-up bar</h3><div class="price">~£20</div><p>Doorframe or wall-mounted. The single best piece of home gym kit you can own.</p></div>
-      <div class="card"><div class="icon">💪</div><h3>Parallettes</h3><div class="price">~£25</div><p>Low push-up bars that save your wrists and unlock full ROM pressing.</p></div>
-      <div class="card"><div class="icon">🎒</div><h3>Backpack + books</h3><div class="price">Free</div><p>Fill a rucksack with textbooks for instant, adjustable weight — squats, carries, rows.</p></div>
-      <div class="card"><div class="icon">🔴</div><h3>Resistance bands</h3><div class="price">£10</div><p>Loop bands for pull-up assistance, glute work, and banded push-ups. Compact and versatile.</p></div>
-      <div class="card"><div class="icon">🧘</div><h3>Floor space</h3><div class="price">Free</div><p>2m × 2m of clear floor is all you need for lunges, planks, bridges and mobility work.</p></div>
-      <div class="card"><div class="icon">🪑</div><h3>Chair or table</h3><div class="price">Free</div><p>For Bulgarian split squats, incline push-ups, and box step-ups. Your furniture is gym equipment.</p></div>
+      <div class="card reveal"><div class="icon">×çü¿í¸¿</div><h3>Pull-up bar</h3><div class="price">~$20</div><p>Doorframe or wall-mounted. The single best piece of home gym kit you can own.</p></div>
+      <div class="card reveal"><div class="icon">×çü©ª</div><h3>Paralettes</h3><div class="price">~$25</div><p>Low push-up bars that save your wrists and unlock full ROM pressing.</p></div>
+      <div class="card reveal"><div class="icon">×çü½×</div><h3>Backpack + books</h3><div class="price">Free</div><p>Fill a rucksack with textbooks for instant, adjustable weight × squats, carries, rows.</p></div>
+      <div class="card reveal"><div class="icon">×çü</div><h3>Resistance bands</h3><div class="price">£$10</div><p>Loop bands for pull-up assistance, glute work, and banded push-ups. Compact and versatile.</p></div>
+      <div class="card reveal"><div class="icon">×çü§Ü</div><h3>Floor space</h3><div class="price">Free</div><p>2m — 2m of clear floor is all you need for lunges, planks, bridges and mobility work.</p></div>
+      <div class="card reveal"><div class="icon">×çüª×</div><h3>Chair or table</h3><div class="price">Free</div><p>For Bulgarian split squats, incline push-ups, and box step-ups. Your furniture is gym equipment.</p></div>
     </div>
   </div>
 </section>
@@ -99,7 +102,7 @@
       <p>Four templates you can run today. Pick your level and go.</p>
     </div>
     <div class="grid-4">
-      <div class="workout-card">
+      <div class="workout-card reveal">
         <span class="badge badge-beginner">Beginner</span>
         <h3>Full Body Beginner</h3>
         <ul>
@@ -109,9 +112,9 @@
           <li>Plank</li>
           <li>Glute bridges</li>
         </ul>
-        <div class="rounds">3 rounds · 45s work / 15s rest</div>
+        <div class="rounds">3 rounds × 45s work / 15s rest</div>
       </div>
-      <div class="workout-card">
+      <div class="workout-card reveal">
         <span class="badge badge-intermediate">Intermediate</span>
         <h3>Full Body Intermediate</h3>
         <ul>
@@ -121,9 +124,9 @@
           <li>Knee raises</li>
           <li>Pike push-ups</li>
         </ul>
-        <div class="rounds">4 rounds · 60s work / 30s rest</div>
+        <div class="rounds">4 rounds × 60s work / 30s rest</div>
       </div>
-      <div class="workout-card">
+      <div class="workout-card reveal">
         <span class="badge badge-advanced">Advanced</span>
         <h3>Push Day</h3>
         <ul>
@@ -133,9 +136,9 @@
           <li>Tricep extensions</li>
           <li>Lateral raises (bands)</li>
         </ul>
-        <div class="rounds">4 rounds · 8-12 reps · 90s rest</div>
+        <div class="rounds">4 rounds × 8-12 reps × 90s rest</div>
       </div>
-      <div class="workout-card">
+      <div class="workout-card reveal">
         <span class="badge badge-advanced">Advanced</span>
         <h3>Pull Day</h3>
         <ul>
@@ -145,7 +148,7 @@
           <li>Hammer curls (bands)</li>
           <li>Dead hangs</li>
         </ul>
-        <div class="rounds">4 rounds · 8-12 reps · 90s rest</div>
+        <div class="rounds">4 rounds × 8-12 reps × 90s rest</div>
       </div>
     </div>
   </div>
@@ -155,28 +158,28 @@
   <div class="container">
     <div class="section-header">
       <h2><span>How I</span> programme</h2>
-      <p>The principles behind every workout I write — whether you're in a garage, a bedroom, or a hotel room.</p>
+      <p>The principles behind every workout I write × whether you're in a garage, a bedroom, or a hotel room.</p>
     </div>
     <div class="grid-4">
-      <div class="programme-card">
-        <div class="icon">📈</div>
+      <div class="programme-card reveal">
+        <div class="icon">×çüÍÇ</div>
         <h3>Progressive overload at home</h3>
-        <p>Add reps, reduce rest, increase time under tension, or switch to harder variations. The bar still moves up — even without a barbell.</p>
+        <p>Add reps, reduce rest, increase time under tension, or switch to harder variations. The bar still moves up × even without a barbell.</p>
       </div>
-      <div class="programme-card">
-        <div class="icon">🎒</div>
+      <div class="programme-card reveal">
+        <div class="icon">×çü½×</div>
         <h3>Rucking & weighted carries</h3>
         <p>Load a backpack and walk. Then add lunges, step-ups, and carries. It's boring. It works. Cardio that doesn't kill gains.</p>
       </div>
-      <div class="programme-card">
-        <div class="icon">✂️</div>
+      <div class="programme-card reveal">
+        <div class="icon">ÃÑ×¿ï¸Í</div>
         <h3>Minimalist splits</h3>
         <p>Push / Pull / Legs fits home training perfectly. Two compound lifts plus accessories. 45 minutes, door to door, done.</p>
       </div>
-      <div class="programme-card">
-        <div class="icon">📱</div>
+      <div class="programme-card reveal">
+        <div class="icon">×çü°±</div>
         <h3>Form checks via video</h3>
-        <p>Film a set, watch it back, fix one thing. No coach needed — just honest eyes and a phone tripod. Progress compounds fast.</p>
+        <p>Film a set, watch it back, fix one thing. No coach needed × just honest eyes and a phone tripod. Progress compounds fast.</p>
       </div>
     </div>
   </div>
@@ -187,16 +190,17 @@
     <div class="cta-banner">
       <h2>Ready to&nbsp;train at&nbsp;home?</h2>
       <p>Pick a workout, find your floor space, and start today. No commute, no queue, no excuses.</p>
-      <a href="#workouts" class="btn-outline">Start now →</a>
+      <a href="#workouts" class="btn-outline">Start now £×</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p><a href="https://github.com/Aryoluke/tutor">tutor</a> · home workouts · built with nothing but bodyweight</p>
+    <p><a href="https://github.com/Aryoluke/tutor">tutor</a> × home workouts × built with nothing but bodyweight</p>
   </div>
 </footer>
 
+<script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));</script>
 </body>
 </html>
