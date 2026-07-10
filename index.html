@@ -102,6 +102,16 @@
   .footer-links a:hover{color:var(--text)}
   footer p{color:var(--muted);font-size:.85rem}
 
+  /* Scroll animations */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  .reveal-left{opacity:0;transform:translateX(-30px);transition:opacity .6s ease-out,transform .6s ease-out}
+  .reveal-left.visible{opacity:1;transform:translateX(0)}
+  .reveal-right{opacity:0;transform:translateX(30px);transition:opacity .6s ease-out,transform .6s ease-out}
+  .reveal-right.visible{opacity:1;transform:translateX(0)}
+  .reveal-scale{opacity:0;transform:scale(.95);transition:opacity .6s ease-out,transform .6s ease-out}
+  .reveal-scale.visible{opacity:1;transform:scale(1)}
+
   @media(max-width:768px){
     .nav-links{display:none}
     .hero h1{font-size:2.2rem}
@@ -134,7 +144,7 @@
   </div>
 </nav>
 
-<div class="hero">
+<div class="hero reveal">
   <h1>Maths &amp; Gym Coaching<br><span>that actually makes sense</span></h1>
   <p>No pressure. No complicated jargon. Just clear explanations and steady progress — whether you're stuck on trigonometry or working towards your first pull-up.</p>
   <div class="hero-btns">
@@ -146,14 +156,14 @@
 <section>
   <div class="section-inner">
     <div class="service-grid">
-      <a href="maths/" class="service-card">
+      <a href="maths/" class="service-card reveal-scale" style="transition-delay:0s">
         <div class="icon">📐</div>
         <h3>Maths Tutoring</h3>
         <p>KS3, GCSE, and A-Level. I've been through the full maths journey myself — exams, past papers, and all — and I've helped other students through it too. We'll build real understanding, not just exam tricks.</p>
         <span class="tag tag-maths">From £20/hr</span>
       </a>
-      <a href="gym/" class="service-card">
-        <div class="icon">💪</div>
+      <a href="gym/" class="service-card reveal-scale" style="transition-delay:0.15s">
+        <div class="icon">🏪</div>
         <h3>Gym Coaching</h3>
         <p>Calisthenics, form coaching, custom programmes, diet advice, and skills training. From your first pull-up to advanced moves like muscle-ups and front levers — I'll meet you wherever you're at.</p>
         <span class="tag tag-gym">From £20/hr</span>
@@ -168,10 +178,10 @@
     <div class="section-heading">Different from the rest</div>
     <div class="section-sub">I'm not a teacher with 20 years of experience. I'm someone who recently went through it — and I remember exactly what it's like to be stuck.</div>
     <div class="stats">
-      <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Students taught</div></div>
-      <div class="stat"><div class="stat-num">4.9</div><div class="stat-label">Average rating</div></div>
-      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Would recommend</div></div>
-      <div class="stat"><div class="stat-num">GCSE &amp; A-Level</div><div class="stat-label">Covered</div></div>
+      <div class="stat reveal" style="transition-delay:0s"><div class="stat-num">20+</div><div class="stat-label">Students taught</div></div>
+      <div class="stat reveal" style="transition-delay:0.1s"><div class="stat-num">4.9</div><div class="stat-label">Average rating</div></div>
+      <div class="stat reveal" style="transition-delay:0.2s"><div class="stat-num">100%</div><div class="stat-label">Would recommend</div></div>
+      <div class="stat reveal" style="transition-delay:0.3s"><div class="stat-num">GCSE &amp; A-Level</div><div class="stat-label">Covered</div></div>
     </div>
   </div>
 </section>
@@ -182,10 +192,28 @@
     <div class="section-heading">Four simple steps</div>
     <div class="section-sub">No contracts. No long-term commitment. Just a straightforward process to get started.</div>
     <div class="steps">
-      <div class="step"><div class="step-num">1</div><h3>Reach out</h3><p>Send me a message on WhatsApp or email. Tell me what you need — maths, gym, or both.</p></div>
-      <div class="step"><div class="step-num">2</div><h3>Quick chat</h3><p>A relaxed conversation about your goals and current level. This is free — no obligation.</p></div>
-      <div class="step"><div class="step-num">3</div><h3>First session</h3><p>We meet, assess where you're at, and get straight into it. No judgement, just progress.</p></div>
-      <div class="step"><div class="step-num">4</div><h3>Keep going</h3><p>If it's working, we set up regular sessions. If not, no hard feelings. Pay as you go.</p></div>
+      <div class="step reveal" style="transition-delay:0s"><div class="step-num">1</div><h3>Reach out</h3><p>Send me a message on WhatsApp or email. Tell me what you need — maths, gym, or both.</p></div>
+      <div class="step reveal" style="transition-delay:0.15s"><div class="step-num">2</div><h3>Quick chat</h3><p>A relaxed conversation about your goals and current level. This is free — no obligation.</p></div>
+      <div class="step reveal" style="transition-delay:0.3s"><div class="step-num">3</div><h3>First session</h3><p>We meet, assess where you're at, and get straight into it. No judgement, just progress.</p></div>
+      <div class="step reveal" style="transition-delay:0.45s"><div class="step-num">4</div><h3>Keep going</h3><p>If it's working, we set up regular sessions. If not, no hard feelings. Pay as you go.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="section-inner reveal">
+    <div class="section-label">Locations</div>
+    <div class="section-heading">Stanmore and beyond</div>
+    <div class="section-sub">Based in Stanmore, but I cover nearby areas too. If you're not sure whether I can get to you, just ask.</div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:.88rem;color:var(--muted)">Stanmore</span>
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:.88rem;color:var(--muted)">Harrow</span>
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:.88rem;color:var(--muted)">Edgware</span>
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:.88rem;color:var(--muted)">Bushey</span>
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:.88rem;color:var(--muted)">Pinner</span>
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:.88rem;color:var(--muted)">Hatch End</span>
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:.88rem;color:var(--muted)">Kenton</span>
+      <span style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 18px;font-size:.88rem;color:var(--muted)">North London</span>
     </div>
   </div>
 </section>
@@ -195,22 +223,22 @@
     <div class="section-label">What people say</div>
     <div class="section-heading">Real feedback from real students</div>
     <div class="testimonials">
-      <div class="testimonial">
+      <div class="testimonial reveal-left">
         <div class="stars">★★★★★</div>
         <div class="body">"Was stuck on a grade 4 in maths and honestly thought I'd fail. After a few months of weekly sessions I walked out with a 7. The way he explains things actually sticks — it's not just memorising formulas, he makes you understand why they work."</div>
-        <div class="author">GCSE student, Stanmore<span>Edexcel Higher · Grade 4 → 7</span></div>
+        <div class="author">GCSE student, Stanmore<span>EdExcel Higher — Grade 4 → 7</span></div>
       </div>
-      <div class="testimonial">
+      <div class="testimonial reveal-right">
         <div class="stars">★★★★★</div>
         <div class="body">"Started with zero pull-ups and honestly didn't think I'd ever get there. The progression plan was simple and the form coaching actually fixed my shoulder issues. Two months later I'm at 5 clean pull-ups. Never thought I'd say that."</div>
         <div class="author">Sixth form student, North London<span>Calisthenics beginner</span></div>
       </div>
-      <div class="testimonial">
+      <div class="testimonial reveal-left">
         <div class="stars">★★★★★</div>
         <div class="body">"The A-Level jump was brutal. Mechanics especially. But he broke everything down into tiny steps and made it manageable. Went from panicking about exams to feeling genuinely prepared."</div>
-        <div class="author">A-Level student, Harrow<span>A-Level Maths · Mechanics focus</span></div>
+        <div class="author">A-Level student, Harrow<span>A-Level Maths — Mechanics focus</span></div>
       </div>
-      <div class="testimonial">
+      <div class="testimonial reveal-right">
         <div class="stars">★★★★★</div>
         <div class="body">"Had terrible rounded shoulders from gaming. He showed me exactly what was wrong and gave me a few simple exercises. Two months later my posture is noticeably better and I actually feel stronger."</div>
         <div class="author">Year 10 student, Stanmore<span>Posture correction</span></div>
@@ -225,7 +253,7 @@
     <div class="section-heading">Simple, straightforward rates</div>
     <div class="section-sub">No hidden fees. No long contracts. Pay per session. First session includes a relaxed assessment at no extra charge.</div>
     <div class="pricing-grid">
-      <div class="pricing-card">
+      <div class="pricing-card reveal-scale" style="transition-delay:0s">
         <h3>Maths Tutoring</h3>
         <div class="price">£20</div>
         <div class="period">per hour</div>
@@ -238,7 +266,7 @@
         </ul>
         <a href="contact/" class="btn btn-primary" style="width:100%">Get started</a>
       </div>
-      <div class="pricing-card featured">
+      <div class="pricing-card featured reveal-scale" style="transition-delay:0.15s">
         <h3>Gym Coaching</h3>
         <div class="price">£20</div>
         <div class="period">per hour</div>
@@ -256,7 +284,7 @@
   </div>
 </section>
 
-<div class="bottom-cta">
+<div class="bottom-cta reveal">
   <h2>Ready to get started?</h2>
   <p>Send me a message — I'll reply within a few hours. No pressure, just a conversation.</p>
   <a href="contact/" class="btn">Get in touch →</a>
@@ -275,6 +303,11 @@
   </div>
   <p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · Based in Stanmore, UK</p>
 </footer>
+
+<script>
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:0.15,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
