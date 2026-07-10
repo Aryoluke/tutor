@@ -6,134 +6,104 @@
 <meta name="description" content="Maths tutoring in Stanmore — KS3, GCSE, and A-Level. Build real understanding with clear explanations and past paper practice.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://aryoluke.github.io/tutor/maths/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232d6a4f'/><text x='50' y='68' text-anchor='middle' font-size='50' font-weight='700' font-family='system-ui' fill='%23fff'>AT</text></svg>">
 <title>Maths Tutoring — Aryan Tutors</title>
 <style>
-  :root{--bg:#f5f2eb;--text:#1a1a1a;--muted:#5c5c5c;--accent:#2d6a4f;--card:#fff;--border:#e0dcd4;--shadow:0 1px 3px rgba(0,0,0,.05);--chalk:#d4e8d0}
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .container{max-width:720px;margin:0 auto;padding:0 24px}
-  .back{display:inline-block;padding:10px 0;color:var(--muted);text-decoration:none;font-size:.9rem;margin-top:20px}
-  .back:hover{color:var(--text)}
-  header{padding:40px 0 32px}
-  header h1{font-size:2.2rem;font-weight:700;letter-spacing:-0.5px}
-  header .sub{color:var(--muted);font-size:1rem;margin-top:4px}
-  .intro{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:40px;box-shadow:var(--shadow);border-left:4px solid var(--accent)}
-  .intro p{color:#444;font-size:.95rem;line-height:1.7}
-  .levels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:40px}
-  .level{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
-  .level h3{font-size:1rem;font-weight:600;margin-bottom:8px}
-  .level p{font-size:.88rem;color:var(--muted);line-height:1.5}
-  .level ul{list-style:none;margin-top:10px}
-  .level ul li{font-size:.84rem;color:#555;padding:3px 0}
-  .level ul li::before{content:"▸ ";color:var(--accent)}
-  .reviews{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
-  .review{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow)}
-  .review .stars{color:#f4b400;font-size:.9rem;margin-bottom:6px}
-  .review p{font-size:.9rem;color:#444;line-height:1.6;font-style:italic}
-  .review .name{font-size:.82rem;color:var(--muted);margin-top:8px;font-style:normal;font-weight:500}
-  .faq{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:40px;box-shadow:var(--shadow)}
-  .faq h2{font-size:1.3rem;font-weight:600;margin-bottom:16px}
-  .faq-item{margin-bottom:16px}
-  .faq-item:last-child{margin-bottom:0}
-  .faq-item q{font-weight:600;font-size:.95rem;display:block;margin-bottom:4px}
-  .faq-item p{font-size:.9rem;color:var(--muted);line-height:1.5}
-  .cta{text-align:center;padding:32px;background:var(--accent);color:#fff;border-radius:12px;margin-bottom:40px}
-  .cta h2{font-size:1.4rem;margin-bottom:8px;font-weight:600}
-  .cta p{font-size:.95rem;opacity:.9;margin-bottom:16px}
-  .cta a{display:inline-block;padding:12px 28px;background:#fff;color:var(--accent);border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem;transition:all .2s}
-  .cta a:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.2)}
-  footer{text-align:center;padding:32px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border)}
-  @media(max-width:600px){
-    .levels,.reviews{grid-template-columns:1fr}
-    header h1{font-size:1.8rem}
-    .container{padding:0 16px}
-  }
+:root{--bg:#fafaf8;--text:#1a1a1a;--muted:#5c5c5c;--accent:#2d6a4f;--accent2:#1b4332;--card:#fff;--border:#e8e8e4;--light:#f0f7f3}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.nav-bar{position:sticky;top:0;z-index:100;background:rgba(250,250,248,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:1.2rem;color:var(--text);letter-spacing:-0.3px}
+.logo-icon{width:36px;height:36px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;font-weight:800}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-links a.active{border-bottom:2px solid var(--accent);padding-bottom:2px}
+.nav-cta{background:var(--accent);color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600!important}
+.hero{padding:80px 32px 60px;max-width:900px;margin:0 auto;text-align:center}
+.hero .section-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:12px}
+.hero h1{font-size:3rem;font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:16px}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:620px;margin:0 auto;line-height:1.7}
+section{padding:70px 32px}
+section.alt{background:var(--light)}
+.section-inner{max-width:900px;margin:0 auto}
+.section-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:12px}
+.section-heading{font-size:2rem;font-weight:700;letter-spacing:-0.6px;line-height:1.2;margin-bottom:12px}
+.section-sub{font-size:1.05rem;color:var(--muted);line-height:1.7;margin-bottom:36px;max-width:620px}
+.levels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.level-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;transition:all .2s}
+.level-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.level-card h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.level-card .years{font-size:.82rem;color:var(--accent);font-weight:600;margin-bottom:14px}
+.level-card ul{list-style:none}
+.level-card ul li{font-size:.88rem;color:#555;padding:4px 0}
+.level-card ul li::before{content:"▸ ";color:var(--accent)}
+.approach{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.approach-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}
+.approach-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.approach-card p{font-size:.9rem;color:var(--muted);line-height:1.6}
+.cta-section{background:var(--accent);color:#fff;text-align:center;padding:70px 32px}
+.cta-section h2{font-size:2rem;font-weight:700;letter-spacing:-0.6px;margin-bottom:12px}
+.cta-section p{font-size:1.05rem;opacity:.9;margin-bottom:28px}
+.btn{display:inline-block;padding:14px 30px;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .2s}
+.btn-primary{background:#fff;color:var(--accent)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+footer{padding:40px 32px;border-top:1px solid var(--border);text-align:center}
+footer p{color:var(--muted);font-size:.85rem}
+@media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2rem}.levels,.approach{grid-template-columns:1fr}.section-heading{font-size:1.6rem}section{padding:50px 20px}}
 </style>
 </head>
 <body>
-<div class="container">
-<a href="../" class="back">← Back to Aryan Tutors</a>
-<header>
-  <h1>Maths Tutoring</h1>
-  <div class="sub">KS3 · GCSE · A-Level</div>
-</header>
+<nav class="nav-bar"><div class="nav-inner"><a href="../" class="logo"><div class="logo-icon">AT</div>Aryan Tutors</a><div class="nav-links"><a href="../maths/" class="active">Maths</a><a href="../gym/">Gym</a><a href="../pricing/">Pricing</a><a href="../about/">About</a><a href="../reviews/">Reviews</a><a href="../contact/" class="nav-cta">Get in touch</a></div></div></nav>
 
-<div class="intro">
-  <p>I've been through GCSE and A-Level maths — both the content and the exams — and I've tutored students through it too. I know which topics tend to trip people up and how to explain them clearly. No rushing, no making anyone feel behind. Just building real understanding, one topic at a time.</p>
+<div class="hero">
+  <div class="section-label">Maths Tutoring</div>
+  <h1>KS3 · GCSE · A-Level</h1>
+  <p>I've been through the full maths journey and tutored others through it too. No rushing, no making anyone feel behind — just building real understanding, one topic at a time.</p>
 </div>
 
-<div class="levels">
-  <div class="level">
-    <h3>KS3 (Years 7–9)</h3>
-    <p>Building strong foundations early.</p>
-    <ul>
-      <li>Numbers &amp; algebra basics</li>
-      <li>Geometry &amp; measures</li>
-      <li>Fractions, ratios, percentages</li>
-      <li>Confidence building</li>
-    </ul>
+<section>
+  <div class="section-inner">
+    <div class="section-label">What I cover</div>
+    <div class="section-heading">Three levels, one approach</div>
+    <div class="section-sub">Whether you're in Year 7 or Year 13, the method is the same: understand the concept, practise it properly, and build confidence.</div>
+    <div class="levels">
+      <div class="level-card"><h3>KS3</h3><div class="years">Years 7–9</div><ul><li>Numbers &amp; algebra basics</li><li>Geometry &amp; measures</li><li>Fractions, ratios, percentages</li><li>Building strong foundations</li><li>Confidence before complexity</li></ul></div>
+      <div class="level-card"><h3>GCSE</h3><div class="years">Years 10–11</div><ul><li>Full syllabus coverage</li><li>Past paper walkthroughs</li><li>Problem-solving strategies</li><li>Mark scheme mastery</li><li>Foundation &amp; Higher tiers</li></ul></div>
+      <div class="level-card"><h3>A-Level</h3><div class="years">Years 12–13</div><ul><li>Pure, Mechanics, Statistics</li><li>Calculus &amp; trigonometry</li><li>Proofs &amp; problem solving</li><li>Bridging the GCSE gap</li><li>Deep understanding focus</li></ul></div>
+    </div>
   </div>
-  <div class="level">
-    <h3>GCSE</h3>
-    <p>Full syllabus + exam prep.</p>
-    <ul>
-      <li>Past paper walkthroughs</li>
-      <li>Problem-solving techniques</li>
-      <li>Understanding mark schemes</li>
-      <li>Higher &amp; Foundation tiers</li>
-    </ul>
-  </div>
-  <div class="level">
-    <h3>A-Level</h3>
-    <p>Pure, Mechanics &amp; Statistics.</p>
-    <ul>
-      <li>Calculus &amp; trigonometry</li>
-      <li>Proofs &amp; problem solving</li>
-      <li>Mechanics: forces, kinematics</li>
-      <li>Statistics: distributions, tests</li>
-    </ul>
-  </div>
-</div>
+</section>
 
-<h2 style="font-size:1.4rem;font-weight:600;margin-bottom:20px">What students say</h2>
-<div class="reviews">
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <p>"I was stuck on a grade 4 in maths and honestly thought I'd fail. After a few months of sessions I walked out with a 7. The way he explains things actually sticks."</p>
-    <div class="name">— GCSE student, Stanmore</div>
+<section class="alt">
+  <div class="section-inner">
+    <div class="section-label">How I teach</div>
+    <div class="section-heading">Understanding over memorising</div>
+    <div class="section-sub">Most people don't struggle with maths — they struggle with how it was explained. My job is to make it clear.</div>
+    <div class="approach">
+      <div class="approach-card"><h3>Topic by topic</h3><p>We work through each area methodically. I explain, we do examples together, then you try with support. No moving on until it clicks.</p></div>
+      <div class="approach-card"><h3>Past paper practice</h3><p>The most effective way to prepare. We use real exam papers, learn how to read questions, manage time, and pick up every mark.</p></div>
+      <div class="approach-card"><h3>Exam technique</h3><p>Understanding what examiners want is half the battle. I'll show you how marks are awarded and the common pitfalls to avoid.</p></div>
+      <div class="approach-card"><h3>Your pace, your path</h3><p>Everyone learns differently. We'll adapt the approach to how you learn best — whether that's visual, step-by-step, or practice-heavy.</p></div>
+    </div>
   </div>
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <p>"Trigonometry used to give me actual headaches. Now it's my strongest topic. Goes at your pace and never judges — proper lifesaver."</p>
-    <div class="name">— Year 11 student, Harrow</div>
-  </div>
-</div>
+</section>
 
-<div class="faq">
-  <h2>Common questions</h2>
-  <div class="faq-item">
-    <q>I'm really behind. Is that okay?</q>
-    <p>Completely. We'll go back to basics, find where the gaps are, and build up from there. No embarrassment, no judgement.</p>
+<section>
+  <div class="section-inner" style="text-align:center">
+    <div class="section-label">Deep dives</div>
+    <div class="section-heading">Want more detail?</div>
+    <div class="section-sub" style="margin:0 auto 36px">I've put together detailed pages for GCSE and A-Level with full topic breakdowns, exam board info, and what to expect.</div>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="gcse/" class="btn" style="background:var(--accent);color:#fff">GCSE Maths →</a>
+      <a href="alevel/" class="btn" style="border:2px solid var(--accent);color:var(--accent)">A-Level Maths →</a>
+    </div>
   </div>
-  <div class="faq-item">
-    <q>Do you do online or in-person?</q>
-    <p>Both — but I prefer in-person around Stanmore. Online works fine too if that's easier for you.</p>
-  </div>
-  <div class="faq-item">
-    <q>How much does it cost?</q>
-    <p>Reach out and we'll figure out something that works. I try to keep it reasonable.</p>
-  </div>
-</div>
+</section>
 
-<div class="cta">
-  <h2>Want to get better at maths?</h2>
-  <p>Send me a message and we'll work out a plan.</p>
-  <a href="https://wa.me/447777940152">Message on WhatsApp</a>
-</div>
+<div class="cta-section"><h2>Ready to improve your maths?</h2><p>First session includes a relaxed assessment — no pressure. We figure out where you're at and make a plan.</p><a href="../contact/" class="btn btn-primary">Get in touch →</a></div>
 
-<footer>
-  <p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p>
-</footer>
-</div>
+<footer><p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
 </body>
 </html>
