@@ -35,6 +35,7 @@ footer{background:#1a1a1a;color:#aaa;text-align:center;padding:2rem;font-size:0.
 .nav-links{display:none;}
 .case-study{padding:1.5rem;}
 }
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
 </style>
 </head>
 <body>
@@ -51,14 +52,14 @@ footer{background:#1a1a1a;color:#aaa;text-align:center;padding:2rem;font-size:0.
 </div>
 </nav>
 
-<section class="hero">
+<section class="hero reveal">
 <div class="label">SUCCESS STORIES</div>
 <h1>Real transformations</h1>
 <p>Detailed case studies from students I've worked with — what they started with, what we did, and where they ended up.</p>
 </section>
 
 <section class="section">
-<div class="case-study">
+<div class="case-study reveal">
 <h2>From Grade 4 to Grade 7 in GCSE Maths</h2>
 <p class="student-info">Year 11 · GCSE Maths</p>
 <h3>Starting point</h3>
@@ -70,7 +71,7 @@ footer{background:#1a1a1a;color:#aaa;text-align:center;padding:2rem;font-size:0.
 <blockquote>"I used to dread maths lessons. Now it's my favourite subject. Alex didn't just teach me maths — he taught me how to believe I could do it."<cite>— Sarah, Year 11</cite></blockquote>
 </div>
 
-<div class="case-study">
+<div class="case-study reveal">
 <h2>A-Level Maths: From Predicted D to B</h2>
 <p class="student-info">Year 12 · A-Level Maths (Mechanics)</p>
 <h3>Starting point</h3>
@@ -82,7 +83,7 @@ footer{background:#1a1a1a;color:#aaa;text-align:center;padding:2rem;font-size:0.
 <blockquote>"I was so close to giving up. Alex showed me that mechanics wasn't impossible — I just needed the right framework. Getting that B felt incredible."<cite>— James, Year 12</cite></blockquote>
 </div>
 
-<div class="case-study">
+<div class="case-study reveal">
 <h2>Zero to Five Pull-Ups in 2 Months</h2>
 <p class="student-info">Year 10 · Gym / Calisthenics</p>
 <h3>Starting point</h3>
@@ -104,5 +105,6 @@ footer{background:#1a1a1a;color:#aaa;text-align:center;padding:2rem;font-size:0.
 <footer>
 <p>&copy; 2026 AT Tutoring. All rights reserved.</p>
 </footer>
+<script>document.addEventListener('DOMContentLoaded',function(){const r=document.querySelectorAll('.reveal');const o=new IntersectionObserver((e)=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target)}})},{threshold:0.15});r.forEach(e=>o.observe(e))});</script>
 </body>
 </html>
