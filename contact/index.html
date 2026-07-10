@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Get in touch — WhatsApp, email, or contact form. Maths tutoring and gym coaching in Stanmore. Fast responses, no pressure.">
+<meta name="description" content="Get in touch — WhatsApp, email, or contact form. Maths tutoring and gym coaching in Stamore. Fast responses, no pressure.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://aryoluke.github.io/tutor/contact/">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232d6a4f'/><text x='50' y='68' text-anchor='middle' font-size='50' font-weight='700' font-family='system-ui' fill='%23fff'>AT</text></svg>">
@@ -45,15 +45,15 @@ section{padding:70px 32px}
 .info{text-align:center;margin-top:40px;padding:24px;background:var(--light);border-radius:12px}
 .info p{color:var(--muted);font-size:.9rem;line-height:1.6}
 .info strong{color:var(--text)}
-footer{padding:40px 32px;border-top:1px solid var(--border);text-align:center}
-footer p{color:var(--muted);font-size:.85rem}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2rem}.contact-cards{grid-template-columns:1fr}section{padding:50px 20px}.form-section{padding:24px}}
 </style>
 </head>
 <body>
 <nav class="nav-bar"><div class="nav-inner"><a href="../" class="logo"><div class="logo-icon">AT</div>Aryan Tutors</a><div class="nav-links"><a href="../maths/">Maths</a><a href="../gym/">Gym</a><a href="../pricing/">Pricing</a><a href="../about/">About</a><a href="../reviews/">Reviews</a><a href="../contact/" class="active nav-cta">Get in touch</a></div></div></nav>
 
-<div class="hero">
+<div class="hero reveal">
   <div class="section-label">Contact</div>
   <h1>Get in touch</h1>
   <p>WhatsApp is fastest — I usually reply within a few hours. But any method works. No pressure, no commitment.</p>
@@ -61,9 +61,9 @@ footer p{color:var(--muted);font-size:.85rem}
 
 <section>
   <div class="section-inner">
-    <div class="contact-cards">
+    <div class="contact-cards reveal">
       <a href="https://wa.me/447777940152" class="contact-card">
-        <div class="icon">💬</div>
+        <div class="icon">💌</div>
         <h3>WhatsApp</h3>
         <p>Fastest response. Send a message any time — I'll get back to you within a few hours.</p>
       </a>
@@ -74,9 +74,21 @@ footer p{color:var(--muted);font-size:.85rem}
       </a>
     </div>
 
-    <div class="form-section">
+    <section class="alt" style="padding:50px 32px">
+      <div class="section-inner reveal">
+        <div class="section-label">Response time</div>
+        <div class="section-heading">What happens after you message</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:24px">
+          <div style="text-align:center"><div style="font-size:2rem;margin-bottom:8px">💬</div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Under 3 hours</h3><p style="font-size:.85rem;color:var(--muted)">Typical WhatsApp response time during waking hours</p></div>
+          <div style="text-align:center"><div style="font-size:2rem;margin-bottom:8px">📋</div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Quick chat</h3><p style="font-size:.85rem;color:var(--muted)">We'll figure out if we're a good fit. No pressure, no commitment.</p></div>
+          <div style="text-align:center"><div style="font-size:2rem;margin-bottom:8px">📅</div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Book when ready</h3><p style="font-size:.85rem;color:var(--muted)">If it feels right, we'll find a time. If not, no hard feelings at all.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="form-section reveal">
       <h2>Or drop a message here</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+      <form action="https://formspee.io/f/your-form-id" method="POST">
         <div class="form-group"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="What should I call you?" required></div>
         <div class="form-group"><label for="contact">Email or phone number</label><input type="text" id="contact" name="contact" placeholder="How can I reach you?" required></div>
         <div class="form-group"><label for="subject">What are you interested in?</label><select id="subject" name="subject"><option value="">Select...</option><option value="maths">Maths tutoring</option><option value="gym">Gym coaching</option><option value="both">Both</option><option value="other">Something else</option></select></div>
@@ -85,13 +97,14 @@ footer p{color:var(--muted);font-size:.85rem}
       </form>
     </div>
 
-    <div class="info">
-      <p><strong>Based in Stanmore, UK</strong> — In-person sessions preferred for local students. Online available for anyone, anywhere.</p>
-      <p style="margin-top:8px">Sessions available after school, evenings, and weekends. Let me know what works for you.</p>
+    <div class="info reveal">
+      <p><strong>Based in Stamore, UK</strong> — In-person sessions preferred for local students. Online available for anyone, anywhere.</p>
+      <p style="margin-top:8px"><strong>Availability:</strong> After school (4pm–8pm), weekends (10am–6pm), and school holidays. Flexible — just ask.</p>
     </div>
   </div>
 </section>
 
 <footer><p>© 2026 Aryan Mehta · <a href="mailto:aryoluke29@gmail.com" style="color:inherit">aryoluke29@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
+<script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));</script>
 </body>
 </html>
