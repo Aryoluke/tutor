@@ -80,15 +80,15 @@ section{padding:70px 32px}
         <div class="section-heading">What happens after you message</div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:24px">
           <div style="text-align:center"><div style="font-size:2rem;margin-bottom:8px">💬</div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Under 3 hours</h3><p style="font-size:.85rem;color:var(--muted)">Typical WhatsApp response time during waking hours</p></div>
-          <div style="text-align:center"><div style="font-size:2rem;margin-bottom:8px">📋</div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Quick chat</h3><p style="font-size:.85rem;color:var(--muted)">We'll figure out if we're a good fit. No pressure, no commitment.</p></div>
-          <div style="text-align:center"><div style="font-size:2rem;margin-bottom:8px">📅</div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Book when ready</h3><p style="font-size:.85rem;color:var(--muted)">If it feels right, we'll find a time. If not, no hard feelings at all.</p></div>
+          <div style="text-align:center"><div style="font-size:2rem;margin-bottom:8px">🗋</div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Quick chat</h3><p style="font-size:.85rem;color:var(--muted)">We'll figure out if we're a good fit. No pressure, no commitment.</p></div>
+          <div style="text-align:center"><div style="font-size:2rem;margin-bottom:8px">🗅</div><h3 style="font-size:1rem;font-weight:700;margin-bottom:4px">Book when ready</h3><p style="font-size:.85rem;color:var(--muted)">If it feels right, we'll find a time. If not, no hard feelings at all.</p></div>
         </div>
       </div>
     </section>
 
     <div class="form-section reveal">
       <h2>Or drop a message here</h2>
-      <form action="https://formspee.io/f/your-form-id" method="POST">
+      <form action="https://formspree.io/f/your-form-id" method="POST">
         <div class="form-group"><label for="name">Your name</label><input type="text" id="name" name="name" placeholder="What should I call you?" required></div>
         <div class="form-group"><label for="contact">Email or phone number</label><input type="text" id="contact" name="contact" placeholder="How can I reach you?" required></div>
         <div class="form-group"><label for="subject">What are you interested in?</label><select id="subject" name="subject"><option value="">Select...</option><option value="maths">Maths tutoring</option><option value="gym">Gym coaching</option><option value="both">Both</option><option value="other">Something else</option></select></div>
@@ -99,16 +99,13 @@ section{padding:70px 32px}
 
     <div class="info reveal">
       <p><strong>Based in Stamore, UK</strong> — In-person sessions preferred for local students. Online available for anyone, anywhere.</p>
-      <p style="margin-top:8px"><strong>Availability:</strong> After school (4pm–8pm), weekends (10am–6pm), and school holidays. Flexible — just ask.</p>
+      <p style="margin-top:8px"><strong>Availability:</strong> After school (4pm—8pm), weekends (10am—6pm), and school holidays. Flexible — just ask.</p>
     </div>
   </div>
 </section>
 
 <footer><p>© 2026 Aryan Mehta · <a href="mailto:aryanjigar.jmehta@gmail.com" style="color:inherit">aryanjigar.jmehta@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
 <script>
-const revealElements = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
-revealElements.forEach(el => observer.observe(el));
-</script>
+const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));</script>
 </body>
 </html>
