@@ -44,8 +44,9 @@ section.alt{background:var(--light)}
 .cta-section p{opacity:.9;margin-bottom:24px;font-size:1.05rem}
 .cta-section .btn{background:#fff;color:var(--accent)}
 .cta-section .btn:hover{box-shadow:0 6px 20px rgba(0,0,0,.3)}
-#btt{position:fixed;bottom:24px;right:24px;width:44px;height:44px;background:var(--accent);color:#fff;border:none;border-radius:50%;font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s;z-index:200;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.3)}
-#btt.visible{opacity:1;pointer-events:auto}
+#btt{position:fixed;bottom:40px;right:40px;width:48px;height:48px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.2);opacity:0;visibility:hidden;transition:all .3s ease;z-index:999;display:flex;align-items:center;justify-content:center}
+#btt.visible{opacity:1;visibility:visible}
+.pricing-card:hover,.service-card:hover,.value:hover,.review:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,.1);transition:all .3s ease}
 footer{padding:40px 32px;border-top:1px solid var(--border);text-align:center}
 footer p{color:var(--muted);font-size:.85rem}
 footer a{color:inherit}
@@ -106,7 +107,7 @@ footer a{color:inherit}
 
 <footer><p>&copy; 2026 Aryan Mehta &middot; <a href="mailto:aryanjigar.jmehta@gmail.com">aryanjigar.jmehta@gmail.com</a> &middot; <a href="../">Aryan Tutors</a></p></footer>
 
-<button id="btt" onclick="window.scrollTo({top:0,behavior:smooth}')">&uarr;</button>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:smooth})" aria-label="Back to top">&#9664;</button>
 
 <script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(b)b.classList.toggle('visible',window.scrollY>400)});</script>
 </body>
