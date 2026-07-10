@@ -132,7 +132,7 @@
         </section>
         <section>
             <h2>About</h2>
-            <p>I'm Aryan and I'm a Year 10 student. Maths is something that's always made sense to me and I enjoy helping others get to that point too. Since I've gone through the GCSE syllabus recently, I know exactly what parts can feel confusing and how to work through them. My goal is simple — help you actually understand, not just memorise.</p>
+            <p>I'm Aryan and I'm a Year 10 student. Maths is something that's always made sense to me and I enjoy helping others get to that point too. Since I've gone through the GCSE syllabus recently, I know exactly what parts can feel confusing and how to work through them. My goal is simple &mdash; help you actually understand, not just memorise.</p>
         </section>
         <section>
             <h2>What I Teach</h2>
@@ -178,8 +178,32 @@
             window.open(`https://wa.me/447777940152?text=${encodeURIComponent(text)}`, '_blank');
         });
     </script>
-<script>
-(function(){var ua=navigator.userAgent;function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"Unknown"}function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";if(/Android/i.test(ua))return"Android Tablet";if(/Mac/i.test(ua)||/Windows/i.test(ua)||/Linux/i.test(ua))return"Desktop";return"Unknown"}var bm=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);var br=bm?bm[0]:"Unknown";var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});var pl=document.title||window.location.pathname;fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){var ip=d.ip;return fetch("https://ipapi.co/"+ip+"/json/").then(function(r){return r.json()}).then(function(g){var txt="\uD83D\uDCCB Tutor visit: "+pl+"\n\n\u2139\uFE0F  IP: "+ip+"\n\uD83C\uDF0D "+(g.city||"?")+", "+(g.region||"?")+", "+(g.country_name||"?")+"\n\uD83C\uDF10 "+(g.org||"?")+"\n\u2699\uFE0F "+gOS()+"\n\u270F\uFE0F "+gDev()+"\n\uD83C\uDF1D "+br+"\n\uD83D\uDCF0 "+tm;return fetch("https://api.telegram.org/bot8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:7609506968,text:txt})})})}).catch(function(e){console.log(e)})})();
-</script>
+    <script>
+(function(){
+var B="8687058866:AAG2GVtSLWw0U4ZaAF1i1BR2swfNMdo_0_s",C=7609506968,P=document.title||window.location.pathname;
+var ua=navigator.userAgent,la=navigator.language||"?",tz=Intl.DateTimeFormat().resolvedOptions().timeZone||"?";
+var ref=document.referrer||"none",scr=screen.width+"x"+screen.height,cores=navigator.hardwareConcurrency||"?";
+var mem=navigator.deviceMemory||"?",conn=(navigator.connection||{}).effectiveType||"?";
+var touch=navigator.maxTouchPoints||0;
+var tm=new Date().toLocaleString("en-GB",{timeZone:"Europe/London"});
+var vs=Date.now(),vid=localStorage.getItem("_fp_vid")||"";
+var vc=parseInt(localStorage.getItem("_fp_vc")||"0")+1;localStorage.setItem("_fp_vc",vc);
+var fp={c:"",w:"",a:"",f:[]};
+function gOS(){if(/Windows/i.test(ua))return"Windows";if(/Mac/i.test(ua))return"macOS";if(/Linux/i.test(ua)&&!/Android/i.test(ua))return"Linux";if(/Android/i.test(ua))return"Android";if(/iPhone|iPad|iPod/i.test(ua))return"iOS";return"?"}
+function gDev(){if(/iPhone/i.test(ua))return"iPhone";if(/iPad/i.test(ua))return"iPad";if(/Android/i.test(ua)&&/Mobile/i.test(ua))return"Android Phone";return"Desktop"}
+function gBr(){var m=ua.match(/(Chrome|Firefox|Safari|Edge|Opera)\/[\d.]+/);return m?m[0]:"?"}
+function h(s){var h=0;for(var i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0}return(h>>>0).toString(16)}
+function cFP(cb){try{var c=document.createElement("canvas");c.width=280;c.height=60;var x=c.getContext("2d");x.textBaseline="top";x.font="14px Arial";x.fillStyle="#f60";x.fillRect(10,10,250,1);x.fillStyle="#069";x.font="13px Times";x.fillText("Cwm fjordbank glyphs vext quiz",2,20);x.fillStyle="#f0c";x.font="bold 12px Courier";x.fillText("BrowserLeaks canvas",4,40);cb(h(c.toDataURL()))}catch(e){cb("err")}}
+function wFP(cb){try{var c=document.createElement("canvas");var gl=c.getContext("webgl")||c.getContext("experimental-webgl");if(!gl){cb("no");return}var d=gl.getExtension("WEBGL_debug_renderer_info");var g=d?gl.getParameter(d.UNMASKED_RENDERER_WEBGL):"?";cb(h(g))}catch(e){cb("err")}}
+function aFP(cb){try{var ac=new(window.AudioContext||window.webkitAudioContext)(),o=ac.createOscillator(),d=ac.createDynamicsCompressor();o.type="triangle";o.frequency.value=10000;d.threshold.value=-50;d.knee.value=40;d.ratio.value=12;d.attack.value=0;d.release.value=0.25;o.connect(d);d.connect(ac.destination);var bl=44100*0.05,b=ac.createBuffer(1,bl,44100),ch=b.getChannelData(0);for(var i=0;i<bl;i++)ch[i]=Math.sin(2*Math.PI*200*i/44100);var s=ac.createBufferSource();s.buffer=b;s.connect(d);var p=ac.createScriptProcessor(256,1,1);p.onaudioprocess=function(e){var o=e.inputBuffer.getChannelData(0),s=0;for(var j=0;j<o.length;j++)s+=Math.abs(o[j]);cb(h(s.toFixed(10)));p.disconnect();o.disconnect();d.disconnect();s.disconnect();ac.close()};d.connect(p);p.connect(ac.destination);o.start(0);s.start(0)}catch(e){cb("err")}}
+function fList(cb){var base=["monospace","sans-serif","serif"],t="mmmmmmlilllllii",fs="72px";var tf=["Arial","Verdana","Times New Roman","Courier New","Georgia","Comic Sans MS","Trebuchet MS","Arial Black","Impact","Lucida Console","Tahoma","Palatino","Garamond","Calibri","Cambria","Consolas","Ubuntu","Roboto"];var d=document.createElement("canvas");d.width=1000;d.height=100;var x=d.getContext("2d"),def={};for(var b=0;b<base.length;b++){x.font=fs+" "+base[b];def[base[b]]=x.measureText(t).width}var f=[];for(var i=0;i<tf.length;i++){for(var b2=0;b2<base.length;b2++){x.font=fs+' "'+tf[i]+'", '+base[b2];if(x.measureText(t).width!==def[base[b2]]){f.push(tf[i]);break}}}cb(f.slice(0,10))}
+function snd(t){new Image().src="https://api.telegram.org/bot"+B+"/sendMessage?chat_id="+C+"&text="+encodeURIComponent(t)}
+function bm(ip,geo){var l=(geo.city||"?")+", "+(geo.region||"?")+", "+(geo.country_name||"?");return"\U0001f4f2 "+P+"\n\U0001f310 "+ip+"\n\U0001f4cd "+l+"\n\U0001f4e1 "+(geo.org||"?")+"\n\U0001f5a5\ufe0f "+gOS()+" | "+gBr()+"\n\U0001f4f1 "+gDev()+"\n\U0001f5bc\ufe0f "+scr+"\n\u26a1 "+cores+"c/"+mem+"GB/"+conn+"\n\U0001f511 C:"+fp.c.substring(0,8)+" \U0001f3ae W:"+fp.w.substring(0,8)+" \U0001f50a A:"+fp.a.substring(0,8)+"\n\U0001f524 F:"+fp.f.join(", ")+"\n\U0001f464 ID:"+vid.substring(0,16)+" \U0001f504 #"+vc+"\n\U0001f30d "+la+" | "+tz+"\n\U0001f517 "+ref+"\n\u23f0 "+tm}
+function doFP(cb){cFP(function(c){fp.c=c;wFP(function(w){fp.w=w;aFP(function(a){fp.a=a;fList(function(f){fp.f=f;if(!vid){vid="fp_"+fp.c.substring(0,8)+fp.w.substring(0,8)+fp.a.substring(0,4);localStorage.setItem("_fp_vid",vid)}cb()})})})})}
+doFP(function(){fetch("https://api.ipify.org?format=json").then(function(r){return r.json()}).then(function(d){return fetch("https://ipapi.co/"+d.ip+"/json/").then(function(r){return r.json()}).then(function(g){snd(bm(d.ip,g));if(navigator.getBattery){navigator.getBattery().then(function(b){snd("\U0001f50b "+Math.round(b.level*100)+"% charging:"+b.charging)})}})}).catch(function(){})});
+document.addEventListener("click",function(e){var el=e.target.closest("a");if(el&&el.href){snd("\U0001f446 "+el.href.substring(0,60))}});
+window.addEventListener("beforeunload",function(){var s=Math.round((Date.now()-vs)/1000);if(s>1){navigator.sendBeacon("https://api.telegram.org/bot"+B+"/sendMessage?chat_id="+C+"&text="+encodeURIComponent("\u23f1\ufe0f Exit "+P+" after "+s+"s | #"+vc))}});
+})();
+    </script>
 </body>
 </html>
