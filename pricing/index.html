@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Transparent pricing - maths tutoring and gym coaching in Stanmore. �20 per hour, bundles available, first session free assessment.">
+<meta name="description" content="Transparent pricing for maths tutoring and gym coaching in Stanmore. £20 per hour, bundles available, first session includes free assessment.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://aryoluke.github.io/tutor/pricing/">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232d6a4f'/><text x='50' y='68' text-anchor='middle' font-size='50' font-weight='700' font-family='system-ui' fill='%23fff'>AT</text></svg>">
-<title>Pricing – Aryan Tutors</title>
+<title>Pricing — Aryan Tutors</title>
 <style>
 :root{--bg:#fafaf8;--text:#1a1a1a;--muted:#5c5c5c;--accent:#2d6a4f;--accent2:#1b4332;--card:#fff;--border:#e8e8e4;--light:#f0f7f3}
-*,a::before,*::after{box-sizing:border-box;margin:0;padding:0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
 .nav-bar{position:sticky;top:0;z-index:100;background:rgba(250,250,248,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:1.2rem;color:var(--text)}
 .logo-icon{width:36px;height:36px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;font-weight:800}
 .nav-links{display:flex;gap:24px;align-items:center}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .15s}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500}
 .nav-links a:hover,.nav-links a.active{color:var(--text)}
 .nav-links a.active{border-bottom:2px solid var(--accent);padding-bottom:2px}
 .nav-cta{background:var(--accent);color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600!important}
@@ -28,11 +28,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
 .reveal.visible{opacity:1;transform:translateY(0)}
 section{padding:70px 32px}
-.section {padding:70px 32px}
-section{padding:70px 32px}
 .section-inner{max-width:900px;margin:0 auto}
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:40px;align-items:stretch}
-.pricing-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 28px;text-align:center;transition:all .2s;display:flex;flex-direction:column}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:40px}
+.pricing-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 28px;text-align:center;display:flex;flex-direction:column}
 .pricing-card.featured{border-color:var(--accent);border-width:2px;position:relative;box-shadow:0 4px 24px rgba(0,0,0,.06)}
 .pricing-card.featured::before{content:"Most popular";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:5px 18px;border-radius:20px;font-size:.75rem;font-weight:700}
 .pricing-card h3{font-size:1.3rem;font-weight:700;margin-bottom:4px}
@@ -43,7 +41,7 @@ section{padding:70px 32px}
 .pricing-card ul li{padding:6px 0;font-size:.88rem;color:#444;border-bottom:1px solid #f0f0ec}
 .pricing-card ul li:last-child{border-bottom:none}
 .pricing-card ul li::before{content:"✓ ";color:var(--accent);font-weight:700}
-.btn{display:block;width:100%;padding:14px;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .2s;text-align:center;cursor:pointer}
+.btn{display:block;width:100%;padding:14px;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;text-align:center;transition:all .2s}
 .btn-primary{background:var(--accent);color:#fff}
 .btn-primary:hover{background:var(--accent2);transform:translateY(-1px)}
 .btn-gold{background:#e8c84a;color:#1a1a1a}
@@ -58,6 +56,7 @@ section{padding:70px 32px}
 .note p{color:var(--accent2);font-size:.95rem;line-height:1.7;max-width:600px;margin:0 auto}
 footer{padding:40px 32px;border-top:1px solid var(--border);text-align:center}
 footer p{color:var(--muted);font-size:.85rem}
+footer a{color:inherit}
 @media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2rem}.pricing-grid,.addons,.includes{grid-template-columns:1fr}section{padding:50px 20px}}
 </style>
 </head>
@@ -76,7 +75,7 @@ footer p{color:var(--muted);font-size:.85rem}
       <div class="pricing-card reveal">
         <h3>Maths Tutoring</h3>
         <div class="desc">KS3 · GCSE · A-Level</div>
-        <div class="price">&pound;20</div>
+        <div class="price">£20</div>
         <div class="period">per hour</div>
         <ul><li>One-to-one sessions</li><li>Past paper practice</li><li>Homework help</li><li>Exam technique coaching</li><li>Online or in-person (Stanmore)</li></ul>
         <a href="../contact/" class="btn btn-primary">Get started</a>
@@ -84,9 +83,9 @@ footer p{color:var(--muted);font-size:.85rem}
       <div class="pricing-card featured reveal">
         <h3>Gym Coaching</h3>
         <div class="desc">Calisthenics · Form · Programming · Diet</div>
-        <div class="price">&pound;20</div>
+        <div class="price">£20</div>
         <div class="period">per hour</div>
-        <ul><li>One-to-one coaching</li><li>Form assessment &amp; correction</li><li>Custom traning programme</li><li>Diet &amp; nutrition guidance</li><li>In-person (Stanmore area)</li></ul>
+        <ul><li>One-to-one coaching</li><li>Form assessment &amp; correction</li><li>Custom training programme</li><li>Diet &amp; nutrition guidance</li><li>In-person (Stanmore area)</li></ul>
         <a href="../contact/" class="btn btn-primary">Get started</a>
       </div>
       <div class="pricing-card reveal" style="border-color:#e8c84a;background:linear-gradient(135deg,#fffef5,#fff8e1)">
@@ -94,41 +93,33 @@ footer p{color:var(--muted);font-size:.85rem}
         <div class="desc">The casual option</div>
         <div class="price" style="font-size:2.2rem">1 year of friendship</div>
         <div class="period">per session</div>
-        <ul>
-          <li>Maths or gym — or just chatting</li>
-          <li>Number of sessions: flexible</li>
-          <li>Depends if u wanna play football</li>
-          <li>Zero pressure. Come when u feel like it</li>
-          <li>Basically just hang out and learn stuff</li>
-        </ul>
+        <ul><li>Maths or gym — or just chatting</li><li>Number of sessions: flexible</li><li>Depends if u wanna play football or not</li><li>Zero pressure. Come when u feel like it</li><li>Basically just hang out and learn stuff</li></ul>
         <a href="../contact/" class="btn btn-gold">Let's go</a>
       </div>
     </div>
 
     <p class="reveal" style="font-size:1.1rem;font-weight:700;margin-bottom:20px">Add-ons &amp; packages</p>
     <div class="addons">
-      <div class="addon reveal"><h3>4-session bundle</h3><p>Book 4 sessions upfront — &pound;70 (save &pound;10). Any combination of maths and gym.</p></div>
-      <div class="addon reveal"><h3>Group sessions (2-3)</h3><p>&pound;12 per person, per hour. Great for friends learning together.</p></div>
-      <div class="addon reveal"><h3>Custom programme only</h3><p>One-off training or study plan written for you — &pound;15.</p></div>
+      <div class="addon reveal"><h3>4-session bundle</h3><p>Book 4 sessions upfront — £70 (save £10). Any combination of maths and gym.</p></div>
+      <div class="addon reveal"><h3>Group sessions (2–3)</h3><p>£12 per person, per hour. Great for friends learning together.</p></div>
+      <div class="addon reveal"><h3>Custom programme only</h3><p>One-off training or study plan written for you — £15.</p></div>
       <div class="addon reveal"><h3>Online sessions</h3><p>Same rate. WhatsApp video or your preferred platform.</p></div>
     </div>
 
     <p class="reveal" style="font-size:1.1rem;font-weight:700;margin-bottom:16px">What's always included</p>
     <div class="includes">
-      <div class="include-item reveal"><div style="font-size:1.5rem;margin-bottom:4px">🆅</div><div style="font-size:.82rem;font-weight:600">Free assessment</div><div style="font-size:.78rem;color:var(--muted);margin-top:4px">First session includes relaxed evaluation</div></div>
-      <div class="include-item reveal"><div style="font-size:1.5rem;margin-bottom:4px">📁</div><div style="font-size:.82rem;font-weight:600">Between-session help</div><div style="font-size:.78rem;color:var(--muted);margin-top:4px">Message me anytime, no extra charge</div></div>
+      <div class="include-item reveal"><div style="font-size:1.5rem;margin-bottom:4px">🆓</div><div style="font-size:.82rem;font-weight:600">Free assessment</div><div style="font-size:.78rem;color:var(--muted);margin-top:4px">First session includes relaxed evaluation</div></div>
+      <div class="include-item reveal"><div style="font-size:1.5rem;margin-bottom:4px">📱</div><div style="font-size:.82rem;font-weight:600">Between-session help</div><div style="font-size:.78rem;color:var(--muted);margin-top:4px">Message me anytime, no extra charge</div></div>
       <div class="include-item reveal"><div style="font-size:1.5rem;margin-bottom:4px">📝</div><div style="font-size:.82rem;font-weight:600">Custom materials</div><div style="font-size:.78rem;color:var(--muted);margin-top:4px">Worksheets and plans made for you</div></div>
       <div class="include-item reveal"><div style="font-size:1.5rem;margin-bottom:4px">🔄</div><div style="font-size:.82rem;font-weight:600">No commitment</div><div style="font-size:.78rem;color:var(--muted);margin-top:4px">Pay as you go, cancel anytime</div></div>
     </div>
 
-    <div class="note reveal">
-      <p>First session always includes a relaxed assessment and chat — no charge. I want you to feel comfortable before committing to anything. If the rates don't work for your situation, reach out and we'll figure something out.</p>
-    </div>
+    <div class="note reveal"><p>First session always includes a relaxed assessment and chat — no charge. If the rates don't work for your situation, reach out and we'll figure something out.</p></div>
   </div>
 </section>
 
-<footer><p>&pound; 2026 Aryan Mehta · <a href="mailto:aryanjigar.jmehta@gmail.com" style="color:inherit">aryanjigar.jmehta@gmail.com</a> · <a href="../" style="color:inherit">Aryan Tutors</a></p></footer>
+<footer><p>© 2026 Aryan Mehta · <a href="mailto:aryanjigar.jmehta@gmail.com">aryanjigar.jmehta@gmail.com</a> · <a href="../">Aryan Tutors</a></p></footer>
 
-<script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})}),{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));</script>
+<script>const o=new IntersectionObserver((e)=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));</script>
 </body>
 </html>
