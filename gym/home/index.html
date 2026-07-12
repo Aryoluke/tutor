@@ -1,1 +1,184 @@
-.cmplxLXJldmVhbHtvcGFjaXR5OjEhaW1wb3J0YW50O3RyYW5zZm9ybTpub25lIWltcG9ydGFudH0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Home Workouts — Aryan Tutors</title>
+  <style>
+    :root{--bg:#121212;--bg2:#1e1e1e;--text:#f0f0f0;--muted:#aaa;--accent:#e65100;--accent2:#ff8f00;--card:#1a1a1a;--border:#2a2a2a;--light:#222}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    .nav-bar{position:sticky;top:0;z-index:100;background:rgba(18,18,18,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:1.2rem;color:var(--text)}
+    .logo-icon{width:36px;height:36px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;font-weight:800}
+    .nav-links{display:flex;gap:24px;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-links a.active{border-bottom:2px solid var(--accent);padding-bottom:2px}
+    .nav-cta{background:var(--accent);color:#fff!important;padding:8px 18px;border-radius:8px;font-weight:600!important}
+    .hero{padding:60px 32px 40px;max-width:800px;margin:0 auto;text-align:center}
+    .hero .section-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:12px}
+    .hero h1{font-size:3rem;font-weight:800;letter-spacing:-1.5px;margin-bottom:12px}
+    .hero p{font-size:1.1rem;color:var(--muted);max-width:500px;margin:0 auto;line-height:1.7}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    section{padding:50px 32px}
+    section.alt{background:var(--light)}
+    .section-inner{max-width:860px;margin:0 auto}
+    .section-label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:8px}
+    .section-heading{font-size:1.8rem;font-weight:700;margin-bottom:10px}
+    .section-sub{font-size:1rem;color:var(--muted);line-height:1.6;margin-bottom:24px}
+    .workout-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    .workout-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;transition:all .3s ease}
+    .workout-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.3)}
+    .workout-card h3{font-size:1.05rem;font-weight:700;margin-bottom:6px;color:var(--accent)}
+    .workout-card p{font-size:.85rem;color:var(--muted);line-height:1.5}
+    .equip-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+    .equip-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;transition:all .3s ease}
+    .equip-item:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    .equip-item h4{font-size:.95rem;font-weight:600;margin-bottom:6px}
+    .equip-item p{font-size:.82rem;color:var(--muted)}
+    .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .tip{background:var(--card);border-left:3px solid var(--accent);border-radius:10px;padding:18px}
+    .tip h4{font-size:.9rem;font-weight:600;margin-bottom:4px}
+    .tip p{font-size:.82rem;color:var(--muted);line-height:1.5}
+    .btn{display:inline-block;padding:13px 28px;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;background:var(--accent);color:#fff;transition:all .2s}
+    .btn:hover{background:var(--accent2);transform:translateY(-2px)}
+    .cta-section{text-align:center;padding:50px 32px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .cta-section h2{font-size:1.8rem;font-weight:700;margin-bottom:10px}
+    .cta-section p{opacity:.9;margin-bottom:22px;font-size:1rem}
+    .cta-section .btn{background:#fff;color:var(--accent)}
+    #btt{position:fixed;bottom:24px;right:24px;width:44px;height:44px;background:var(--accent);color:#fff;border:none;border-radius:50%;font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s;z-index:200;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+    #btt.visible{opacity:1;pointer-events:auto}
+    footer{padding:30px 32px;border-top:1px solid var(--border);text-align:center}
+    footer p{color:var(--muted);font-size:.85rem}
+    footer a{color:inherit}
+    @media(max-width:768px){.nav-links{display:none}.hero h1{font-size:2rem}.workout-grid,.equip-grid,.tips-grid{grid-template-columns:1fr}section{padding:40px 20px}}
+  </style>
+</head>
+<body>
+  <nav class="nav-bar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Home">
+        <span class="logo-icon" aria-hidden="true">AT</span>
+        <span>Aryan Tutors</span>
+      </a>
+      <div class="nav-links">
+        <a href="../../index.html">Maths</a>
+        <a href="index.html" class="active">Gym</a>
+        <a href="../skills/index.html">Pricing</a>
+        <a href="#">About</a>
+        <a href="#">Reviews</a>
+        <a href="../../contact/index.html" class="nav-cta">Get in touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero reveal">
+    <div class="section-label">Home Workouts</div>
+    <h1>No gym, no problem</h1>
+    <p>Effective training with minimal equipment. Dumbbells, a pull-up bar, or just your bodyweight — I'll build a plan that works wherever you are.</p>
+  </section>
+
+  <section id="equipment" class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Equipment you need</div>
+      <h2 class="section-heading">Start with what you have</h2>
+      <p class="section-sub">You don't need a full gym. Here's what makes home workouts effective.</p>
+      <div class="equip-grid">
+        <div class="equip-item">
+          <h4>Pull-up bar</h4>
+          <p>The single best investment. Doorframe bar works perfectly. Essential for back strength and unlocking calisthenics skills.</p>
+        </div>
+        <div class="equip-item">
+          <h4>Adjustable dumbbells</h4>
+          <p>Versatile and space-efficient. Covers everything from curls to goblet squats to shoulder work.</p>
+        </div>
+        <div class="equip-item">
+          <h4>Paralettes</h4>
+          <p>Small, cheap, game-changing. Perfect for push-up progressions, L-sits, and handstand work.</p>
+        </div>
+        <div class="equip-item">
+          <h4>Resistance bands</h4>
+          <p>Warm-ups, assisted pull-ups, banded push-ups. The most versatile piece of kit under a tenner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workouts" class="alt reveal">
+    <div class="section-inner">
+      <div class="section-label">Sample workouts</div>
+      <h2 class="section-heading">What a session looks like</h2>
+      <div class="workout-grid">
+        <div class="workout-card">
+          <h3>Upper body push</h3>
+          <p>Diamond push-ups, pike push-ups, dumbbell press, tricep dips. 4 sets each, 60s rest.</p>
+        </div>
+        <div class="workout-card">
+          <h3>Upper body pull</h3>
+          <p>Pull-ups, chin-ups, inverted rows, banded face pulls. 4 sets each. Progressive overload every week.</p>
+        </div>
+        <div class="workout-card">
+          <h3>Legs + core</h3>
+          <p>Goblet squats, Bulgarian split squats, hanging leg raises, planks. Build dense leg strength without a squat rack.</p>
+        </div>
+        <div class="workout-card">
+          <h3>Full body</h3>
+          <p>Burpees, dumbbell thrusters, pull-ups, L-sit holds. 3 rounds for time. Efficient when you're short on time.</p>
+        </div>
+        <div class="workout-card">
+          <h3>Skill work</h3>
+          <p>Muscle-up transitions, front lever progressions, handstand holds. Dedicated skill practice to unlock advanced moves.</p>
+        </div>
+        <div class="workout-card">
+          <h3>Mobility + recovery</h3>
+          <p>Active stretching, banded distractions, foam rolling. Keeps you injury-free and moving well between hard sessions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tips" class="reveal">
+    <div class="section-inner">
+      <div class="section-label">Pro tips</div>
+      <h2 class="section-heading">Getting the most from home training</h2>
+      <div class="tips-grid">
+        <div class="tip">
+          <h4>Train at the same time daily</h4>
+          <p>Routine is everything. Pick a time and protect it like an appointment you can't miss.</p>
+        </div>
+        <div class="tip">
+          <h4>Track everything</h4>
+          <p>Reps, sets, weight. If you're not tracking, you're guessing. Progressive overload needs data.</p>
+        </div>
+        <div class="tip">
+          <h4>Film your sets</h4>
+          <p>You can't see your own form. Record your top sets and check technique between rest periods.</p>
+        </div>
+        <div class="tip">
+          <h4>Warm up properly</h4>
+          <p>5-10 mins of dynamic stretching and light movement before every session. Your joints will thank you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section reveal">
+    <h2>Want a custom home plan?</h2>
+    <p>Tell me your equipment, goals, and schedule — I'll build a programme for you.</p>
+    <a href="../../contact/index.html" class="btn">Get in touch</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Aryan Mehta · aryanjigar.jmehta@gmail.com · Aryan Tutors</p>
+  </footer>
+
+  <button id="btt" aria-label="Back to top">↑</button>
+
+  <script>
+    const o=new IntersectionObserver((e)=>{e.forEach(n=>{const r=n.target.getBoundingClientRect();if(n.isIntersecting||r.top<window.innerHeight)n.target.classList.add('visible')})},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));window.addEventListener('scroll',()=>{const b=document.getElementById('btt');if(b)b.classList.toggle('visible',window.scrollY>400)});
+  </script>
+</body>
+</html>
